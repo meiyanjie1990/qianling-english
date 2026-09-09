@@ -369,7 +369,89 @@
       cursor: pointer;
     }
 
-    /* #view-day、#view-map 的样式在 Task 5/6 追加 */
+    /* ---------- 当天页返回按钮（页头顶部，安静的大触控区） ---------- */
+    .back {
+      display: inline-flex;
+      align-items: center;
+      border: 0;
+      background: none;
+      color: var(--caramel);
+      font-size: 15.5px;
+      font-weight: 800;
+      letter-spacing: .03em;
+      min-height: 44px;
+      margin: -6px -6px 0 -10px;   /* 负边距回收触控区，文字仍与 h1 左对齐 */
+      padding: 4px 10px;
+      border-radius: var(--r-sm);
+      cursor: pointer;
+      transition: background-color .15s ease, transform .12s ease;
+    }
+    .back:active { background: var(--main-soft); transform: scale(.97); }
+
+    /* ---------- 当天时间段卡片：白卡 + 左侧橙条时间轨 ---------- */
+    .block {
+      background: var(--card);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      border-left: 5px solid var(--main);
+      padding: 13px 16px 15px;
+      margin-top: 14px;
+    }
+    .block h2 {
+      margin: 0 0 6px;
+      font-size: 15.5px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      line-height: 1.5;
+      color: var(--caramel);
+    }
+    .block .do {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.7;
+      color: var(--ink);
+    }
+
+    /* 英文原句：淡橙便签块，大字加粗照着念 */
+    .block .say {
+      background: var(--main-soft);
+      border-radius: var(--r-sm);
+      color: var(--ink);
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.5;
+      word-break: break-word;
+      padding: 9px 13px;
+      margin: 9px 0 0;
+    }
+    .block .say + .say { margin-top: 7px; }
+
+    /* ---------- 打卡大按钮：全宽橙色，完成态整块变深绿 ---------- */
+    .btn-checkin {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 18px;
+      min-height: 56px;
+      padding: 14px 18px;
+      border: 0;
+      border-radius: var(--r-pill);
+      background: var(--main);
+      color: var(--ink);
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      cursor: pointer;
+      transition: background-color .15s ease, transform .12s ease;
+    }
+    .btn-checkin:active { transform: scale(.97); filter: brightness(.95); }
+    .btn-checkin.is-done {
+      background: var(--green-deep);
+      color: #FFF;
+    }
+
+    /* #view-map 的样式在 Task 6 追加 */
   </style>
 </head>
 <body>
