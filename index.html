@@ -451,7 +451,91 @@
       color: #FFF;
     }
 
-    /* #view-map 的样式在 Task 6 追加 */
+    /* ---------- 全年地图：48 周贴纸墙 ----------
+       已细化周 = 贴上白卡贴纸（暖橙章+彩emoji，可点）；
+       未细化周 = 虚线空位（灰字灰emoji「内容还没出」）。
+       暖灰全部由 --ink 降透明度派生，不另起炉灶。 ---------- */
+    .map-grid {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .map-cell {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      min-height: 146px;
+      padding: 12px 8px;
+      border-radius: var(--r-sm);
+      background: rgba(74, 55, 40, .04);
+      border: 1.5px dashed rgba(74, 55, 40, .16);
+    }
+    .map-cell.detailed {
+      background: var(--card);
+      border: 0;
+      box-shadow: var(--shadow);
+      cursor: pointer;
+      transition: transform .12s ease, box-shadow .15s ease;
+    }
+    .map-cell.detailed:active {
+      transform: scale(.95);
+      box-shadow: var(--shadow-lift);
+    }
+
+    /* 周序号小胶囊：空位灰 / 已细化暖橙 */
+    .map-week {
+      background: rgba(74, 55, 40, .10);
+      color: rgba(74, 55, 40, .62);
+      font-size: 11.5px;
+      font-weight: 800;
+      letter-spacing: .06em;
+      padding: 2px 9px;
+      border-radius: var(--r-pill);
+    }
+    .map-cell.detailed .map-week {
+      background: var(--main-soft);
+      color: var(--caramel);
+    }
+    .map-emoji {
+      font-size: 26px;
+      line-height: 1.4;
+      margin-top: 6px;
+      filter: grayscale(1);
+      opacity: .55;
+    }
+    .map-cell.detailed .map-emoji { filter: none; opacity: 1; }
+    .map-theme {
+      font-size: 15px;
+      font-weight: 700;
+      line-height: 1.4;
+      margin-top: 4px;
+      color: rgba(74, 55, 40, .72);
+    }
+    .map-cell.detailed .map-theme { color: var(--ink); }
+    .map-en {
+      font-size: 11.5px;
+      font-weight: 600;
+      line-height: 1.4;
+      letter-spacing: .02em;
+      margin-top: 1px;
+      word-break: break-word;
+      color: rgba(74, 55, 40, .62);
+    }
+    .map-cell.detailed .map-en { color: var(--ink-soft); }
+    .map-tag {
+      margin-top: 8px;
+      padding: 2px 10px;
+      border-radius: var(--r-pill);
+      background: rgba(74, 55, 40, .10);
+      color: rgba(74, 55, 40, .62);
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: .05em;
+      white-space: nowrap;
+    }
   </style>
 </head>
 <body>
