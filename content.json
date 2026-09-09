@@ -1,0 +1,649 @@
+{
+  "version": 1,
+  "weeks": [
+    {
+      "week": 1, "stage": 1, "dates": "6/29-7/5",
+      "theme": "颜色①", "themeEn": "Colors", "emoji": "🎨",
+      "coreWords": [
+        {"en": "red", "zh": "红"}, {"en": "blue", "zh": "蓝"},
+        {"en": "yellow", "zh": "黄"}, {"en": "green", "zh": "绿"}
+      ],
+      "coreSentences": ["It's red!", "What color is this?"],
+      "detailed": true
+    },
+    {
+      "week": 2, "stage": 1, "dates": "7/6-7/12",
+      "theme": "动物①", "themeEn": "Animals", "emoji": "🐱",
+      "coreWords": [
+        {"en": "dog", "zh": "狗"}, {"en": "cat", "zh": "猫"},
+        {"en": "bird", "zh": "鸟"}, {"en": "fish", "zh": "鱼"}
+      ],
+      "coreSentences": ["I see a dog."],
+      "detailed": true
+    },
+    {
+      "week": 3, "stage": 1, "dates": "7/13-7/19",
+      "theme": "食物①", "themeEn": "Food", "emoji": "🍎",
+      "coreWords": [
+        {"en": "milk", "zh": "牛奶"}, {"en": "apple", "zh": "苹果"},
+        {"en": "banana", "zh": "香蕉"}, {"en": "egg", "zh": "鸡蛋"}
+      ],
+      "coreSentences": ["I want milk.", "I like apples."],
+      "detailed": true
+    },
+    {
+      "week": 4, "stage": 1, "dates": "7/20-7/26",
+      "theme": "身体①", "themeEn": "Body", "emoji": "👃",
+      "coreWords": [
+        {"en": "head", "zh": "头"}, {"en": "eyes", "zh": "眼睛"},
+        {"en": "nose", "zh": "鼻子"}, {"en": "mouth", "zh": "嘴巴"},
+        {"en": "ears", "zh": "耳朵"}
+      ],
+      "coreSentences": ["Touch your nose."],
+      "detailed": true
+    },
+    {
+      "week": 5, "stage": 1, "dates": "7/27-8/2",
+      "theme": "家人①", "themeEn": "Family", "emoji": "👨‍👩‍👧",
+      "coreWords": [
+        {"en": "mum", "zh": "妈妈"}, {"en": "dad", "zh": "爸爸"},
+        {"en": "baby", "zh": "宝宝"}, {"en": "grandma", "zh": "奶奶"},
+        {"en": "grandpa", "zh": "爷爷"}
+      ],
+      "coreSentences": ["This is Mum.", "I love Dad."],
+      "detailed": false
+    },
+    {
+      "week": 6, "stage": 1, "dates": "8/3-8/9",
+      "theme": "动作①", "themeEn": "Actions", "emoji": "🎵",
+      "coreWords": [
+        {"en": "clap", "zh": "拍手"}, {"en": "jump", "zh": "跳"},
+        {"en": "run", "zh": "跑"}, {"en": "sit", "zh": "坐"},
+        {"en": "walk", "zh": "走"}
+      ],
+      "coreSentences": ["I can jump!"],
+      "detailed": false
+    },
+    {
+      "week": 7, "stage": 1, "dates": "8/10-8/16",
+      "theme": "数字①", "themeEn": "Numbers", "emoji": "🔢",
+      "coreWords": [
+        {"en": "one", "zh": "一"}, {"en": "two", "zh": "二"},
+        {"en": "three", "zh": "三"}, {"en": "four", "zh": "四"},
+        {"en": "five", "zh": "五"}
+      ],
+      "coreSentences": ["I have two hands."],
+      "detailed": false
+    },
+    {
+      "week": 8, "stage": 1, "dates": "8/17-8/23",
+      "theme": "颜色②", "themeEn": "Colors", "emoji": "🎨",
+      "coreWords": [
+        {"en": "red", "zh": "红"}, {"en": "blue", "zh": "蓝"},
+        {"en": "yellow", "zh": "黄"}, {"en": "green", "zh": "绿"},
+        {"en": "pink", "zh": "粉红"}, {"en": "purple", "zh": "紫色"}
+      ],
+      "coreSentences": ["Which is red?", "I like blue."],
+      "detailed": false
+    },
+    {
+      "week": 9, "stage": 1, "dates": "8/24-8/30",
+      "theme": "动物②", "themeEn": "Animals", "emoji": "🐱",
+      "coreWords": [
+        {"en": "cow", "zh": "奶牛"}, {"en": "duck", "zh": "鸭子"},
+        {"en": "pig", "zh": "猪"}, {"en": "sheep", "zh": "绵羊"}
+      ],
+      "coreSentences": ["The cow says moo.", "I see a duck."],
+      "detailed": false
+    },
+    {
+      "week": 10, "stage": 1, "dates": "8/31-9/6",
+      "theme": "食物②", "themeEn": "Food", "emoji": "🍎",
+      "coreWords": [
+        {"en": "rice", "zh": "米饭"}, {"en": "water", "zh": "水"},
+        {"en": "bread", "zh": "面包"}, {"en": "juice", "zh": "果汁"}
+      ],
+      "coreSentences": ["I want water.", "I eat rice."],
+      "detailed": false
+    },
+    {
+      "week": 11, "stage": 1, "dates": "9/7-9/13",
+      "theme": "衣服①", "themeEn": "Clothes", "emoji": "👕",
+      "coreWords": [
+        {"en": "hat", "zh": "帽子"}, {"en": "shirt", "zh": "衬衫"},
+        {"en": "shoes", "zh": "鞋子"}, {"en": "socks", "zh": "袜子"}
+      ],
+      "coreSentences": ["Put on your shoes.", "My hat!"],
+      "detailed": false
+    },
+    {
+      "week": 12, "stage": 1, "dates": "9/14-9/20",
+      "theme": "天气①", "themeEn": "Weather", "emoji": "☀️",
+      "coreWords": [
+        {"en": "sun", "zh": "太阳"}, {"en": "rain", "zh": "雨"},
+        {"en": "wind", "zh": "风"}, {"en": "cloud", "zh": "云"}
+      ],
+      "coreSentences": ["It's sunny!", "I see a cloud."],
+      "detailed": false
+    },
+    {
+      "week": 13, "stage": 2, "dates": "9/21-9/27",
+      "theme": "情绪①", "themeEn": "Feelings", "emoji": "😊",
+      "coreWords": [
+        {"en": "happy", "zh": "开心"}, {"en": "sad", "zh": "难过"},
+        {"en": "angry", "zh": "生气"}, {"en": "tired", "zh": "累"}
+      ],
+      "coreSentences": ["I am happy!", "Are you tired?"],
+      "detailed": false
+    },
+    {
+      "week": 14, "stage": 2, "dates": "9/28-10/4",
+      "theme": "身体②", "themeEn": "Body", "emoji": "👃",
+      "coreWords": [
+        {"en": "hands", "zh": "手"}, {"en": "feet", "zh": "脚"},
+        {"en": "tummy", "zh": "肚子"}, {"en": "back", "zh": "背"},
+        {"en": "hair", "zh": "头发"}
+      ],
+      "coreSentences": ["My hands!", "Wash your feet."],
+      "detailed": false
+    },
+    {
+      "week": 15, "stage": 2, "dates": "10/5-10/11",
+      "theme": "动物③", "themeEn": "Animals", "emoji": "🐱",
+      "coreWords": [
+        {"en": "lion", "zh": "狮子"}, {"en": "tiger", "zh": "老虎"},
+        {"en": "elephant", "zh": "大象"}, {"en": "monkey", "zh": "猴子"}
+      ],
+      "coreSentences": ["The lion is big!", "I see a tiger."],
+      "detailed": false
+    },
+    {
+      "week": 16, "stage": 2, "dates": "10/12-10/18",
+      "theme": "食物③", "themeEn": "Food", "emoji": "🍎",
+      "coreWords": [
+        {"en": "cake", "zh": "蛋糕"}, {"en": "carrot", "zh": "胡萝卜"},
+        {"en": "chicken", "zh": "鸡肉"}, {"en": "juice", "zh": "果汁"}
+      ],
+      "coreSentences": ["I like cake.", "Do you like carrots?"],
+      "detailed": false
+    },
+    {
+      "week": 17, "stage": 2, "dates": "10/19-10/25",
+      "theme": "动作②", "themeEn": "Actions", "emoji": "🎵",
+      "coreWords": [
+        {"en": "stomp", "zh": "跺脚"}, {"en": "hop", "zh": "单脚跳"},
+        {"en": "skip", "zh": "蹦跳"}, {"en": "tip-toe", "zh": "踮脚尖"},
+        {"en": "spin", "zh": "转圈"}
+      ],
+      "coreSentences": ["I can hop!", "Let's stomp!"],
+      "detailed": false
+    },
+    {
+      "week": 18, "stage": 2, "dates": "10/26-11/1",
+      "theme": "交通①", "themeEn": "Transport", "emoji": "🚗",
+      "coreWords": [
+        {"en": "car", "zh": "汽车"}, {"en": "bus", "zh": "公交车"},
+        {"en": "bike", "zh": "自行车"}, {"en": "plane", "zh": "飞机"}
+      ],
+      "coreSentences": ["I see a blue car.", "The bus is big."],
+      "detailed": false
+    },
+    {
+      "week": 19, "stage": 2, "dates": "11/2-11/8",
+      "theme": "家人②", "themeEn": "Family", "emoji": "👨‍👩‍👧",
+      "coreWords": [
+        {"en": "mum", "zh": "妈妈"}, {"en": "dad", "zh": "爸爸"},
+        {"en": "baby", "zh": "宝宝"}, {"en": "grandma", "zh": "奶奶"},
+        {"en": "grandpa", "zh": "爷爷"}, {"en": "sister", "zh": "姐妹"},
+        {"en": "brother", "zh": "兄弟"}
+      ],
+      "coreSentences": ["This is my dad.", "My grandma likes..."],
+      "detailed": false
+    },
+    {
+      "week": 20, "stage": 2, "dates": "11/9-11/15",
+      "theme": "颜色③", "themeEn": "Colors", "emoji": "🎨",
+      "coreWords": [
+        {"en": "orange", "zh": "橙色"}, {"en": "white", "zh": "白色"},
+        {"en": "black", "zh": "黑色"}, {"en": "gold", "zh": "金色"}
+      ],
+      "coreSentences": ["My favorite color is...", "What color do you like?"],
+      "detailed": false
+    },
+    {
+      "week": 21, "stage": 2, "dates": "11/16-11/22",
+      "theme": "数字②", "themeEn": "Numbers", "emoji": "🔢",
+      "coreWords": [
+        {"en": "one", "zh": "一"}, {"en": "two", "zh": "二"},
+        {"en": "three", "zh": "三"}, {"en": "four", "zh": "四"},
+        {"en": "five", "zh": "五"}, {"en": "six", "zh": "六"},
+        {"en": "seven", "zh": "七"}, {"en": "eight", "zh": "八"},
+        {"en": "nine", "zh": "九"}, {"en": "ten", "zh": "十"}
+      ],
+      "coreSentences": ["How many?", "I have three!"],
+      "detailed": false
+    },
+    {
+      "week": 22, "stage": 2, "dates": "11/23-11/29",
+      "theme": "地点①", "themeEn": "Places", "emoji": "🏠",
+      "coreWords": [
+        {"en": "home", "zh": "家"}, {"en": "park", "zh": "公园"},
+        {"en": "shop", "zh": "商店"}, {"en": "bed", "zh": "床"}
+      ],
+      "coreSentences": ["Let's go to the park!", "I am home."],
+      "detailed": false
+    },
+    {
+      "week": 23, "stage": 2, "dates": "11/30-12/6",
+      "theme": "圣诞特辑", "themeEn": "Christmas", "emoji": "🎄",
+      "coreWords": [
+        {"en": "tree", "zh": "圣诞树"}, {"en": "gift", "zh": "礼物"},
+        {"en": "star", "zh": "星星"}, {"en": "Santa", "zh": "圣诞老人"},
+        {"en": "snow", "zh": "雪"}
+      ],
+      "coreSentences": ["Merry Christmas!", "I see a gift."],
+      "detailed": false
+    },
+    {
+      "week": 24, "stage": 2, "dates": "12/7-12/13",
+      "theme": "综合复习", "themeEn": "Review", "emoji": "🔄",
+      "coreWords": [],
+      "coreSentences": [],
+      "detailed": false
+    },
+    {
+      "week": 25, "stage": 3, "dates": "1/4-1/10",
+      "theme": "大自然①", "themeEn": "Nature", "emoji": "🌳",
+      "coreWords": [
+        {"en": "tree", "zh": "树"}, {"en": "flower", "zh": "花"},
+        {"en": "grass", "zh": "草"}, {"en": "leaf", "zh": "树叶"},
+        {"en": "sky", "zh": "天空"}
+      ],
+      "coreSentences": ["I see a green tree.", "The flower is pretty."],
+      "detailed": false
+    },
+    {
+      "week": 26, "stage": 3, "dates": "1/11-1/17",
+      "theme": "情绪②", "themeEn": "Feelings", "emoji": "😊",
+      "coreWords": [
+        {"en": "hungry", "zh": "饿"}, {"en": "thirsty", "zh": "渴"},
+        {"en": "cold", "zh": "冷"}, {"en": "hot", "zh": "热"},
+        {"en": "sleepy", "zh": "困"}
+      ],
+      "coreSentences": ["I'm hungry!", "I want rice."],
+      "detailed": false
+    },
+    {
+      "week": 27, "stage": 3, "dates": "1/18-1/24",
+      "theme": "昆虫", "themeEn": "Insects", "emoji": "🐛",
+      "coreWords": [
+        {"en": "ant", "zh": "蚂蚁"}, {"en": "bee", "zh": "蜜蜂"},
+        {"en": "butterfly", "zh": "蝴蝶"}, {"en": "spider", "zh": "蜘蛛"}
+      ],
+      "coreSentences": ["I see a bee!", "The butterfly is yellow."],
+      "detailed": false
+    },
+    {
+      "week": 28, "stage": 3, "dates": "1/25-1/31",
+      "theme": "衣服②", "themeEn": "Clothes", "emoji": "👕",
+      "coreWords": [
+        {"en": "jacket", "zh": "夹克"}, {"en": "sweater", "zh": "毛衣"},
+        {"en": "pants", "zh": "裤子"}, {"en": "boots", "zh": "靴子"}
+      ],
+      "coreSentences": ["Put on your jacket.", "My blue sweater."],
+      "detailed": false
+    },
+    {
+      "week": 29, "stage": 3, "dates": "2/1-2/7",
+      "theme": "现在进行", "themeEn": "Present Continuous", "emoji": "🎭",
+      "coreWords": [
+        {"en": "running", "zh": "跑步"}, {"en": "jumping", "zh": "跳"},
+        {"en": "eating", "zh": "吃"}, {"en": "sleeping", "zh": "睡觉"}
+      ],
+      "coreSentences": ["I am running!", "Dad is eating."],
+      "detailed": false
+    },
+    {
+      "week": 30, "stage": 3, "dates": "2/8-2/14",
+      "theme": "动物④", "themeEn": "Animals", "emoji": "🐱",
+      "coreWords": [
+        {"en": "giraffe", "zh": "长颈鹿"}, {"en": "zebra", "zh": "斑马"},
+        {"en": "bear", "zh": "熊"}, {"en": "kangaroo", "zh": "袋鼠"}
+      ],
+      "coreSentences": ["The giraffe is tall.", "I like bears."],
+      "detailed": false
+    },
+    {
+      "week": 31, "stage": 3, "dates": "2/15-2/21",
+      "theme": "食物④", "themeEn": "Food", "emoji": "🍎",
+      "coreWords": [
+        {"en": "plate", "zh": "盘子"}, {"en": "bowl", "zh": "碗"},
+        {"en": "cup", "zh": "杯子"}, {"en": "spoon", "zh": "勺子"}
+      ],
+      "coreSentences": ["Breakfast time!", "I eat with a spoon."],
+      "detailed": false
+    },
+    {
+      "week": 32, "stage": 3, "dates": "2/22-2/28",
+      "theme": "天气②", "themeEn": "Weather", "emoji": "☀️",
+      "coreWords": [
+        {"en": "sunny", "zh": "晴"}, {"en": "rainy", "zh": "雨"},
+        {"en": "windy", "zh": "风"}, {"en": "cloudy", "zh": "多云"},
+        {"en": "cold", "zh": "冷"}, {"en": "hot", "zh": "热"}
+      ],
+      "coreSentences": ["It's cold today.", "I like sunny days."],
+      "detailed": false
+    },
+    {
+      "week": 33, "stage": 3, "dates": "3/1-3/7",
+      "theme": "字母周", "themeEn": "Alphabet", "emoji": "🔤",
+      "coreWords": [
+        {"en": "A", "zh": "a"}, {"en": "B", "zh": "b"}, {"en": "C", "zh": "c"},
+        {"en": "D", "zh": "d"}, {"en": "E", "zh": "e"}, {"en": "F", "zh": "f"}
+      ],
+      "coreSentences": ["A is for apple!", "B is for ball!"],
+      "detailed": false
+    },
+    {
+      "week": 34, "stage": 3, "dates": "3/8-3/14",
+      "theme": "儿歌特辑", "themeEn": "Nursery Rhymes", "emoji": "🎵",
+      "coreWords": [
+        {"en": "Twinkle", "zh": "小星星"}, {"en": "Old Mac", "zh": "老麦克唐纳"},
+        {"en": "ABC", "zh": "字母歌"}, {"en": "Baby Shark", "zh": "鲨鱼宝宝"}
+      ],
+      "coreSentences": [],
+      "detailed": false
+    },
+    {
+      "week": 35, "stage": 3, "dates": "3/15-3/21",
+      "theme": "地点②", "themeEn": "Places", "emoji": "🏠",
+      "coreWords": [
+        {"en": "school", "zh": "学校"}, {"en": "kitchen", "zh": "厨房"},
+        {"en": "bathroom", "zh": "浴室"}, {"en": "garden", "zh": "花园"}
+      ],
+      "coreSentences": ["Where is Mum?", "She is in the kitchen."],
+      "detailed": false
+    },
+    {
+      "week": 36, "stage": 3, "dates": "3/22-3/28",
+      "theme": "综合复习", "themeEn": "Review", "emoji": "🔄",
+      "coreWords": [],
+      "coreSentences": [],
+      "detailed": false
+    },
+    {
+      "week": 37, "stage": 4, "dates": "3/29-4/4",
+      "theme": "家人③", "themeEn": "Family", "emoji": "👨‍👩‍👧",
+      "coreWords": [
+        {"en": "tall", "zh": "高"}, {"en": "kind", "zh": "善良"},
+        {"en": "funny", "zh": "有趣"}, {"en": "strong", "zh": "强壮"}
+      ],
+      "coreSentences": ["My dad is strong.", "Mum is kind."],
+      "detailed": false
+    },
+    {
+      "week": 38, "stage": 4, "dates": "4/5-4/11",
+      "theme": "动物⑤", "themeEn": "Animals", "emoji": "🐱",
+      "coreWords": [
+        {"en": "run", "zh": "跑"}, {"en": "swim", "zh": "游泳"},
+        {"en": "fly", "zh": "飞"}, {"en": "eat", "zh": "吃"},
+        {"en": "sleep", "zh": "睡"}
+      ],
+      "coreSentences": ["A bird can fly.", "Fish can swim."],
+      "detailed": false
+    },
+    {
+      "week": 39, "stage": 4, "dates": "4/12-4/18",
+      "theme": "颜色④", "themeEn": "Colors", "emoji": "🎨",
+      "coreWords": [
+        {"en": "circle", "zh": "圆形"}, {"en": "square", "zh": "方形"},
+        {"en": "star", "zh": "星星"}, {"en": "heart", "zh": "心形"}
+      ],
+      "coreSentences": ["A red circle.", "The star is yellow."],
+      "detailed": false
+    },
+    {
+      "week": 40, "stage": 4, "dates": "4/19-4/25",
+      "theme": "故事周", "themeEn": "Story", "emoji": "📖",
+      "coreWords": [],
+      "coreSentences": [],
+      "detailed": false
+    },
+    {
+      "week": 41, "stage": 4, "dates": "4/26-5/2",
+      "theme": "动作③", "themeEn": "Actions", "emoji": "🎵",
+      "coreWords": [
+        {"en": "first", "zh": "先"}, {"en": "then", "zh": "然后"}
+      ],
+      "coreSentences": ["First clap, then jump!"],
+      "detailed": false
+    },
+    {
+      "week": 42, "stage": 4, "dates": "5/3-5/9",
+      "theme": "角色扮演", "themeEn": "Role Play", "emoji": "🛒",
+      "coreWords": [
+        {"en": "shop", "zh": "商店"}, {"en": "buy", "zh": "买"},
+        {"en": "how much", "zh": "多少钱"}, {"en": "please", "zh": "请"}
+      ],
+      "coreSentences": ["I want an apple, please.", "Here you are!"],
+      "detailed": false
+    },
+    {
+      "week": 43, "stage": 4, "dates": "5/10-5/16",
+      "theme": "大自然②", "themeEn": "Nature", "emoji": "🌳",
+      "coreWords": [
+        {"en": "sun", "zh": "太阳"}, {"en": "moon", "zh": "月亮"},
+        {"en": "star", "zh": "星星"}, {"en": "rainbow", "zh": "彩虹"},
+        {"en": "cloud", "zh": "云"}
+      ],
+      "coreSentences": ["Look at the rainbow!", "The moon is big."],
+      "detailed": false
+    },
+    {
+      "week": 44, "stage": 4, "dates": "5/17-5/23",
+      "theme": "故事周②", "themeEn": "Story", "emoji": "📖",
+      "coreWords": [],
+      "coreSentences": [],
+      "detailed": false
+    },
+    {
+      "week": 45, "stage": 4, "dates": "5/24-5/30",
+      "theme": "生日特辑", "themeEn": "Birthday", "emoji": "🎂",
+      "coreWords": [
+        {"en": "cake", "zh": "蛋糕"}, {"en": "candle", "zh": "蜡烛"},
+        {"en": "gift", "zh": "礼物"}, {"en": "balloon", "zh": "气球"},
+        {"en": "party", "zh": "派对"}
+      ],
+      "coreSentences": ["Happy Birthday!", "I am three!"],
+      "detailed": false
+    },
+    {
+      "week": 46, "stage": 4, "dates": "5/31-6/6",
+      "theme": "数字③", "themeEn": "Numbers", "emoji": "🔢",
+      "coreWords": [],
+      "coreSentences": ["I have five crayons."],
+      "detailed": false
+    },
+    {
+      "week": 47, "stage": 4, "dates": "6/7-6/13",
+      "theme": "字母周②", "themeEn": "Alphabet", "emoji": "🔤",
+      "coreWords": [
+        {"en": "G", "zh": "g"}, {"en": "H", "zh": "h"}, {"en": "I", "zh": "i"},
+        {"en": "J", "zh": "j"}, {"en": "K", "zh": "k"}, {"en": "L", "zh": "l"},
+        {"en": "M", "zh": "m"}, {"en": "N", "zh": "n"}
+      ],
+      "coreSentences": ["G is for green!", "M is for Mum!"],
+      "detailed": false
+    },
+    {
+      "week": 48, "stage": 4, "dates": "6/14-6/20",
+      "theme": "年度回顾", "themeEn": "Year Review", "emoji": "🎉",
+      "coreWords": [],
+      "coreSentences": [],
+      "detailed": false
+    }
+  ],
+  "details": {
+    "1": {
+      "video": {
+        "primary": {"name": "I See Something Blue", "no": "026"},
+        "advanced": {"name": "I See Something Pink", "no": "027"}
+      },
+      "advanced": "进阶词4个：pink（粉红）· purple（紫色）· orange（橙色）· rainbow（彩虹）——红蓝黄绿熟了之后随口带进去，不求记住。进阶句型：\"This apple is red and green.\" \"I like blue more than red.\" 进阶游戏：颜色混合实验（red+yellow=orange）。进阶绘本：《Brown Bear, Brown Bear, What Do You See?》先读 Red Bird 和 Blue Horse 两页。",
+      "days": [
+        {"day": 1, "title": "红色日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "挑红色衣服，边穿边说；穿好站镜子前指", "say": ["Let's wear your red shirt! Red!", "Red shirt!"]},
+           {"time": "早餐 7:30-7:45", "do": "找红色食物：苹果、番茄；红色杯子也指", "say": ["Red apple! Yummy!", "Red cup!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "红色寻宝：客厅找所有红色东西，找到大力鼓掌", "say": ["Let's find red!", "Red! You found red!"]},
+           {"time": "晚饭后（5分钟）", "do": "打印苹果轮廓涂红色，涂完贴墙上；放视频或唱颜色歌Red段", "say": ["What color? Red! A red apple!"]}
+         ],
+         "remember": "一切红色 = \"Red!\""},
+        {"day": 2, "title": "蓝色日", "rest": false,
+         "sections": [
+           {"time": "穿衣服", "do": "Yesterday red, today blue，站镜子前看自己", "say": ["Yesterday red. Today... blue!"]},
+           {"time": "早餐", "do": "指蓝色碗，顺便复习红色", "say": ["Blue bowl!", "Remember red?"]},
+           {"time": "出门（湖边/海边）", "do": "看天看水，你先指先喊", "say": ["Look up! The sky is blue! Blue sky!", "Look down! The water is blue!"]},
+           {"time": "晚饭后", "do": "蓝色寻宝+红蓝对比：红苹果和蓝玩具放一起让她指；放视频或唱Red+Blue两段", "say": ["Which is red? Which is blue?"]}
+         ],
+         "remember": "天空+水 = Blue"},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "黄+绿日", "rest": false,
+         "sections": [
+           {"time": "早餐", "do": "找黄色食物：鸡蛋黄、香蕉，让她帮你在冰箱找", "say": ["Yellow egg! Yellow banana!"]},
+           {"time": "上午（8分钟）", "do": "颜色分类：红蓝黄积木混一起，三个纸片当\"颜色家\"，你边分边自言自语", "say": ["Let's put red here, blue here, yellow here!"]},
+           {"time": "出门", "do": "指所有绿色：草、树叶、灌木，蹲下摘片叶子递给她", "say": ["Green! The grass is green!", "Green leaf!"]},
+           {"time": "晚饭后", "do": "放视频或唱完整四段颜色歌（Red→Blue→Yellow→Green），边唱边指家里对应颜色的东西", "say": []}
+         ],
+         "remember": "食物=Yellow，户外=Green"},
+        {"day": 5, "title": "颜色大回顾", "rest": false,
+         "sections": [
+           {"time": "穿衣服", "do": "Red or blue 让她自己选并说出颜色名", "say": ["Red shirt or blue shirt?"]},
+           {"time": "上午（10分钟）", "do": "颜色大游行：放视频，你说颜色她跑去碰对应颜色的东西", "say": ["Red!", "Blue!"]},
+           {"time": "睡前", "do": "颜色小故事，讲完放视频或唱颜色歌", "say": ["Once there was a red apple. It met a blue bird. They saw a yellow sun and sat on the green grass. The end!"]}
+         ],
+         "remember": "让她二选一 + 大游行"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "2": {
+      "video": {
+        "primary": {"name": "Old MacDonald", "no": "016"}
+      },
+      "advanced": "进阶词：cow（牛/moo）· duck（鸭子/quack）——加到 Old MacDonald 里多唱两段。进阶句型：\"I see a dog and a cat.\"（一次说两个动物）\"The dog is brown. The cat is white.\"（描述动物颜色——串上周颜色词）进阶绘本：《Brown Bear, Brown Bear, What Do You See?》继续读——上周读了 Red Bird，这周正好把整本书的动物串一遍。",
+      "days": [
+        {"day": 1, "title": "Dog 日", "rest": false,
+         "sections": [
+           {"time": "穿衣服", "do": "有小狗图案的衣服就指出来（没有就跳过）", "say": ["Look! A dog on your shirt! Woof woof!"]},
+           {"time": "上午（8分钟）", "do": "神秘袋摸狗：毛绒狗放进布袋让她伸手摸，拿出来抱一抱；反复说 dog+woof 让她跟着叫", "say": ["What's in the bag?", "It's a... dog! Woof woof!", "This is a dog."]},
+           {"time": "出门", "do": "路上看到狗就指出来", "say": ["Look! A dog! Woof woof! What does the dog say?"]},
+           {"time": "晚饭后", "do": "一起趴地上学狗爬学狗叫；唱 Old MacDonald 的 dog 段", "say": ["Let's be a dog!"]}
+         ],
+         "remember": "狗=dog，叫=woof"},
+        {"day": 2, "title": "Cat 日", "rest": false,
+         "sections": [
+           {"time": "穿衣服", "do": "复习昨天的狗，再拿出毛绒猫介绍今天的主角", "say": ["Remember dog? Woof woof!", "Today we have a cat! Meow!"]},
+           {"time": "上午（8分钟）", "do": "狗猫对比：毛绒狗猫并排介绍；你学叫声她指对应动物，反过来你指她学叫", "say": ["This is a dog. This is a cat."]},
+           {"time": "睡前", "do": "讲猫狗小故事，然后唱 Old MacDonald 的 dog+cat 两段", "say": ["Dog said woof. Cat said meow. Dog and cat are friends!"]}
+         ],
+         "remember": "猫=cat，叫=meow"},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "Bird + Fish 日", "rest": false,
+         "sections": [
+           {"time": "上午（8分钟）", "do": "动物排队：dog/cat/bird 排成一排，指一个说一个；你说名字她拿起来", "say": ["Dog... cat... bird!", "Give me the bird!"]},
+           {"time": "出门", "do": "去湖边/海边看鸟看鱼", "say": ["Look! A bird! Tweet tweet!", "Look in the water! Fish! Blub blub!"]},
+           {"time": "晚饭后", "do": "你画一条鱼（简笔画）她涂色，边涂说 Blue fish（顺便复习上周颜色）；唱 Old MacDonald 四段完整版", "say": ["Let's draw a fish!", "Fish! Blue fish!"]}
+         ],
+         "remember": "鸟=bird/tweet，鱼=fish/blub"},
+        {"day": 5, "title": "动物大游行", "rest": false,
+         "sections": [
+           {"time": "上午（10分钟）", "do": "动物运动会：你说动物名她做动作+叫声（趴下学狗叫、张开手臂飞……），四种动物各做一遍", "say": ["Let's be a dog!", "Let's be a bird!"]},
+           {"time": "睡前", "do": "动物猜谜：你学叫声她猜动物，交换她学叫你猜；唱 Old MacDonald 完整版", "say": ["Woof woof! What animal?", "Dog!", "Yes!"]}
+         ],
+         "remember": "四个动物全部复习一遍"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "3": {
+      "video": {
+        "primary": {"name": "Are You Hungry", "no": "138"}
+      },
+      "advanced": "进阶词：bread（面包）· water（水）——日常最常用，吃饭时顺手加。进阶句型：\"I want more milk please.\"（加 more + please——教礼貌表达）\"Do you like banana?\" \"Yes, I do. / No, I don't.\"（完整问答）进阶活动：一起做个简单食物：剥香蕉、切苹果（你用刀她看着），过程中全程英文——\"Peel the banana. Cut the apple. Eat!\"",
+      "days": [
+        {"day": 1, "title": "Milk + Apple 日", "rest": false,
+         "sections": [
+           {"time": "早餐", "do": "倒牛奶时喝一口夸张地 Mmm；吃苹果时加音效（顺便复习颜色，现在给食物也加音效）", "say": ["Milk! Yummy milk!", "Mmm!", "Apple! Red apple! Crunch crunch!"]},
+           {"time": "上午（5分钟）", "do": "真食物展示：苹果和牛奶放桌上，让她摸一摸、假装喝一口；唱 Are You Hungry 的 milk 和 apple 段", "say": ["What's this? Apple!", "And this? Milk!"]},
+           {"time": "晚饭后", "do": "吃水果时让她二选一（提前预告明天的词 banana）", "say": ["Do you want an apple or a banana?"]}
+         ],
+         "remember": "牛奶=milk，苹果=apple"},
+        {"day": 2, "title": "Banana + Egg 日", "rest": false,
+         "sections": [
+           {"time": "早餐", "do": "吃鸡蛋（Yummy egg），剥香蕉时边说 Peel peel peel 边做剥皮动作", "say": ["Egg! Yummy egg!", "Banana! Yellow banana! Peel peel peel!"]},
+           {"time": "上午（8分钟）", "do": "食物配对：苹果/香蕉/鸡蛋配卡片，让她把卡片放到对应食物旁，四样各配一次", "say": ["Where is banana?"]},
+           {"time": "睡前", "do": "唱 Are You Hungry 四段完整版，复习今天吃的", "say": ["Today we ate banana and egg!"]}
+         ],
+         "remember": "香蕉=banana，蛋=egg"},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "食物分类", "rest": false,
+         "sections": [
+           {"time": "早餐", "do": "指桌上食物复习，四个食物各指一遍等她回答", "say": ["What's this?"]},
+           {"time": "上午（8分钟）", "do": "开餐厅：你当服务员她当客人，她说 I want... 就真给她一块，四样各来一轮", "say": ["What do you want? Apple or banana?", "I want apple!"]},
+           {"time": "晚饭", "do": "吃饭时指食物复习", "say": ["Milk! Egg! What else?"]}
+         ],
+         "remember": "\"I want...\" 句型——这是最有用的句型之一"},
+        {"day": 5, "title": "食物商店", "rest": false,
+         "sections": [
+           {"time": "上午（10分钟）", "do": "逛超市：四个食物摆茶几上给她小篮子，你说 I want... 她拿；交换她说你帮她拿", "say": ["Let's go shopping!", "I want milk!", "I want apple!"]},
+           {"time": "睡前", "do": "讲食物小故事，唱完歌晚安", "say": ["Once a little girl was hungry. She said 'I want milk!' She drank milk. Then 'I want banana!' She ate banana. Then she was full and happy!"]}
+         ],
+         "remember": "逛超市游戏——她说\"I want...\"你就给"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "4": {
+      "video": {
+        "primary": {"name": "Head Shoulders Knees & Toes", "no": "013"}
+      },
+      "advanced": "进阶词：hands（手）· feet（脚）——洗澡时最自然。进阶句型：\"I have two eyes.\" \"I have one nose.\"（数词+身体——串数字概念）\"Touch your nose with your finger.\"（更精确的指令）进阶游戏：镜子模仿——站镜子前，你指自己鼻子说 \"Nose!\" 她指镜子里的自己说 \"Nose!\"，五官全部做一遍。",
+      "days": [
+        {"day": 1, "title": "Eyes + Nose 日", "rest": false,
+         "sections": [
+           {"time": "穿衣服", "do": "穿好衣服蹲下和她面对面，自己先指眼睛眨给她看；她指了之后确认（眨眼睛）", "say": ["Where are your eyes?", "Yes! Your eyes! Blink blink!"]},
+           {"time": "早餐", "do": "拿苹果放她鼻子前闻一闻", "say": ["Let's smell! With your nose!", "Sniff sniff! Your nose smells!"]},
+           {"time": "洗澡", "do": "洗脸时边洗边说", "say": ["Wash your eyes! Wash your nose!"]},
+           {"time": "睡前", "do": "指五官游戏：你问 my nose 她指你的、your nose 她指自己的，eyes 同样玩；唱五官歌", "say": ["Where is my nose?", "Where is your nose?"]}
+         ],
+         "remember": "眼睛=eyes（眨），鼻子=nose（嗅）"},
+        {"day": 2, "title": "Mouth + Ears 日", "rest": false,
+         "sections": [
+           {"time": "刷牙", "do": "刷牙时让她张嘴，边刷边说", "say": ["Open your mouth! Let's brush!", "Mouth!", "Brush brush brush your mouth!"]},
+           {"time": "早餐", "do": "吃东西时指她的嘴，顺便复习昨天的眼睛和鼻子", "say": ["Yummy in your mouth!", "Where are your eyes? Where is your nose?"]},
+           {"time": "上午（5分钟）", "do": "耳朵听声音：拉自己耳朵，再轻声说话、指窗外让她听", "say": ["Where are your ears?", "Listen! What do you hear?", "Your ears hear the bird!"]},
+           {"time": "睡前", "do": "唱完整五官歌，速度越来越快，最后快到找不到部位她就笑瘫了", "say": []}
+         ],
+         "remember": "嘴巴=mouth（吃），耳朵=ears（听）"},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "五官大考验", "rest": false,
+         "sections": [
+           {"time": "任何时间", "do": "我说你指（加速版）：连着说五个部位让她指，速度越来越快，她跟不上了就是大笑时刻", "say": ["Touch your nose! Touch your mouth! Touch your ears! Touch your eyes! Touch your head!"]},
+           {"time": "上午（8分钟）", "do": "画一张脸：画个大圆（头），问她五官画在哪，一样一样画完整张脸（eyes、nose、mouth、ears）", "say": ["Where do the eyes go?"]},
+           {"time": "洗澡", "do": "洗澡时五官全套洗一遍", "say": ["Wash your head! Wash your ears! Wash your nose!"]}
+         ],
+         "remember": "指认加速——最后一定要快到乱掉才会笑"},
+        {"day": 5, "title": "身体大回顾", "rest": false,
+         "sections": [
+           {"time": "任何时间", "do": "反转版：这次她来说、你来指，她说不出来就小声提醒", "say": []},
+           {"time": "上午（8分钟）", "do": "贴五官：打印（或画）空白脸，五官剪成贴片，她说哪个就贴哪个；贴完贴冰箱当本周成果展", "say": ["Eyes!"]},
+           {"time": "睡前", "do": "晚安五官：亲着眼睛/鼻子/嘴/耳朵说晚安，然后唱完歌", "say": ["Goodnight, eyes!", "Goodnight, nose!", "Goodnight, mouth!", "Goodnight, ears!"]}
+         ],
+         "remember": "晚安五官——最温柔的复习方式"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    }
+  }
+}
