@@ -12,7 +12,7 @@
 - 目前第 1-4 周已细化（Colors / Animals / Food / Body）；第 5 周起只有骨架，App 内显示「内容还没出」。
 - 打开默认停在**第 2 周 Animals**（DEFAULT_WEEK=2）。
 - **打卡记录只存在手机本地**（localStorage，浏览器本地存储），没有服务器、不跨设备同步；换设备或清浏览器数据会重新开始。
-- 托管于 GitHub Pages（GitHub 免费网页托管）——建仓推送、开启 Pages 的收尾部署步骤执行后即生效，此后改动 push 即上线。
+- 托管于 GitHub Pages（GitHub 免费网页托管），**已部署上线**：push 到 master 后由 `.github/workflows/pages.yml` 工作流自动发布（约 1-2 分钟生效）。注意本仓库不能用 GitHub 老式"分支构建"方式（新仓库会卡死在 building 状态），必须走工作流部署。
 
 线上地址：<https://meiyanjie1990.github.io/qianling-english/>
 
@@ -23,7 +23,7 @@
 - **内容源材料在 `E:\谦灵英语启蒙\`**（另一个项目，有它自己的 CLAUDE.md）：每周一个 `第X周-主题\` 文件夹，装 docx 三件套（详细计划 / 配套讲义 / 冰箱贴），另有 `年度规划-谦灵英语启蒙.md` 和 `视频资源\`。App 仓库**只存转录后的 content.json，不存源 docx**。
 - 转录参考：`docs/source-transcripts\` 放着 1-4 周源材料（docx 三件套）的 markdown 转录版 + 年度规划，转录 content.json 时对照用。
 - 设计文档与 8 任务实施计划在 `docs\superpowers\specs\` 和 `docs\superpowers\plans\`（2026-09-09，本 App 从零到上线的完整记录）。
-- 开发期（2026-09）的隔离 worktree 在 `.worktrees\qianling-app`（feat/qianling-app 分支），收尾合并后删除即可；日常开发一律以主目录为准。
+- 日常开发一律以主目录为准（2026-09 开发期的隔离 worktree 与 feat 分支已合并删除）。
 
 ## 当前进度
 
@@ -33,7 +33,7 @@
 | 细化内容（details） | 第 1-4 周：Colors / Animals / Food / Body，每周 7 天（休息日固定第 3、6、7 天） |
 | 页面代码 | v1：三页齐全（本周页 / 当天详情页 / 全年地图页）+ PWA 套件 + 更新徽标 |
 | 测试 | 20/20 通过（`node --test`） |
-| 仓库与上线 | Task 8 收尾步骤（建仓推送、开启 Pages、线上验证），紧接本提交执行 |
+| 仓库与上线 | ✅ 已上线 https://meiyanjie1990.github.io/qianling-english/，工作流自动部署 |
 
 ## 文件结构
 
@@ -51,6 +51,7 @@
 | `tests/` | 测试：content.test.js / logic.test.js / ui.test.js，共 20 条，`node --test` 跑 |
 | `tools/` | `make-icons.py`：Pillow 脚本；重新生成图标后要提交新的 PNG |
 | `docs/` | `source-transcripts/`（1-4 周源材料转录参考）+ `superpowers/`（设计文档、实施计划） |
+| `.github/workflows/pages.yml` | GitHub Pages 部署工作流（push 到 master 自动发布）；仓库 remote 用 SSH（git@github.com），https 推送会被重置 |
 
 ## content.json 结构（转新内容照这个填）
 
@@ -100,7 +101,7 @@ Mei 说「**出第 X 周的细化版**」（或 App 里提示的同款话）时�
 
 1. **测试**：`node --test`，20 条全绿才算过。注意参数不带 `tests/`（Windows 本机带目录参数会报错）。
 2. **提交**：`git status` 先确认没有意外文件；`.gitignore` 只忽略 Python 缓存等杂物（tools 目录），不把临时文件带进提交。
-3. **改完必须 push + 线上验证**：
+3. **改完必须 push + 线上验证**：push 后 Actions 工作流自动部署（`gh run list --repo meiyanjie1990/qianling-english` 看状态，约 1-2 分钟），再
    `curl -s -o /dev/null -w "%{http_code}" https://meiyanjie1990.github.io/qianling-english/` 返回 `200` 才算发布成功。
 4. **纯内容更新**（只动 content.json）按「每周新内容固定流程」，不动版本号以外的发布件。
 5. **页面代码更新**（index / logic / ui / manifest / 图标 / sw 行为变了）才需要**三处同步**：
