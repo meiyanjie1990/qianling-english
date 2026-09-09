@@ -12,7 +12,7 @@
 - 目前第 1-4 周已细化（Colors / Animals / Food / Body）；第 5 周起只有骨架，App 内显示「内容还没出」。
 - 打开默认停在**第 2 周 Animals**（DEFAULT_WEEK=2）。
 - **打卡记录只存在手机本地**（localStorage，浏览器本地存储），没有服务器、不跨设备同步；换设备或清浏览器数据会重新开始。
-- 已由 GitHub Pages（GitHub 免费网页托管）发布，仓库任意改动 push 后即生效。
+- 托管于 GitHub Pages（GitHub 免费网页托管）——建仓推送、开启 Pages 的收尾部署步骤执行后即生效，此后改动 push 即上线。
 
 线上地址：<https://meiyanjie1990.github.io/qianling-english/>
 
@@ -30,7 +30,7 @@
 | 部分 | 状态 |
 |---|---|
 | 48 周骨架（weeks） | 全部在 content.json，字段完整（含 1-48 周的详细 false/true 标记） |
-| 细化内容（details） | 第 1-4 周：Colors / Animals / Food / Body，每周 7 天（第 3 天休息） |
+| 细化内容（details） | 第 1-4 周：Colors / Animals / Food / Body，每周 7 天（休息日固定第 3、6、7 天） |
 | 页面代码 | v1：三页齐全（本周页 / 当天详情页 / 全年地图页）+ PWA 套件 + 更新徽标 |
 | 测试 | 20/20 通过（`node --test`） |
 | 仓库与上线 | Task 8 收尾步骤（建仓推送、开启 Pages、线上验证），紧接本提交执行 |
@@ -73,7 +73,7 @@
         { "day": 1, "title": "第1天标题", "rest": false,
           "sections": [ { "time": "穿衣服 7:00-7:15", "do": "动作描述", "say": ["英文原句1", "英文原句2"] } ],
           "remember": "当天小结（中英都行）" },
-        { "day": 3, "title": "休息", "rest": true, "sections": [], "remember": "" }
+        { "day": 6, "title": "休息", "rest": true, "sections": [], "remember": "" }
       ]
     }
   }
@@ -83,8 +83,8 @@
 规则要点：
 
 - `weeks` 48 个骨架对象**全部存在**，1-4 周已标 `detailed: true`；加新周细化时把该周骨架标 true 并补全核心词句。
-- `details` 的键是字符串周号（`"1"` 不是 `1`）；每周 `days` 恰 7 天，**第 3 天固定休息**（`rest: true`、无 sections）。
-- 每个非休息天的 sections 块 `time / do / say`：时间段、Mei 照做的动作、对谦灵说的英文原句。测试要求整周 7 天齐全、有 video、非休息天结构完整。
+- `details` 的键是字符串周号（`"1"` 不是 `1`）；每周 `days` 恰 7 天，**休息日固定为第 3、6、7 天**（周三+周末，`rest: true`、sections 空），**活动日只有 1/2/4/5**，样式见上面的 `{"day": 6, ...}` 休息日条目。
+- 每个活动日（非休息天）的 sections 块 `time / do / say`：时间段、Mei 照做的动作、对谦灵说的英文原句。测试要求整周 7 天齐全、有 video、活动日结构完整。
 
 ## 每周新内容固定流程
 
