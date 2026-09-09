@@ -352,10 +352,11 @@
     .empty button:active { transform: scale(.96); }
 
     /* ---------- 「点我更新」悬浮胶囊（Task 7 接逻辑） ---------- */
+    /* bottom 76px：悬浮在底部停靠栏(.week-nav 高58px+停靠10px)之上，不遮挡 */
     #update-badge {
       position: fixed;
       right: 14px;
-      bottom: calc(16px + var(--safe-b));
+      bottom: calc(76px + var(--safe-b));
       z-index: 60;
       background: var(--main);
       color: var(--ink);
