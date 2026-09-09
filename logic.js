@@ -1,0 +1,108 @@
+(function (root, factory) {
+  if (typeof module !== "undefined" && module.exports) { module.exports = factory(); }
+  else { root.Logic = factory(); }
+})(typeof self !== "undefined" ? self : this, function () {
+  "use strict";
+
+  var PROGRESS_KEY = "qianling-progress-v1";
+  var CURRENT_WEEK_KEY = "qianling-current-week";
+  var APP_VERSION_KEY = "qianling-app-version";
+  var DEFAULT_WEEK = 2;
+
+  function parseContent(text) {
+    var data = JSON.parse(text);
+    if (!Array.isArray(data.weeks) || typeof data.details !== "object" || data.details === null) {
+      throw new Error("content.json 结构不对：需要 weeks 数组和 details 对象");
+    }
+    return data;
+  }
+
+  function getWeek(content, weekNum) {
+    for (var i = 0; i < content.weeks.length; i++) {
+      if (content.weeks[i].week === weekNum) return content.weeks[i];
+    }
+    return undefined;
+  }
+
+  function getDetail(content, weekNum) {
+    return content.details[String(weekNum)] || null;
+  }
+
+  function clampWeek(n) {
+    n = Number(n);
+    if (!Number.isFinite(n)) return DEFAULT_WEEK;
+    return Math.min(48, Math.max(1, Math.round(n)));
+  }
+
+  function loadProgress(storage) {
+    try {
+      var raw = storage.getItem(PROGRESS_KEY);
+      if (!raw) return {};
+      var p = JSON.parse(raw);
+      return (p && typeof p === "object") ? p : {};
+    } catch (e) { return {}; }
+  }
+
+  function saveProgress(storage, progress) {
+    storage.setItem(PROGRESS_KEY, JSON.stringify(progress));
+  }
+
+  function toggleDay(progress, weekNum, dayNum) {
+    var p = JSON.parse(JSON.stringify(progress || {}));
+    var wk = String(weekNum), d = String(dayNum);
+    if (!p[wk]) p[wk] = {};
+    p[wk][d] = !p[wk][d];
+    return p;
+  }
+
+  function isDayDone(progress, weekNum, dayNum) {
+    return !!(progress && progress[String(weekNum)] && progress[String(weekNum)][String(dayNum)]);
+  }
+
+  function weekDoneCount(progress, weekNum) {
+    var wk = progress && progress[String(weekNum)];
+    if (!wk) return 0;
+    return Object.keys(wk).filter(function (d) { return !!wk[d]; }).length;
+  }
+
+  function loadCurrentWeek(storage) {
+    var raw = storage.getItem(CURRENT_WEEK_KEY);
+    if (raw === null || raw === undefined || raw === "") return DEFAULT_WEEK;
+    return clampWeek(Number(raw));
+  }
+
+  function saveCurrentWeek(storage, weekNum) {
+    storage.setItem(CURRENT_WEEK_KEY, String(weekNum));
+  }
+
+  async function fetchContent(fetchImpl) {
+    try {
+      var res = await fetchImpl("content.json?ts=" + Date.now());
+      if (res && res.ok) return await res.json();
+    } catch (e) { /* 走回退 */ }
+    try {
+      var res2 = await fetchImpl("content.json");
+      if (res2 && res2.ok) return await res2.json();
+    } catch (e) { /* 走失败 */ }
+    return null;
+  }
+
+  return {
+    PROGRESS_KEY: PROGRESS_KEY,
+    CURRENT_WEEK_KEY: CURRENT_WEEK_KEY,
+    APP_VERSION_KEY: APP_VERSION_KEY,
+    DEFAULT_WEEK: DEFAULT_WEEK,
+    parseContent: parseContent,
+    getWeek: getWeek,
+    getDetail: getDetail,
+    clampWeek: clampWeek,
+    loadProgress: loadProgress,
+    saveProgress: saveProgress,
+    toggleDay: toggleDay,
+    isDayDone: isDayDone,
+    weekDoneCount: weekDoneCount,
+    loadCurrentWeek: loadCurrentWeek,
+    saveCurrentWeek: saveCurrentWeek,
+    fetchContent: fetchContent
+  };
+});
