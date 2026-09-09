@@ -562,6 +562,25 @@
         Ui.initApp(content);
       });
     })();
+    (function () {
+      var badge = document.getElementById("update-badge");
+      fetch("version.json?ts=" + Date.now()).then(function (r) { return r.json(); })
+        .then(function (v) {
+          var cur = Number(localStorage.getItem(Logic.APP_VERSION_KEY)) || 0;
+          if (v.version > cur) {
+            badge.hidden = false;
+            badge.onclick = function () {
+              if (navigator.serviceWorker && navigator.serviceWorker.controller) {
+                navigator.serviceWorker.controller.postMessage("CLEAR_CACHE");
+              }
+              localStorage.setItem(Logic.APP_VERSION_KEY, String(v.version));
+              setTimeout(function () { location.reload(true); }, 600);
+            };
+          } else {
+            localStorage.setItem(Logic.APP_VERSION_KEY, String(v.version));
+          }
+        }).catch(function () {});
+    })();
   </script>
 </body>
 </html>
