@@ -26,13 +26,18 @@ self.addEventListener("fetch", function (e) {
   var pathname = new URL(e.request.url).pathname;
   var isFresh = pathname.endsWith("/content.json") || pathname.endsWith("/version.json");
   if (isFresh) {
+    var cleanUrl = new URL(e.request.url);
+    cleanUrl.search = "";
+    var cleanReq = new Request(cleanUrl.href, { method: "GET" });
     e.respondWith(
       fetch(e.request).then(function (res) {
-        var copy = res.clone();
-        caches.open(CACHE_NAME).then(function (c) { c.put(e.request, copy); });
+        if (res.ok) {
+          var copy = res.clone();
+          caches.open(CACHE_NAME).then(function (c) { c.put(cleanReq, copy); });
+        }
         return res;
       }).catch(function () {
-        return caches.match(e.request).then(function (m) { return m || caches.match("./"); });
+        return caches.match(cleanReq).then(function (m) { return m || caches.match(e.request).then(function (m2) { return m2 || caches.match("./"); }); });
       })
     );
     return;

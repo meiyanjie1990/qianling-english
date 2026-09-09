@@ -45,7 +45,8 @@
     var week = content.weeks.find(function (w) { return w.week === weekNum; });
     if (!week) return '<div class="empty">没有这一周</div>';
     var detail = content.details[String(weekNum)] || null;
-    var core = wordChips(week.coreWords) + sentenceCard(week.coreSentences);
+    var core = (week.coreWords && week.coreWords.length ? wordChips(week.coreWords) : "") +
+      (week.coreSentences && week.coreSentences.length ? sentenceCard(week.coreSentences) : "");
     var body;
     if (!detail) {
       body = core + '<div class="notice warn">这周的内容还没出——在电脑上跟Claude说「出第' + weekNum +

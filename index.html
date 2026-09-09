@@ -559,15 +559,25 @@
             '<button onclick="location.reload()">重试</button></div>';
           return;
         }
-        Ui.initApp(content);
+        try {
+          Logic.parseContent(JSON.stringify(content)); // 形状校验，坏结构抛错
+          Ui.initApp(content);
+        } catch (err) {
+          document.getElementById("view-week").innerHTML =
+            '<div class="empty"><p>内容数据有问题（结构不完整），已保留旧缓存。<br>在电脑上修好 content.json 再刷新。</p>' +
+            '<button onclick="location.reload()">重试</button></div>';
+        }
       });
     })();
     (function () {
       var badge = document.getElementById("update-badge");
       fetch("version.json?ts=" + Date.now()).then(function (r) { return r.json(); })
         .then(function (v) {
-          var cur = Number(localStorage.getItem(Logic.APP_VERSION_KEY)) || 0;
-          if (v.version > cur) {
+          var curRaw = localStorage.getItem(Logic.APP_VERSION_KEY);
+          if (curRaw === null) {
+            // 首装：只记录版本，不弹徽标（否则一点徽标就清掉刚预缓存的壳文件，破坏离线）
+            localStorage.setItem(Logic.APP_VERSION_KEY, String(v.version));
+          } else if (v.version > Number(curRaw)) {
             badge.hidden = false;
             badge.onclick = function () {
               if (navigator.serviceWorker && navigator.serviceWorker.controller) {

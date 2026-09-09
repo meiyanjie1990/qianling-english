@@ -66,9 +66,11 @@
   }
 
   function loadCurrentWeek(storage) {
-    var raw = storage.getItem(CURRENT_WEEK_KEY);
-    if (raw === null || raw === undefined || raw === "") return DEFAULT_WEEK;
-    return clampWeek(Number(raw));
+    try {
+      var raw = storage.getItem(CURRENT_WEEK_KEY);
+      if (raw === null || raw === undefined || raw === "") return DEFAULT_WEEK;
+      return clampWeek(Number(raw));
+    } catch (e) { return DEFAULT_WEEK; }
   }
 
   function saveCurrentWeek(storage, weekNum) {
