@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#FFF6E9">
+  <title>谦灵启蒙</title>
+  <link rel="manifest" href="manifest.json">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="icon" href="icon-192.png">
+  <style>
+    /* ============================================================
+       设计令牌 —— 亲子手账风：暖底、深棕墨字、橙色主色 + 语义色
+       (绿=完成/休息，红=提醒)。彩色文字只用深色变体保证可读。
+       ============================================================ */
+    :root {
+      --bg: #FFF6E9;            /* 奶油暖底 */
+      --card: #FFFFFF;          /* 卡片白 */
+      --ink: #4A3728;           /* 正文深棕 */
+      --ink-2: #7A5C3E;         /* 深棕（浅底上的次级文字） */
+      --ink-soft: #82664A;      /* 说明性文字（浅底上 AA 达标） */
+      --main: #FF8C1A;          /* 暖橙主色（大色块/按钮） */
+      --main-soft: #FFE9CC;     /* 浅橙底（色块/状态圈/条形） */
+      --caramel: #A04B00;       /* 焦糖橙文字（cream/浅橙底上可读） */
+      --green: #4CAF50;         /* 完成绿（勾、大图标） */
+      --green-deep: #2E7D32;    /* 深绿文字（浅绿底/已读行） */
+      --green-soft: #E9F5E4;    /* 完成/休息浅底 */
+      --red-deep: #B33E26;      /* 提醒深红文字 */
+      --red-soft: #FBE9E1;      /* 提醒浅底（内容没出/今天只需记） */
+      --line: rgba(74, 55, 40, .10);   /* 细分隔线 */
+      --shadow: 0 2px 10px rgba(160, 94, 38, .10);
+      --shadow-lift: 0 8px 24px rgba(160, 94, 38, .20);
+      --r: 20px;                /* 大卡片圆角 */
+      --r-sm: 14px;             /* 小条圆角 */
+      --r-pill: 999px;          /* 胶囊 */
+      --safe-b: env(safe-area-inset-bottom, 0px);
+    }
+
+    /* ---------- reset 与基础 ---------- */
+    * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
+        "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
+    button { font: inherit; color: inherit; }
+    [hidden] { display: none !important; }
+    ::selection { background: var(--main-soft); }
+    :focus-visible { outline: 3px solid var(--caramel); outline-offset: 2px; }
+    @media (prefers-reduced-motion: reduce) {
+      * { transition: none !important; animation: none !important; }
+    }
+
+    /* ---------- 页面外壳：移动优先，宽屏居中 ---------- */
+    #app {
+      max-width: 520px;
+      margin: 0 auto;
+      padding: 14px 16px calc(22px + var(--safe-b));
+    }
+    .view { display: block; }
+
+    /* ---------- 页头：日期章 + 周标题 + 英文主题 ---------- */
+    .page-head { margin: 2px 2px 10px; }
+    .week-badge {
+      display: inline-block;
+      background: var(--main-soft);
+      color: var(--caramel);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .05em;
+      padding: 3px 12px;
+      border-radius: var(--r-pill);
+      margin-bottom: 8px;
+    }
+    .page-head h1 {
+      margin: 0;
+      font-size: 24px;
+      font-weight: 800;
+      line-height: 1.35;
+      letter-spacing: -.01em;
+      word-break: break-word;
+    }
+    .page-head .sub {
+      margin: 2px 0 0;
+      color: var(--caramel);
+      font-size: 17px;
+      font-weight: 800;
+      letter-spacing: .04em;
+      line-height: 1.4;
+    }
+
+    /* ---------- 分区小标签（ui.js 不输出标题，CSS 伪元素补文案） ---------- */
+    .word-chips::before { content: "本 周 核 心 词"; }
+    .sentence-card::before { content: "本 周 核 心 句 · 说给孩子听"; }
+    .word-chips::before,
+    .sentence-card::before {
+      display: block;
+      color: var(--caramel);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .12em;
+      margin-bottom: 8px;
+    }
+
+    /* ---------- 核心词：明快色块，英文大字 + 中文小字 ---------- */
+    .word-chips {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 4px;
+    }
+    .word-chips::before { flex-basis: 100%; margin-bottom: 4px; }
+    .word-chip {
+      display: inline-flex;
+      flex-direction: column;
+      background: var(--main-soft);
+      border-radius: var(--r-sm);
+      padding: 9px 16px 8px;
+      box-shadow: var(--shadow);
+    }
+    .word-chip b {
+      font-size: 22px;
+      font-weight: 800;
+      line-height: 1.3;
+      letter-spacing: .01em;
+    }
+    .word-chip i {
+      font-style: normal;
+      color: var(--ink-2);
+      font-size: 12.5px;
+      font-weight: 600;
+      line-height: 1.4;
+      margin-top: 1px;
+    }
+
+    /* ---------- 核心句：白卡片内英文大字，照着读 ---------- */
+    .sentence-card {
+      background: var(--card);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      padding: 16px 18px;
+      margin-top: 14px;
+    }
+    .sentence-card::before { margin-bottom: 10px; }
+    .sentence {
+      margin: 0;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.5;
+      word-break: break-word;
+    }
+    .sentence + .sentence { margin-top: 12px; }
+
+    /* ---------- 本周主视频提醒条（浅橙窄条） ---------- */
+    .video-bar {
+      background: var(--main-soft);
+      color: var(--ink);
+      font-size: 15px;
+      line-height: 1.6;
+      border-radius: var(--r-sm);
+      padding: 10px 14px;
+      margin-top: 14px;
+    }
+
+    /* ---------- 7 天打卡列表 ---------- */
+    .day-list {
+      background: var(--card);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      padding: 8px 6px;
+      margin-top: 14px;
+    }
+    .day-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      width: 100%;
+      min-height: 54px;
+      padding: 6px 12px;
+      border: 0;
+      background: transparent;
+      text-align: left;
+      border-radius: var(--r-sm);
+      cursor: pointer;
+      transition: background-color .15s ease, transform .12s ease;
+    }
+    .day-row:active { transform: scale(.985); background: var(--main-soft); }
+    .day-row.is-done { background: var(--green-soft); }
+    .day-row.is-done:active { background: #DFF1D8; }
+    .day-name {
+      flex: 1;
+      min-width: 0;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 1.4;
+    }
+    .day-row.is-done .day-name { color: var(--green-deep); }
+
+    /* 状态标记：待做=浅橙圆，完成=实心绿勾，休息=浅绿胶囊 */
+    .day-state {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      flex: none;
+      width: 28px;
+      height: 28px;
+      border-radius: 50%;
+      font-size: 0;               /* 占位 ○ 字形由底色表达 */
+      box-shadow: inset 0 0 0 3px var(--card);
+      background: var(--main-soft);
+    }
+    .day-state.done {
+      background: var(--green);
+      box-shadow: none;
+      color: #FFF;
+      font-size: 15px;
+      font-weight: 800;
+    }
+    .day-state.rest {
+      width: auto;
+      height: auto;
+      border-radius: var(--r-pill);
+      background: var(--green-soft);
+      color: var(--green-deep);
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 4px 11px;
+      box-shadow: none;
+    }
+
+    /* ---------- 提示条：tip=浅绿（休息/顺带说），warn=浅红（醒目） ---------- */
+    .notice {
+      border-radius: var(--r-sm);
+      padding: 12px 14px;
+      font-size: 15px;
+      line-height: 1.6;
+      margin-top: 14px;
+      border-left: 5px solid transparent;
+    }
+    .notice.tip { background: var(--green-soft); color: var(--ink); border-left-color: var(--green-deep); }
+    .notice.warn { background: var(--red-soft); color: var(--ink); border-left-color: var(--red-deep); }
+    .notice.warn::before { content: "⚠ "; color: var(--red-deep); font-weight: 800; }
+
+    /* ---------- 进阶内容（选做）折叠卡 ---------- */
+    .adv {
+      background: var(--card);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      margin-top: 14px;
+      overflow: hidden;
+    }
+    .adv summary {
+      list-style: none;
+      display: flex;
+      align-items: center;
+      min-height: 48px;
+      padding: 0 16px;
+      font-size: 15.5px;
+      font-weight: 700;
+      cursor: pointer;
+    }
+    .adv summary::-webkit-details-marker { display: none; }
+    .adv summary::after {
+      content: "▾";
+      margin-left: auto;
+      color: var(--caramel);
+      font-weight: 800;
+      transition: transform .2s ease;
+    }
+    .adv[open] summary::after { transform: rotate(180deg); }
+    .adv p { margin: 0; padding: 2px 16px 15px; font-size: 15px; line-height: 1.65; }
+
+    /* ---------- 底部周切换条：白色悬浮胶囊 dock ---------- */
+    .week-nav {
+      position: sticky;
+      bottom: calc(10px + var(--safe-b));
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--card);
+      border-radius: var(--r-pill);
+      box-shadow: var(--shadow-lift);
+      padding: 6px;
+      margin-top: 18px;
+    }
+    .nav-btn {
+      border: 0;
+      background: none;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 44px;
+      cursor: pointer;
+      border-radius: var(--r-pill);
+      transition: transform .12s ease, background-color .15s ease;
+    }
+    .nav-btn:active { transform: scale(.94); }
+    .nav-btn:not(.map) {
+      width: 46px;
+      height: 46px;
+      flex: none;
+      background: var(--main-soft);
+      color: var(--caramel);
+      font-size: 15px;
+      font-weight: 800;
+    }
+    .nav-btn.map {
+      flex: 1;
+      height: 46px;
+      gap: 4px;
+      background: var(--main);
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 800;
+    }
+    .nav-label {
+      color: var(--ink-soft);
+      font-size: 15px;
+      font-weight: 700;
+      white-space: nowrap;
+      margin: 0 2px;
+    }
+
+    /* ---------- 空态 / 加载失败 ---------- */
+    .empty {
+      background: var(--card);
+      border-radius: var(--r);
+      box-shadow: var(--shadow);
+      padding: 30px 20px;
+      text-align: center;
+      margin-top: 24px;
+    }
+    .empty p { margin: 0 0 14px; font-size: 15px; color: var(--ink-soft); }
+    .empty button {
+      border: 0;
+      background: var(--main);
+      color: var(--ink);
+      font-size: 16px;
+      font-weight: 800;
+      padding: 11px 26px;
+      min-height: 44px;
+      border-radius: var(--r-pill);
+      cursor: pointer;
+      transition: transform .12s ease;
+    }
+    .empty button:active { transform: scale(.96); }
+
+    /* ---------- 「点我更新」悬浮胶囊（Task 7 接逻辑） ---------- */
+    #update-badge {
+      position: fixed;
+      right: 14px;
+      bottom: calc(16px + var(--safe-b));
+      z-index: 60;
+      background: var(--main);
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 800;
+      letter-spacing: .03em;
+      padding: 11px 18px;
+      border-radius: var(--r-pill);
+      box-shadow: var(--shadow-lift);
+      cursor: pointer;
+    }
+
+    /* #view-day、#view-map 的样式在 Task 5/6 追加 */
+  </style>
+</head>
+<body>
+  <div id="app">
+    <div id="view-week" class="view"></div>
+    <div id="view-day" class="view" hidden></div>
+    <div id="view-map" class="view" hidden></div>
+  </div>
+  <div id="update-badge" hidden>点我更新</div>
+  <script src="logic.js"></script>
+  <script src="ui.js"></script>
+  <script>
+    (function () {
+      if ("serviceWorker" in navigator) {
+        navigator.serviceWorker.register("sw.js").catch(function () {});
+      }
+      Logic.fetchContent(window.fetch).then(function (content) {
+        if (!content) {
+          document.getElementById("view-week").innerHTML =
+            '<div class="empty"><p>内容加载失败，请检查网络后刷新。</p>' +
+            '<button onclick="location.reload()">重试</button></div>';
+          return;
+        }
+        Ui.initApp(content);
+      });
+    })();
+  </script>
+</body>
+</html>
