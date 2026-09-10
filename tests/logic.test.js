@@ -91,6 +91,19 @@ test("当前周默认2，存读正常", () => {
   assert.strictEqual(Logic.loadCurrentWeek(s), 5);
 });
 
+test("上一次打卡的周号：存取、夹范围、坏数据不炸", () => {
+  const s = memStorage();
+  assert.strictEqual(Logic.loadLastCheckinWeek(s), null, "没记录时应是 null（好退回当前周）");
+  Logic.saveLastCheckinWeek(s, 5);
+  assert.strictEqual(Logic.loadLastCheckinWeek(s), 5);
+  Logic.saveLastCheckinWeek(s, 99);
+  assert.strictEqual(Logic.loadLastCheckinWeek(s), 48, "超出 1-48 要夹住");
+  s.setItem(Logic.LAST_WEEK_KEY, "abc");
+  assert.strictEqual(Logic.loadLastCheckinWeek(s), null);
+  s.setItem(Logic.LAST_WEEK_KEY, "");
+  assert.strictEqual(Logic.loadLastCheckinWeek(s), null);
+});
+
 test("fetchContent 网络优先，失败回退，再失败 null", async () => {
   const calls = [];
   const impl = async url => {

@@ -6,6 +6,7 @@
 
   var PROGRESS_KEY = "qianling-progress-v1";
   var CURRENT_WEEK_KEY = "qianling-current-week";
+  var LAST_WEEK_KEY = "qianling-last-checkin-week";
   var APP_VERSION_KEY = "qianling-app-version";
   var DEFAULT_WEEK = 2;
 
@@ -103,6 +104,22 @@
     storage.setItem(CURRENT_WEEK_KEY, String(weekNum));
   }
 
+  // 「上一次打卡的那一周」：Mei 打开 App 就停在这里，跟着她真实进度走。
+  // 没打过卡（返回 null）时上层再退回 loadCurrentWeek。
+  function loadLastCheckinWeek(storage) {
+    try {
+      var raw = storage.getItem(LAST_WEEK_KEY);
+      if (raw === null || raw === undefined || raw === "") return null;
+      var n = Number(raw);
+      if (!Number.isFinite(n)) return null;
+      return clampWeek(n);
+    } catch (e) { return null; }
+  }
+
+  function saveLastCheckinWeek(storage, weekNum) {
+    try { storage.setItem(LAST_WEEK_KEY, String(clampWeek(weekNum))); } catch (e) { /* 存不下就算了 */ }
+  }
+
   async function fetchContent(fetchImpl) {
     try {
       var res = await fetchImpl("content.json?ts=" + Date.now());
@@ -118,6 +135,7 @@
   return {
     PROGRESS_KEY: PROGRESS_KEY,
     CURRENT_WEEK_KEY: CURRENT_WEEK_KEY,
+    LAST_WEEK_KEY: LAST_WEEK_KEY,
     APP_VERSION_KEY: APP_VERSION_KEY,
     DEFAULT_WEEK: DEFAULT_WEEK,
     parseContent: parseContent,
@@ -135,6 +153,8 @@
     toggleWeek: toggleWeek,
     loadCurrentWeek: loadCurrentWeek,
     saveCurrentWeek: saveCurrentWeek,
+    loadLastCheckinWeek: loadLastCheckinWeek,
+    saveLastCheckinWeek: saveLastCheckinWeek,
     fetchContent: fetchContent
   };
 });

@@ -143,7 +143,9 @@
     var storage = window.localStorage;
     var state = {
       content: content,
-      week: Logic.loadCurrentWeek(storage),
+      // 打开就停在上一次打卡的那一周（跟着她真实进度走）；
+      // 还没打过卡才退回上次存的周号，再不行才用默认周
+      week: Logic.loadLastCheckinWeek(storage) || Logic.loadCurrentWeek(storage),
       progress: Logic.loadProgress(storage)
     };
     var views = {
@@ -171,6 +173,11 @@
     function save() {
       Logic.saveProgress(storage, state.progress);
       Logic.saveCurrentWeek(storage, state.week);
+    }
+    // 打了卡就记住这一周：下次打开 App 直接停在这儿
+    function saveAfterCheckin() {
+      save();
+      Logic.saveLastCheckinWeek(storage, state.week);
     }
     function historyDepth() {
       var st = window.history.state;
@@ -206,13 +213,13 @@
         navigate("day", el.getAttribute("data-day"));
       } else if (action === "toggle-checkin") {
         state.progress = Logic.toggleDay(state.progress, state.week, Number(el.getAttribute("data-day")));
-        save();
+        saveAfterCheckin();
         render();
       } else if (action === "toggle-week") {
         var act = Logic.activityDays(Logic.getDetail(state.content, state.week));
         if (act.length) {
           state.progress = Logic.toggleWeek(state.progress, state.week, act);
-          save();
+          saveAfterCheckin();
           render();
         }
       } else if (action === "prev-week") {

@@ -4,7 +4,8 @@ const Ui = require("../ui.js");
 const Logic = require("../logic.js");
 
 // 最小浏览器桩：只为了验证「手机的返回键 / 侧滑 = 回上一页，而不是退出 App」
-function makeEnv() {
+// store 可以外部传进来，用来模拟「关掉 App 再打开」（localStorage 留着）
+function makeEnv(store) {
   const views = {};
   for (const id of ["view-week", "view-day", "view-map"]) {
     views[id] = { id, innerHTML: "", hidden: false };
@@ -13,7 +14,7 @@ function makeEnv() {
   const listeners = {};
   const entries = [{ state: null }];
   let idx = 0;
-  const store = {};
+  store = store || {};
   const emit = (type, ev) => (listeners[type] || []).forEach(fn => fn(ev));
   const win = {
     localStorage: {
@@ -30,7 +31,7 @@ function makeEnv() {
     }
   };
   const doc = { getElementById: id => (id === "app" ? app : views[id] || null) };
-  return { win, doc, app, views, entries };
+  return { win, doc, app, views, entries, store };
 }
 
 const content = {
@@ -47,12 +48,19 @@ const content = {
       { day: 2, title: "鸟鱼日", rest: false,
         sections: [{ time: "上午", do: "看鱼", say: ["I see a fish!"] }], remember: "看到鱼就说 fish" },
       { day: 3, title: "休息", rest: true, sections: [], remember: "" }
+    ] },
+    "5": { video: { primary: { name: "The More We Get Together", no: "179" } }, days: [
+      { day: 1, title: "妈妈日", rest: false,
+        sections: [{ time: "上午", do: "指照片", say: ["This is Mum."] }], remember: "妈妈 = Mum" },
+      { day: 3, title: "休息", rest: true, sections: [], remember: "" },
+      { day: 6, title: "休息", rest: true, sections: [], remember: "" },
+      { day: 7, title: "休息", rest: true, sections: [], remember: "" }
     ] }
   }
 };
 
-function boot() {
-  const env = makeEnv();
+function boot(store) {
+  const env = makeEnv(store);
   global.window = env.win;
   global.document = env.doc;
   global.Ui = Ui;
@@ -127,4 +135,26 @@ test("整周打卡：一次勾满本周活动日，休息日不勾，再点全�
   click(env, "toggle-week");
   const p2 = JSON.parse(env.win.localStorage.getItem("qianling-progress-v1"));
   assert.strictEqual(Logic.doneCount(p2, 2, [1, 2]), 0);
+});
+
+test("重开 App 会回到上一次打卡的那一周", () => {
+  const store = {};
+  const env1 = boot(store);
+  assert.ok(env1.views["view-week"].innerHTML.includes("第2周"), "一开始应是默认的第 2 周");
+
+  // 翻到第 5 周，在某一天打卡
+  click(env1, "show-map");
+  click(env1, "goto-week", { "data-week": "5" });
+  click(env1, "open-day", { "data-day": "1" });
+  click(env1, "toggle-checkin", { "data-day": "1" });
+  assert.strictEqual(store["qianling-last-checkin-week"], "5", "打完卡要记住第 5 周");
+
+  // 关掉 App 再打开（localStorage 留着）
+  const env2 = boot(store);
+  assert.ok(env2.views["view-week"].innerHTML.includes("第5周"), "重开应该停在第 5 周");
+});
+
+test("没打过卡就退回上次存的周号", () => {
+  const env = boot({ "qianling-current-week": "5" });
+  assert.ok(env.views["view-week"].innerHTML.includes("第5周"));
 });

@@ -1,5 +1,5 @@
 {
-  "version": 3,
+  "version": 4,
   "weeks": [
     {
       "week": 1, "stage": 1, "dates": "6/29-7/5",
@@ -8,7 +8,7 @@
         {"en": "red", "zh": "红"}, {"en": "blue", "zh": "蓝"},
         {"en": "yellow", "zh": "黄"}, {"en": "green", "zh": "绿"}
       ],
-      "coreSentences": ["It's red!", "What color is this?"],
+      "coreSentences": ["What color is this?", "It's red!", "I see something blue!"],
       "detailed": true
     },
     {
@@ -18,7 +18,7 @@
         {"en": "dog", "zh": "狗"}, {"en": "cat", "zh": "猫"},
         {"en": "bird", "zh": "鸟"}, {"en": "fish", "zh": "鱼"}
       ],
-      "coreSentences": ["I see a dog."],
+      "coreSentences": ["I see a dog!", "What's this? It's a cat!", "The dog says woof!"],
       "detailed": true
     },
     {
@@ -28,7 +28,7 @@
         {"en": "milk", "zh": "牛奶"}, {"en": "apple", "zh": "苹果"},
         {"en": "banana", "zh": "香蕉"}, {"en": "egg", "zh": "鸡蛋"}
       ],
-      "coreSentences": ["I want milk.", "I like apples."],
+      "coreSentences": ["I want milk!", "I like apples.", "Yummy banana!"],
       "detailed": true
     },
     {
@@ -39,7 +39,7 @@
         {"en": "nose", "zh": "鼻子"}, {"en": "mouth", "zh": "嘴巴"},
         {"en": "ears", "zh": "耳朵"}
       ],
-      "coreSentences": ["Touch your nose."],
+      "coreSentences": ["Touch your nose!", "Where is your mouth?", "I have two eyes!"],
       "detailed": true
     },
     {
