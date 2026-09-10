@@ -451,6 +451,32 @@
       color: #FFF;
     }
 
+    /* ---------- 整周打卡键（本周页用：描边胶囊，与当天页的实心键区分开） ---------- */
+    .btn-week {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      margin-top: 12px;
+      min-height: 52px;
+      padding: 12px 18px;
+      border: 2px solid var(--main);
+      border-radius: var(--r-pill);
+      background: var(--card);
+      color: var(--caramel);
+      font-size: 16px;
+      font-weight: 800;
+      letter-spacing: .02em;
+      cursor: pointer;
+      transition: background-color .15s ease, transform .12s ease;
+    }
+    .btn-week:active { transform: scale(.97); background: var(--main-soft); }
+    .btn-week.is-done {
+      border-color: var(--green);
+      background: var(--green-soft);
+      color: var(--green-deep);
+    }
+
     /* ---------- 全年地图：48 周贴纸墙 ----------
        已细化周 = 贴上白卡贴纸（暖橙章+彩emoji，可点）；
        未细化周 = 虚线空位（灰字灰emoji「内容还没出」）。

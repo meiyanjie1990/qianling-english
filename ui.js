@@ -41,6 +41,20 @@
     return html + '</div>';
   }
 
+  // 整周打卡键：内容太简单、她早就会了的时候，一下把本周需要打卡的日子全勾上
+  function weekCheckinButton(weekNum, detail, progress) {
+    var act = detail.days.filter(function (d) { return !d.rest; }).map(function (d) { return d.day; });
+    if (!act.length) return "";
+    var done = act.filter(function (d) {
+      return !!(progress[String(weekNum)] && progress[String(weekNum)][String(d)]);
+    }).length;
+    var all = done === act.length;
+    return '<button class="btn-week' + (all ? " is-done" : "") + '" data-action="toggle-week">' +
+      (all ? '✅ 本周已全部完成 · 点一下取消'
+           : '✅ 整周打卡 · 已完成 ' + done + '/' + act.length + ' 天') +
+      '</button>';
+  }
+
   function renderWeekPage(content, weekNum, progress) {
     var week = content.weeks.find(function (w) { return w.week === weekNum; });
     if (!week) return '<div class="empty">没有这一周</div>';
@@ -58,7 +72,8 @@
       var adv = detail.advanced
         ? '<details class="adv"><summary>进阶内容（选做）</summary><p>' + escapeHtml(detail.advanced) + '</p></details>'
         : "";
-      body = core + videoBar(detail) + '<div class="day-list">' + days + '</div>' + adv;
+      body = core + videoBar(detail) + '<div class="day-list">' + days + '</div>' +
+        weekCheckinButton(weekNum, detail, progress) + adv;
     }
     return '<header class="page-head">' +
       '<span class="week-badge">' + escapeHtml(week.dates) + '</span>' +
@@ -193,6 +208,13 @@
         state.progress = Logic.toggleDay(state.progress, state.week, Number(el.getAttribute("data-day")));
         save();
         render();
+      } else if (action === "toggle-week") {
+        var act = Logic.activityDays(Logic.getDetail(state.content, state.week));
+        if (act.length) {
+          state.progress = Logic.toggleWeek(state.progress, state.week, act);
+          save();
+          render();
+        }
       } else if (action === "prev-week") {
         state.week = Logic.clampWeek(state.week - 1); save(); replaceHere(); render();
       } else if (action === "next-week") {

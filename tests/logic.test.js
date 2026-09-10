@@ -42,6 +42,34 @@ test("toggleDay 勾选/取消，不动原对象", () => {
   assert.strictEqual(next[2][3], false);
 });
 
+test("activityDays 只取活动日", () => {
+  const detail = { days: [
+    { day: 1, rest: false }, { day: 3, rest: true },
+    { day: 4, rest: false }, { day: 6, rest: true }, { day: 7, rest: true }
+  ] };
+  assert.deepStrictEqual(Logic.activityDays(detail), [1, 4]);
+  assert.deepStrictEqual(Logic.activityDays(null), []);
+});
+
+test("toggleWeek 整周勾满 / 再点全部取消，不动原对象", () => {
+  const days = [1, 2, 4, 5];
+  let p = {};
+  p = Logic.toggleWeek(p, 2, days);
+  assert.strictEqual(Logic.doneCount(p, 2, days), 4);
+  assert.strictEqual(Logic.allDaysDone(p, 2, days), true);
+  const orig = Logic.toggleWeek({}, 2, days);
+  Logic.toggleWeek(orig, 2, days);
+  assert.strictEqual(Logic.doneCount(orig, 2, days), 4, "原对象不该被改");
+  p = Logic.toggleWeek(p, 2, days);
+  assert.strictEqual(Logic.doneCount(p, 2, days), 0);
+  assert.strictEqual(Logic.allDaysDone(p, 2, days), false);
+  // 只勾了一半时，整周打卡是「补齐」而不是「取消」
+  const half = { 2: { 1: true } };
+  assert.strictEqual(Logic.doneCount(half, 2, days), 1);
+  assert.strictEqual(Logic.allDaysDone(half, 2, days), false);
+  assert.strictEqual(Logic.doneCount(Logic.toggleWeek(half, 2, days), 2, days), 4);
+});
+
 test("进度存取 localStorage 往返", () => {
   const s = memStorage();
   assert.deepStrictEqual(Logic.loadProgress(s), {});

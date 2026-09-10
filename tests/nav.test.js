@@ -44,6 +44,8 @@ const content = {
     "2": { video: { primary: { name: "Old MacDonald", no: "016" } }, days: [
       { day: 1, title: "狗猫日", rest: false,
         sections: [{ time: "上午", do: "指狗玩偶", say: ["I see a dog!"] }], remember: "看到狗就说 dog" },
+      { day: 2, title: "鸟鱼日", rest: false,
+        sections: [{ time: "上午", do: "看鱼", say: ["I see a fish!"] }], remember: "看到鱼就说 fish" },
       { day: 3, title: "休息", rest: true, sections: [], remember: "" }
     ] }
   }
@@ -113,4 +115,16 @@ test("休息日页面没有打卡键，平时有", () => {
   env.win.history.back();
   click(env, "open-day", { "data-day": "1" });
   assert.ok(env.views["view-day"].innerHTML.includes("toggle-checkin"), "活动日要有打卡键");
+});
+
+test("整周打卡：一次勾满本周活动日，休息日不勾，再点全部取消", () => {
+  const env = boot();
+  assert.ok(env.views["view-week"].innerHTML.includes("data-action=\"toggle-week\""));
+  click(env, "toggle-week");
+  const p = JSON.parse(env.win.localStorage.getItem("qianling-progress-v1"));
+  assert.deepStrictEqual(p["2"], { "1": true, "2": true }, "只勾活动日，周三休息不勾");
+  assert.ok(env.views["view-week"].innerHTML.includes("本周已全部完成"));
+  click(env, "toggle-week");
+  const p2 = JSON.parse(env.win.localStorage.getItem("qianling-progress-v1"));
+  assert.strictEqual(Logic.doneCount(p2, 2, [1, 2]), 0);
 });

@@ -59,6 +59,15 @@ test("休息天不渲染时间块，也不给打卡键", () => {
   assert.ok(!html.includes("data-action=\"toggle-checkin\""), "休息日不该有打卡键");
 });
 
+test("本周页有整周打卡键，未细化周没有", () => {
+  const html = Ui.renderWeekPage(c, 2, {});
+  assert.ok(html.includes("data-action=\"toggle-week\""));
+  assert.ok(html.includes("已完成 0/1 天"), "活动日只算不休息的那天");
+  const all = Ui.renderWeekPage(c, 2, { 2: { 1: true } });
+  assert.ok(all.includes("本周已全部完成"));
+  assert.ok(!Ui.renderWeekPage(c, 5, {}).includes("toggle-week"));
+});
+
 test("打卡状态影响渲染", () => {
   const done = Ui.renderDayPage(c, 2, 1, { 2: { 1: true } });
   assert.ok(done.includes("is-done"));

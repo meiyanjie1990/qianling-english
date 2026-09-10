@@ -65,6 +65,32 @@
     return Object.keys(wk).filter(function (d) { return !!wk[d]; }).length;
   }
 
+  // 一周里真正需要打卡的日子（休息日不算）
+  function activityDays(detail) {
+    if (!detail || !Array.isArray(detail.days)) return [];
+    return detail.days.filter(function (d) { return !d.rest; }).map(function (d) { return d.day; });
+  }
+
+  function doneCount(progress, weekNum, days) {
+    var wk = progress && progress[String(weekNum)];
+    if (!wk) return 0;
+    return days.filter(function (d) { return !!wk[String(d)]; }).length;
+  }
+
+  function allDaysDone(progress, weekNum, days) {
+    return days.length > 0 && doneCount(progress, weekNum, days) === days.length;
+  }
+
+  // 整周打卡：还没全勾就全勾上，已经全勾了就全部取消
+  function toggleWeek(progress, weekNum, days) {
+    var p = JSON.parse(JSON.stringify(progress || {}));
+    var wk = String(weekNum);
+    if (!p[wk]) p[wk] = {};
+    var target = !allDaysDone(progress, weekNum, days);
+    days.forEach(function (d) { p[wk][String(d)] = target; });
+    return p;
+  }
+
   function loadCurrentWeek(storage) {
     try {
       var raw = storage.getItem(CURRENT_WEEK_KEY);
@@ -103,6 +129,10 @@
     toggleDay: toggleDay,
     isDayDone: isDayDone,
     weekDoneCount: weekDoneCount,
+    activityDays: activityDays,
+    doneCount: doneCount,
+    allDaysDone: allDaysDone,
+    toggleWeek: toggleWeek,
     loadCurrentWeek: loadCurrentWeek,
     saveCurrentWeek: saveCurrentWeek,
     fetchContent: fetchContent
