@@ -47,6 +47,20 @@ test("每周有emoji/主题/日期/核心词中英/核心句", () => {
   }
 });
 
+test("每周核心词句都不空", () => {
+  for (const w of content.weeks) {
+    assert.ok(w.coreWords.length >= 1, `第${w.week}周缺核心词`);
+    assert.ok(w.coreSentences.length >= 1, `第${w.week}周缺核心句`);
+  }
+});
+
+test("未细化周核心词句已补满（≥5词/≥2句）", () => {
+  for (const w of content.weeks.filter(x => !x.detailed)) {
+    assert.ok(w.coreWords.length >= 5, `第${w.week}周核心词不足5个`);
+    assert.ok(w.coreSentences.length >= 2, `第${w.week}周核心句不足2句`);
+  }
+});
+
 test("version是数字", () => {
   assert.strictEqual(typeof content.version, "number");
 });

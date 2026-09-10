@@ -47,15 +47,16 @@ test("未细化周显示提示但骨架可见", () => {
 test("当天页有分时块、原句、remember、打卡按钮", () => {
   const html = Ui.renderDayPage(c, 2, 1, {});
   for (const needle of ["上午", "指狗玩偶", "I see a dog!", "看到狗就说 dog",
-    "data-action=\"toggle-checkin\"", "data-day=\"1\"", "data-action=\"show-week\""]) {
+    "data-action=\"toggle-checkin\"", "data-day=\"1\"", "data-action=\"go-back\""]) {
     assert.ok(html.includes(needle), "缺: " + needle);
   }
 });
 
-test("休息天不渲染时间块", () => {
+test("休息天不渲染时间块，也不给打卡键", () => {
   const html = Ui.renderDayPage(c, 2, 3, {});
   assert.ok(html.includes("休息"));
   assert.ok(!html.includes("上午"));
+  assert.ok(!html.includes("data-action=\"toggle-checkin\""), "休息日不该有打卡键");
 });
 
 test("打卡状态影响渲染", () => {

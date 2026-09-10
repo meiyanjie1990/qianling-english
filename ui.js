@@ -94,14 +94,16 @@
     }
     var remember = day.remember
       ? '<div class="notice warn">今天只需记：' + escapeHtml(day.remember) + '</div>' : "";
-    var btnCls = "btn-checkin" + (done ? " is-done" : "");
+    // 休息日不设打卡键：只有真安排了内容的日子才需要打卡
+    var checkin = day.rest ? "" :
+      '<button class="btn-checkin' + (done ? " is-done" : "") +
+      '" data-action="toggle-checkin" data-day="' + day.day + '">' +
+      (done ? '✅ 已完成 · 点一下取消' : '✅ 今天完成啦') + '</button>';
     return '<header class="page-head">' +
-      '<button class="back" data-action="show-week">← 返回本周</button>' +
+      '<button class="back" data-action="go-back">← 返回本周</button>' +
       '<h1>第' + dayNum + '天 · ' + escapeHtml(day.title) + '</h1>' +
       '<p class="sub">第' + week.week + '周 · ' + escapeHtml(week.theme) + '</p></header>' +
-      blocks + remember +
-      '<button class="' + btnCls + '" data-action="toggle-checkin" data-day="' + day.day + '">' +
-      (done ? '✅ 已完成 · 点一下取消' : '✅ 今天完成啦') + '</button>';
+      blocks + remember + checkin;
   }
 
   function renderMapPage(content) {
@@ -117,7 +119,7 @@
       return '<div class="map-cell">' + inner + '<span class="map-tag">内容还没出</span></div>';
     }).join("");
     return '<header class="page-head">' +
-      '<button class="back" data-action="show-week">← 返回</button>' +
+      '<button class="back" data-action="go-back">← 返回</button>' +
       '<h1>🗺 全年地图</h1><p class="sub">48周 · 七大主题循环</p></header>' +
       '<div class="map-grid">' + cells + '</div>';
   }
@@ -134,44 +136,78 @@
       day: document.getElementById("view-day"),
       map: document.getElementById("view-map")
     };
+    // 当前视图。同一份状态也写进浏览器历史记录——
+    // 这样手机的返回键 / 侧滑返回才是「回上一页」，而不是整个退出 App。
+    var current = { view: "week", day: null };
     function show(name) {
       Object.keys(views).forEach(function (k) { views[k].hidden = k !== name; });
       window.scrollTo(0, 0);
     }
-    function render(name) {
-      if (name === "week") views.week.innerHTML = Ui.renderWeekPage(state.content, state.week, state.progress);
-      else if (name === "day") views.day.innerHTML = Ui.renderDayPage(state.content, state.week, state.day, state.progress);
-      else views.map.innerHTML = Ui.renderMapPage(state.content);
-      show(name);
+    function render() {
+      if (current.view === "day") {
+        views.day.innerHTML = Ui.renderDayPage(state.content, state.week, current.day, state.progress);
+      } else if (current.view === "map") {
+        views.map.innerHTML = Ui.renderMapPage(state.content);
+      } else {
+        views.week.innerHTML = Ui.renderWeekPage(state.content, state.week, state.progress);
+      }
+      show(current.view);
     }
     function save() {
       Logic.saveProgress(storage, state.progress);
       Logic.saveCurrentWeek(storage, state.week);
     }
+    function historyDepth() {
+      var st = window.history.state;
+      return (st && st.qianling) ? st.depth : 0;
+    }
+    // 换页 = 往历史里压一条新记录
+    function navigate(view, day) {
+      current = { view: view, day: day === undefined || day === null ? null : Number(day) };
+      window.history.pushState(
+        { qianling: true, view: current.view, day: current.day, depth: historyDepth() + 1 }, "");
+      render();
+    }
+    // 同一页内换周：原地改记录，返回键不会一周一周地倒回去
+    function replaceHere() {
+      window.history.replaceState(
+        { qianling: true, view: current.view, day: current.day, depth: historyDepth() }, "");
+    }
+    // 页内「返回」按钮：有上一页就回上一页，没有就回本周页
+    function goBack() {
+      if (historyDepth() > 0) window.history.back();
+      else { current = { view: "week", day: null }; render(); }
+    }
+    window.addEventListener("popstate", function (e) {
+      var st = e.state;
+      current = (st && st.qianling) ? { view: st.view, day: st.day } : { view: "week", day: null };
+      render();
+    });
     document.getElementById("app").addEventListener("click", function (e) {
       var el = e.target.closest("[data-action]");
       if (!el) return;
       var action = el.getAttribute("data-action");
       if (action === "open-day") {
-        state.day = Number(el.getAttribute("data-day"));
-        render("day");
+        navigate("day", el.getAttribute("data-day"));
       } else if (action === "toggle-checkin") {
         state.progress = Logic.toggleDay(state.progress, state.week, Number(el.getAttribute("data-day")));
         save();
-        render("day");
+        render();
       } else if (action === "prev-week") {
-        state.week = Logic.clampWeek(state.week - 1); save(); render("week");
+        state.week = Logic.clampWeek(state.week - 1); save(); replaceHere(); render();
       } else if (action === "next-week") {
-        state.week = Logic.clampWeek(state.week + 1); save(); render("week");
+        state.week = Logic.clampWeek(state.week + 1); save(); replaceHere(); render();
       } else if (action === "show-map") {
-        render("map");
-      } else if (action === "show-week") {
-        render("week");
+        navigate("map");
+      } else if (action === "go-back") {
+        goBack();
       } else if (action === "goto-week") {
-        state.week = Number(el.getAttribute("data-week")); save(); render("week");
+        state.week = Number(el.getAttribute("data-week")); save(); navigate("week");
       }
     });
-    render("week");
+    // 起点：把当前这条历史记录标成本周页（depth 0 —— 返回键在这一页才会退出 App）
+    window.history.replaceState({ qianling: true, view: "week", day: null, depth: 0 }, "");
+    render();
   }
 
   return {

@@ -1,5 +1,5 @@
 {
-  "version": 1,
+  "version": 2,
   "weeks": [
     {
       "week": 1, "stage": 1, "dates": "6/29-7/5",
@@ -61,7 +61,7 @@
         {"en": "run", "zh": "跑"}, {"en": "sit", "zh": "坐"},
         {"en": "walk", "zh": "走"}
       ],
-      "coreSentences": ["I can jump!"],
+      "coreSentences": ["I can jump!", "Clap your hands!", "Let's run!"],
       "detailed": false
     },
     {
@@ -72,7 +72,7 @@
         {"en": "three", "zh": "三"}, {"en": "four", "zh": "四"},
         {"en": "five", "zh": "五"}
       ],
-      "coreSentences": ["I have two hands."],
+      "coreSentences": ["I have two hands.", "One, two, three! Count with me."],
       "detailed": false
     },
     {
@@ -91,9 +91,10 @@
       "theme": "动物②", "themeEn": "Animals", "emoji": "🐱",
       "coreWords": [
         {"en": "cow", "zh": "奶牛"}, {"en": "duck", "zh": "鸭子"},
-        {"en": "pig", "zh": "猪"}, {"en": "sheep", "zh": "绵羊"}
+        {"en": "pig", "zh": "猪"}, {"en": "sheep", "zh": "绵羊"},
+        {"en": "moo", "zh": "哞（牛叫）"}, {"en": "quack", "zh": "嘎嘎（鸭叫）"}
       ],
-      "coreSentences": ["The cow says moo.", "I see a duck."],
+      "coreSentences": ["The cow says moo.", "I see a duck.", "What does the pig say?"],
       "detailed": false
     },
     {
@@ -101,9 +102,10 @@
       "theme": "食物②", "themeEn": "Food", "emoji": "🍎",
       "coreWords": [
         {"en": "rice", "zh": "米饭"}, {"en": "water", "zh": "水"},
-        {"en": "bread", "zh": "面包"}, {"en": "juice", "zh": "果汁"}
+        {"en": "bread", "zh": "面包"}, {"en": "juice", "zh": "果汁"},
+        {"en": "soup", "zh": "汤"}, {"en": "noodles", "zh": "面条"}
       ],
-      "coreSentences": ["I want water.", "I eat rice."],
+      "coreSentences": ["I want water.", "I eat rice.", "More please!"],
       "detailed": false
     },
     {
@@ -111,9 +113,10 @@
       "theme": "衣服①", "themeEn": "Clothes", "emoji": "👕",
       "coreWords": [
         {"en": "hat", "zh": "帽子"}, {"en": "shirt", "zh": "衬衫"},
-        {"en": "shoes", "zh": "鞋子"}, {"en": "socks", "zh": "袜子"}
+        {"en": "shoes", "zh": "鞋子"}, {"en": "socks", "zh": "袜子"},
+        {"en": "dress", "zh": "连衣裙"}, {"en": "coat", "zh": "外套"}
       ],
-      "coreSentences": ["Put on your shoes.", "My hat!"],
+      "coreSentences": ["Put on your shoes.", "My hat!", "Take off your socks."],
       "detailed": false
     },
     {
@@ -121,9 +124,10 @@
       "theme": "天气①", "themeEn": "Weather", "emoji": "☀️",
       "coreWords": [
         {"en": "sun", "zh": "太阳"}, {"en": "rain", "zh": "雨"},
-        {"en": "wind", "zh": "风"}, {"en": "cloud", "zh": "云"}
+        {"en": "wind", "zh": "风"}, {"en": "cloud", "zh": "云"},
+        {"en": "sky", "zh": "天空"}
       ],
-      "coreSentences": ["It's sunny!", "I see a cloud."],
+      "coreSentences": ["It's sunny!", "I see a cloud.", "It's raining!"],
       "detailed": false
     },
     {
@@ -131,9 +135,10 @@
       "theme": "情绪①", "themeEn": "Feelings", "emoji": "😊",
       "coreWords": [
         {"en": "happy", "zh": "开心"}, {"en": "sad", "zh": "难过"},
-        {"en": "angry", "zh": "生气"}, {"en": "tired", "zh": "累"}
+        {"en": "angry", "zh": "生气"}, {"en": "tired", "zh": "累"},
+        {"en": "scared", "zh": "害怕"}
       ],
-      "coreSentences": ["I am happy!", "Are you tired?"],
+      "coreSentences": ["I am happy!", "Are you tired?", "Don't be sad."],
       "detailed": false
     },
     {
@@ -152,9 +157,10 @@
       "theme": "动物③", "themeEn": "Animals", "emoji": "🐱",
       "coreWords": [
         {"en": "lion", "zh": "狮子"}, {"en": "tiger", "zh": "老虎"},
-        {"en": "elephant", "zh": "大象"}, {"en": "monkey", "zh": "猴子"}
+        {"en": "elephant", "zh": "大象"}, {"en": "monkey", "zh": "猴子"},
+        {"en": "big", "zh": "大的"}, {"en": "small", "zh": "小的"}
       ],
-      "coreSentences": ["The lion is big!", "I see a tiger."],
+      "coreSentences": ["The lion is big!", "I see a tiger.", "The monkey is small."],
       "detailed": false
     },
     {
@@ -162,9 +168,10 @@
       "theme": "食物③", "themeEn": "Food", "emoji": "🍎",
       "coreWords": [
         {"en": "cake", "zh": "蛋糕"}, {"en": "carrot", "zh": "胡萝卜"},
-        {"en": "chicken", "zh": "鸡肉"}, {"en": "juice", "zh": "果汁"}
+        {"en": "chicken", "zh": "鸡肉"}, {"en": "juice", "zh": "果汁"},
+        {"en": "yummy", "zh": "好吃"}
       ],
-      "coreSentences": ["I like cake.", "Do you like carrots?"],
+      "coreSentences": ["I like cake.", "Do you like carrots?", "I don't like carrots."],
       "detailed": false
     },
     {
@@ -183,9 +190,10 @@
       "theme": "交通①", "themeEn": "Transport", "emoji": "🚗",
       "coreWords": [
         {"en": "car", "zh": "汽车"}, {"en": "bus", "zh": "公交车"},
-        {"en": "bike", "zh": "自行车"}, {"en": "plane", "zh": "飞机"}
+        {"en": "bike", "zh": "自行车"}, {"en": "plane", "zh": "飞机"},
+        {"en": "train", "zh": "火车"}, {"en": "boat", "zh": "船"}
       ],
-      "coreSentences": ["I see a blue car.", "The bus is big."],
+      "coreSentences": ["I see a blue car.", "The bus is big.", "Let's go by train!"],
       "detailed": false
     },
     {
@@ -205,9 +213,10 @@
       "theme": "颜色③", "themeEn": "Colors", "emoji": "🎨",
       "coreWords": [
         {"en": "orange", "zh": "橙色"}, {"en": "white", "zh": "白色"},
-        {"en": "black", "zh": "黑色"}, {"en": "gold", "zh": "金色"}
+        {"en": "black", "zh": "黑色"}, {"en": "gold", "zh": "金色"},
+        {"en": "brown", "zh": "棕色"}
       ],
-      "coreSentences": ["My favorite color is...", "What color do you like?"],
+      "coreSentences": ["My favorite color is blue.", "What color do you like?", "The bear is brown."],
       "detailed": false
     },
     {
@@ -228,9 +237,10 @@
       "theme": "地点①", "themeEn": "Places", "emoji": "🏠",
       "coreWords": [
         {"en": "home", "zh": "家"}, {"en": "park", "zh": "公园"},
-        {"en": "shop", "zh": "商店"}, {"en": "bed", "zh": "床"}
+        {"en": "shop", "zh": "商店"}, {"en": "bed", "zh": "床"},
+        {"en": "zoo", "zh": "动物园"}, {"en": "outside", "zh": "外面"}
       ],
-      "coreSentences": ["Let's go to the park!", "I am home."],
+      "coreSentences": ["Let's go to the park!", "I am home.", "Where is my bed?"],
       "detailed": false
     },
     {
@@ -247,8 +257,12 @@
     {
       "week": 24, "stage": 2, "dates": "12/7-12/13",
       "theme": "综合复习", "themeEn": "Review", "emoji": "🔄",
-      "coreWords": [],
-      "coreSentences": [],
+      "coreWords": [
+        {"en": "again", "zh": "再来一次"}, {"en": "all", "zh": "全部"},
+        {"en": "favorite", "zh": "最喜欢的"}, {"en": "more", "zh": "还要"},
+        {"en": "well done", "zh": "真棒"}
+      ],
+      "coreSentences": ["Let's play again!", "Show me your favorite color.", "Well done! You did it!"],
       "detailed": false
     },
     {
@@ -278,9 +292,10 @@
       "theme": "昆虫", "themeEn": "Insects", "emoji": "🐛",
       "coreWords": [
         {"en": "ant", "zh": "蚂蚁"}, {"en": "bee", "zh": "蜜蜂"},
-        {"en": "butterfly", "zh": "蝴蝶"}, {"en": "spider", "zh": "蜘蛛"}
+        {"en": "butterfly", "zh": "蝴蝶"}, {"en": "spider", "zh": "蜘蛛"},
+        {"en": "ladybug", "zh": "瓢虫"}
       ],
-      "coreSentences": ["I see a bee!", "The butterfly is yellow."],
+      "coreSentences": ["I see a bee!", "The butterfly is yellow.", "The ant is small."],
       "detailed": false
     },
     {
@@ -288,9 +303,10 @@
       "theme": "衣服②", "themeEn": "Clothes", "emoji": "👕",
       "coreWords": [
         {"en": "jacket", "zh": "夹克"}, {"en": "sweater", "zh": "毛衣"},
-        {"en": "pants", "zh": "裤子"}, {"en": "boots", "zh": "靴子"}
+        {"en": "pants", "zh": "裤子"}, {"en": "boots", "zh": "靴子"},
+        {"en": "scarf", "zh": "围巾"}
       ],
-      "coreSentences": ["Put on your jacket.", "My blue sweater."],
+      "coreSentences": ["Put on your jacket.", "My blue sweater.", "It's cold. Put on your boots!"],
       "detailed": false
     },
     {
@@ -298,9 +314,10 @@
       "theme": "现在进行", "themeEn": "Present Continuous", "emoji": "🎭",
       "coreWords": [
         {"en": "running", "zh": "跑步"}, {"en": "jumping", "zh": "跳"},
-        {"en": "eating", "zh": "吃"}, {"en": "sleeping", "zh": "睡觉"}
+        {"en": "eating", "zh": "吃"}, {"en": "sleeping", "zh": "睡觉"},
+        {"en": "drinking", "zh": "喝水"}, {"en": "singing", "zh": "唱歌"}
       ],
-      "coreSentences": ["I am running!", "Dad is eating."],
+      "coreSentences": ["I am running!", "Dad is eating.", "What are you doing?"],
       "detailed": false
     },
     {
@@ -308,9 +325,10 @@
       "theme": "动物④", "themeEn": "Animals", "emoji": "🐱",
       "coreWords": [
         {"en": "giraffe", "zh": "长颈鹿"}, {"en": "zebra", "zh": "斑马"},
-        {"en": "bear", "zh": "熊"}, {"en": "kangaroo", "zh": "袋鼠"}
+        {"en": "bear", "zh": "熊"}, {"en": "kangaroo", "zh": "袋鼠"},
+        {"en": "tall", "zh": "高的"}, {"en": "fast", "zh": "快的"}
       ],
-      "coreSentences": ["The giraffe is tall.", "I like bears."],
+      "coreSentences": ["The giraffe is tall.", "I like bears.", "The zebra can run fast."],
       "detailed": false
     },
     {
@@ -318,9 +336,10 @@
       "theme": "食物④", "themeEn": "Food", "emoji": "🍎",
       "coreWords": [
         {"en": "plate", "zh": "盘子"}, {"en": "bowl", "zh": "碗"},
-        {"en": "cup", "zh": "杯子"}, {"en": "spoon", "zh": "勺子"}
+        {"en": "cup", "zh": "杯子"}, {"en": "spoon", "zh": "勺子"},
+        {"en": "fork", "zh": "叉子"}, {"en": "knife", "zh": "刀"}
       ],
-      "coreSentences": ["Breakfast time!", "I eat with a spoon."],
+      "coreSentences": ["Breakfast time!", "I eat with a spoon.", "I'm full! Thank you."],
       "detailed": false
     },
     {
@@ -349,9 +368,10 @@
       "theme": "儿歌特辑", "themeEn": "Nursery Rhymes", "emoji": "🎵",
       "coreWords": [
         {"en": "Twinkle", "zh": "小星星"}, {"en": "Old Mac", "zh": "老麦克唐纳"},
-        {"en": "ABC", "zh": "字母歌"}, {"en": "Baby Shark", "zh": "鲨鱼宝宝"}
+        {"en": "ABC", "zh": "字母歌"}, {"en": "Baby Shark", "zh": "鲨鱼宝宝"},
+        {"en": "Five Little Ducks", "zh": "五只小鸭子"}, {"en": "Head Shoulders", "zh": "头肩膝脚"}
       ],
-      "coreSentences": [],
+      "coreSentences": ["Twinkle, twinkle, little star!", "Old MacDonald had a farm!", "Baby shark, doo doo doo!"],
       "detailed": false
     },
     {
@@ -359,16 +379,21 @@
       "theme": "地点②", "themeEn": "Places", "emoji": "🏠",
       "coreWords": [
         {"en": "school", "zh": "学校"}, {"en": "kitchen", "zh": "厨房"},
-        {"en": "bathroom", "zh": "浴室"}, {"en": "garden", "zh": "花园"}
+        {"en": "bathroom", "zh": "浴室"}, {"en": "garden", "zh": "花园"},
+        {"en": "bedroom", "zh": "卧室"}
       ],
-      "coreSentences": ["Where is Mum?", "She is in the kitchen."],
+      "coreSentences": ["Where is Mum?", "She is in the kitchen.", "I am in the garden."],
       "detailed": false
     },
     {
       "week": 36, "stage": 3, "dates": "3/22-3/28",
       "theme": "综合复习", "themeEn": "Review", "emoji": "🔄",
-      "coreWords": [],
-      "coreSentences": [],
+      "coreWords": [
+        {"en": "what's this", "zh": "这是什么"}, {"en": "let me try", "zh": "让我试试"},
+        {"en": "almost", "zh": "差一点"}, {"en": "by myself", "zh": "我自己来"},
+        {"en": "say it again", "zh": "再说一遍"}
+      ],
+      "coreSentences": ["What's this? Let me try!", "I can do it by myself!", "Almost! Try again!"],
       "detailed": false
     },
     {
@@ -376,9 +401,10 @@
       "theme": "家人③", "themeEn": "Family", "emoji": "👨‍👩‍👧",
       "coreWords": [
         {"en": "tall", "zh": "高"}, {"en": "kind", "zh": "善良"},
-        {"en": "funny", "zh": "有趣"}, {"en": "strong", "zh": "强壮"}
+        {"en": "funny", "zh": "有趣"}, {"en": "strong", "zh": "强壮"},
+        {"en": "beautiful", "zh": "漂亮"}, {"en": "love", "zh": "爱"}
       ],
-      "coreSentences": ["My dad is strong.", "Mum is kind."],
+      "coreSentences": ["My dad is strong.", "Mum is kind.", "I love my family."],
       "detailed": false
     },
     {
@@ -397,25 +423,32 @@
       "theme": "颜色④", "themeEn": "Colors", "emoji": "🎨",
       "coreWords": [
         {"en": "circle", "zh": "圆形"}, {"en": "square", "zh": "方形"},
-        {"en": "star", "zh": "星星"}, {"en": "heart", "zh": "心形"}
+        {"en": "star", "zh": "星星"}, {"en": "heart", "zh": "心形"},
+        {"en": "triangle", "zh": "三角形"}
       ],
-      "coreSentences": ["A red circle.", "The star is yellow."],
+      "coreSentences": ["A red circle.", "The star is yellow.", "How many red stars?"],
       "detailed": false
     },
     {
       "week": 40, "stage": 4, "dates": "4/19-4/25",
       "theme": "故事周", "themeEn": "Story", "emoji": "📖",
-      "coreWords": [],
-      "coreSentences": [],
+      "coreWords": [
+        {"en": "story", "zh": "故事"}, {"en": "book", "zh": "书"},
+        {"en": "read", "zh": "读"}, {"en": "page", "zh": "页"},
+        {"en": "the end", "zh": "讲完了"}
+      ],
+      "coreSentences": ["Let's read a story!", "Turn the page.", "The end! Again?"],
       "detailed": false
     },
     {
       "week": 41, "stage": 4, "dates": "4/26-5/2",
       "theme": "动作③", "themeEn": "Actions", "emoji": "🎵",
       "coreWords": [
-        {"en": "first", "zh": "先"}, {"en": "then", "zh": "然后"}
+        {"en": "first", "zh": "先"}, {"en": "then", "zh": "然后"},
+        {"en": "again", "zh": "再一次"}, {"en": "wait", "zh": "等一下"},
+        {"en": "after", "zh": "之后"}
       ],
-      "coreSentences": ["First clap, then jump!"],
+      "coreSentences": ["First clap, then jump!", "Wash your hands, then eat!", "First shoes, then outside!"],
       "detailed": false
     },
     {
@@ -423,9 +456,11 @@
       "theme": "角色扮演", "themeEn": "Role Play", "emoji": "🛒",
       "coreWords": [
         {"en": "shop", "zh": "商店"}, {"en": "buy", "zh": "买"},
-        {"en": "how much", "zh": "多少钱"}, {"en": "please", "zh": "请"}
+        {"en": "how much", "zh": "多少钱"}, {"en": "please", "zh": "请"},
+        {"en": "here you are", "zh": "给你"}, {"en": "thank you", "zh": "谢谢"},
+        {"en": "money", "zh": "钱"}
       ],
-      "coreSentences": ["I want an apple, please.", "Here you are!"],
+      "coreSentences": ["I want an apple, please.", "Here you are!", "Thank you! Bye-bye!"],
       "detailed": false
     },
     {
@@ -442,8 +477,12 @@
     {
       "week": 44, "stage": 4, "dates": "5/17-5/23",
       "theme": "故事周②", "themeEn": "Story", "emoji": "📖",
-      "coreWords": [],
-      "coreSentences": [],
+      "coreWords": [
+        {"en": "who", "zh": "谁"}, {"en": "where", "zh": "在哪里"},
+        {"en": "why", "zh": "为什么"}, {"en": "tell me", "zh": "告诉我"},
+        {"en": "and then", "zh": "然后呢"}
+      ],
+      "coreSentences": ["Who is this?", "Where is the bear?", "And then? Tell me!", "The end!"],
       "detailed": false
     },
     {
@@ -460,8 +499,12 @@
     {
       "week": 46, "stage": 4, "dates": "5/31-6/6",
       "theme": "数字③", "themeEn": "Numbers", "emoji": "🔢",
-      "coreWords": [],
-      "coreSentences": ["I have five crayons."],
+      "coreWords": [
+        {"en": "count", "zh": "数"}, {"en": "how many", "zh": "多少个"},
+        {"en": "crayons", "zh": "蜡笔"}, {"en": "fingers", "zh": "手指"},
+        {"en": "together", "zh": "一起"}
+      ],
+      "coreSentences": ["I have five crayons.", "Let's count together: one, two, three...", "How many fingers?"],
       "detailed": false
     },
     {
@@ -478,8 +521,12 @@
     {
       "week": 48, "stage": 4, "dates": "6/14-6/20",
       "theme": "年度回顾", "themeEn": "Year Review", "emoji": "🎉",
-      "coreWords": [],
-      "coreSentences": ["I can speak English!"],
+      "coreWords": [
+        {"en": "I can", "zh": "我会"}, {"en": "remember", "zh": "记得"},
+        {"en": "sing", "zh": "唱"}, {"en": "dance", "zh": "跳舞"},
+        {"en": "English", "zh": "英语"}
+      ],
+      "coreSentences": ["I can speak English!", "Let's sing all our songs!", "I love English!"],
       "detailed": false
     }
   ],

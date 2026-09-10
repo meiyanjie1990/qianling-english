@@ -1,4 +1,4 @@
-var CACHE_NAME = "qianling-app-v1";
+var CACHE_NAME = "qianling-app-v2";
 var PRECACHE = [
   "./", "index.html", "logic.js", "ui.js", "content.json",
   "manifest.json", "version.json",

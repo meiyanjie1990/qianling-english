@@ -1,6 +1,6 @@
 # 谦灵启蒙 App · 项目名片
 
-> 最后更新：2026-09-09｜页面代码版本 v1（version.json）｜内容版本 1（content.json，1-4 周已细化）
+> 最后更新：2026-09-10｜页面代码版本 v2（version.json）｜内容版本 2（content.json，1-4 周已细化，48 周核心词句已补满）
 
 ## 项目概述
 
@@ -9,6 +9,7 @@
 - 课程是一年 48 周的幼儿英语启蒙（2026-06-29 ~ 2027-06-20 排满），主题线来自 `E:\谦灵英语启蒙\` 的年度规划。
 - 手机上是给 **Mei 备课速查 + 记录每天有没有带谦灵做**（打卡）的工具，不是给谦灵自己看自己玩的 App。
 - 每周有「骨架」（主题、emoji、日期、核心词、核心句）；**细化过**的周还有逐日分时段内容（时间段 / 做什么 / 英文原句）。
+- **48 周的核心词 / 核心句都已补满**（2026-09-10，内容版本 2）：非细化周一律 ≥5 个核心词、≥2 个核心句，不再有空数组。第 1-4 周的骨架字段保持与 docx 源材料一致，不动。
 - 目前第 1-4 周已细化（Colors / Animals / Food / Body）；第 5 周起只有骨架，App 内显示「内容还没出」。
 - 打开默认停在**第 2 周 Animals**（DEFAULT_WEEK=2）。
 - **打卡记录只存在手机本地**（localStorage，浏览器本地存储），没有服务器、不跨设备同步；换设备或清浏览器数据会重新开始。
@@ -29,10 +30,10 @@
 
 | 部分 | 状态 |
 |---|---|
-| 48 周骨架（weeks） | 全部在 content.json，字段完整（含 1-48 周的详细 false/true 标记） |
+| 48 周骨架（weeks） | 全部在 content.json，字段完整（含 1-48 周的详细 false/true 标记）；**48 周核心词句已补满**（非细化周 ≥5 词 / ≥2 句） |
 | 细化内容（details） | 第 1-4 周：Colors / Animals / Food / Body，每周 7 天（休息日固定第 3、6、7 天） |
-| 页面代码 | v1：三页齐全（本周页 / 当天详情页 / 全年地图页）+ PWA 套件 + 更新徽标 |
-| 测试 | 20/20 通过（`node --test`） |
+| 页面代码 | v2：三页齐全（本周页 / 当天详情页 / 全年地图页）+ PWA 套件 + 更新徽标；返回键走历史记录、休息日无打卡键 |
+| 测试 | 27/27 通过（content 7 + logic 8 + ui 7 + nav 5） |
 | 仓库与上线 | ✅ 已上线 https://meiyanjie1990.github.io/qianling-english/，工作流自动部署 |
 
 ## 文件结构
@@ -41,14 +42,14 @@
 |---|---|
 | `index.html` | 页面外壳 + 全部 CSS + 三视图容器 + Service Worker 注册 + 「点我更新」徽标逻辑 |
 | `logic.js` | Logic 模块：内容解析/拉取、周号钳制、打卡读写、localStorage 键定义。UMD（同一份代码浏览器和 Node 都能用），Node 下导出给测试 |
-| `ui.js` | Ui 模块：本周页 / 当天详情页 / 全年地图页渲染、打卡勾选状态。UMD |
-| `content.json` | 全部课程数据：48 周骨架 + 细化周的逐日内容；顶部带内容版本号 `version` |
-| `version.json` | 页面代码发布版本 `{"version": 1}`，驱动「点我更新」徽标 |
+| `ui.js` | Ui 模块：本周页 / 当天详情页 / 全年地图页渲染、打卡勾选状态、**视图历史记录**（手机返回键先回上一页）。UMD |
+| `content.json` | 全部课程数据：48 周骨架（核心词句已补满）+ 细化周的逐日内容；顶部带内容版本号 `version` |
+| `version.json` | 页面代码发布版本 `{"version": 2}`，驱动「点我更新」徽标 |
 | `manifest.json` | PWA 名称「谦灵启蒙」、图标、主题色 #FFF6E9（暖底） |
 | `sw.js` | Service Worker（浏览器后台脚本，管缓存）：content/version 走网络优先，其余缓存优先；`CACHE_NAME` 即缓存版本 |
-| `icon-192.png` / `icon-512.png` | PWA 图标（暖橙圆角方块 + 白色「谦」字），`tools/make-icons.py` 生成 |
+| `icon-192.png` / `icon-512.png` | PWA 图标（蓝色 #2F6FE0 圆角方块 + 白色「灵」字），`tools/make-icons.py` 生成 |
 | `apple-touch-icon.png` | iPhone「添加到主屏幕」用的图标 |
-| `tests/` | 测试：content.test.js / logic.test.js / ui.test.js，共 20 条，`node --test` 跑 |
+| `tests/` | 测试：content / logic / ui / nav 四个文件共 27 条，`node --test` 跑（nav.test.js 用最小浏览器桩验证返回键历史） |
 | `tools/` | `make-icons.py`：Pillow 脚本；重新生成图标后要提交新的 PNG |
 | `docs/` | `source-transcripts/`（1-4 周源材料转录参考）+ `superpowers/`（设计文档、实施计划） |
 | `.github/workflows/pages.yml` | GitHub Pages 部署工作流（push 到 master 自动发布）；仓库 remote 用 SSH（git@github.com），https 推送会被重置 |
@@ -84,8 +85,10 @@
 规则要点：
 
 - `weeks` 48 个骨架对象**全部存在**，1-4 周已标 `detailed: true`；加新周细化时把该周骨架标 true 并补全核心词句。
+- **48 周都有核心词和核心句**（内容版本 2 起）：非细化周一律 ≥5 个核心词、≥2 个核心句，`content.test.js` 会卡这条。改骨架时别把某周清空。
 - `details` 的键是字符串周号（`"1"` 不是 `1`）；每周 `days` 恰 7 天，**休息日固定为第 3、6、7 天**（周三+周末，`rest: true`、sections 空），**活动日只有 1/2/4/5**，样式见上面的 `{"day": 6, ...}` 休息日条目。
 - 每个活动日（非休息天）的 sections 块 `time / do / say`：时间段、Mei 照做的动作、对谦灵说的英文原句。测试要求整周 7 天齐全、有 video、活动日结构完整。
+- **休息日不打卡**：`renderDayPage` 遇到 `rest: true` 不渲染打卡按钮（休息日本来就没事可做），只有活动日才有「✅ 今天完成啦」。改当天页时别把这条删了。
 
 ## 每周新内容固定流程
 
@@ -99,7 +102,7 @@ Mei 说「**出第 X 周的细化版**」（或 App 里提示的同款话）时�
 
 ## 发布规则
 
-1. **测试**：`node --test`，20 条全绿才算过。注意参数不带 `tests/`（Windows 本机带目录参数会报错）。
+1. **测试**：`node --test`，27 条全绿才算过。注意参数不带 `tests/`（Windows 本机带目录参数会报错）。若本机沙箱让 `node --test` 报 `spawn EPERM`（它要开子进程管道），就逐个跑 `node tests/content.test.js`、`node tests/logic.test.js`、`node tests/ui.test.js`、`node tests/nav.test.js`，同样一份测试、同样 27 条。
 2. **提交**：`git status` 先确认没有意外文件；`.gitignore` 只忽略 Python 缓存等杂物（tools 目录），不把临时文件带进提交。
 3. **改完必须 push + 线上验证**：push 后 Actions 工作流自动部署（`gh run list --repo meiyanjie1990/qianling-english` 看状态，约 1-2 分钟），再
    `curl -s -o /dev/null -w "%{http_code}" https://meiyanjie1990.github.io/qianling-english/` 返回 `200` 才算发布成功。
@@ -114,10 +117,11 @@ Mei 说「**出第 X 周的细化版**」（或 App 里提示的同款话）时�
 - **三个视图**（`index.html` 里三个 view 容器，ui.js 切换渲染）：
   本周页（核心词条 + 核心句卡 + 视频条 + 7 天打卡列表 + 进阶选做折叠；未细化周显示「内容还没出」提示）；当天详情页（分时间段块：时间/做什么/英文原句 + 打卡勾选 + remember 小结）；全年地图页（48 周格子，细化周可点、未细化周灰显）。
 - **代码分工**：index.html 只装配和启动；`Logic`（logic.js）管数据与状态，`Ui`（ui.js）管渲染；UMD 封装让浏览器和 Node 测试共用同一份文件。
+- **导航与历史记录**（v2，解决「按返回键整个 App 退出」）：ui.js 的 `initApp` 把当前视图（week / day / map）同步写进 `history.state`。换页 = `pushState`（多一条记录），页内换周 = `replaceState`（原地改，返回键不会一周一周倒），页内「← 返回」按钮 = `history.back()`。`popstate` 回来就按 `e.state` 重渲染。**根记录 depth 0**：只有在本周页按返回键才会退出 App。测试在 `tests/nav.test.js`。
 - **数据拉取**：逻辑层先 `content.json?ts=时间戳` 网络拉取，失败回退普通请求，再失败走缓存/报错提示——即内容**永远读线上最新**。
 - **缓存策略**（sw.js）：`content.json` / `version.json` 网络优先（每次联网先拿最新，离线才用缓存）；其余静态资源（HTML/JS/图标）缓存优先。
 - **本地状态** localStorage 三键：`qianling-progress-v1`（打卡记录）、`qianling-current-week`（当前周）、`qianling-app-version`（已接受的版本号）。
-- **测试**：`tests/` 下三个文件 20 条，直接读 content.json 与 require logic.js/ui.js，不开浏览器。
+- **测试**：`tests/` 下四个文件 27 条，直接读 content.json 与 require logic.js/ui.js，不开浏览器；`nav.test.js` 自建最小 window/document/history 桩来验证返回键行为。
 
 ## 日常任务速查
 
@@ -125,6 +129,8 @@ Mei 说「**出第 X 周的细化版**」（或 App 里提示的同款话）时�
 |---|---|
 | 「出第 X 周的细化版」/「第 X 周内容还没出」 | 走上面的「每周新内容固定流程」 |
 | 「改页面样式 / 修个 bug」 | 改代码 → `node --test` → bump version.json + sw.js CACHE_NAME → push → curl 200 |
+| 「按返回键整个 App 退出了」 | v2 已修：ui.js 用 history.state 记视图，返回键先回上一页，只有本周页根记录才退出。改了视图切换逻辑要跑 `tests/nav.test.js` |
+| 「休息日怎么还有打卡键」 | v2 已修：`renderDayPage` 里 `day.rest` 为真就不渲染打卡键 |
 | 「打卡没了 / 换个手机还有打卡吗」 | 打卡在手机本地，换设备/清浏览器会丢，无云端可恢复 |
-| 「图标/名字/颜色想改」 | manifest.json、图标 png（tools/make-icons.py 重新生成）、theme_color #FFF6E9 |
+| 「图标/名字/颜色想改」 | manifest.json、图标 png（tools/make-icons.py 重新生成，当前蓝底 #2F6FE0 + 白「灵」）、theme_color #FFF6E9 |
 | 「第 X 周的内容怎么又没了」 | 检查是不是忘 push，或 content.json 忘标 detailed / 忘 bump 内容版本号 |
