@@ -158,3 +158,9 @@ test("没打过卡就退回上次存的周号", () => {
   const env = boot({ "qianling-current-week": "5" });
   assert.ok(env.views["view-week"].innerHTML.includes("第5周"));
 });
+
+test("老数据迁移：只有打卡记录、没记过『上次打卡周』时也落在最后打卡的那一周", () => {
+  const store = { "qianling-progress-v1": JSON.stringify({ "5": { "1": true } }) };
+  const env = boot(store);
+  assert.ok(env.views["view-week"].innerHTML.includes("第5周"), "应从打卡记录推断出第 5 周");
+});

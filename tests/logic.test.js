@@ -104,6 +104,14 @@ test("上一次打卡的周号：存取、夹范围、坏数据不炸", () => {
   assert.strictEqual(Logic.loadLastCheckinWeek(s), null);
 });
 
+test("inferLastCheckinWeek：从已有打卡记录推断最后打卡的周（老数据迁移）", () => {
+  assert.strictEqual(Logic.inferLastCheckinWeek({}), null, "没记录时 null");
+  assert.strictEqual(Logic.inferLastCheckinWeek(null), null);
+  assert.strictEqual(Logic.inferLastCheckinWeek({ 3: { 1: true }, 7: { 2: true } }), 7, "取最大的一周");
+  assert.strictEqual(Logic.inferLastCheckinWeek({ 7: { 2: false } }), null, "全是取消勾的不算");
+  assert.strictEqual(Logic.inferLastCheckinWeek({ 3: { 1: true }, 9: { 1: false } }), 3, "跳过没打勾的周");
+});
+
 test("fetchContent 网络优先，失败回退，再失败 null", async () => {
   const calls = [];
   const impl = async url => {

@@ -143,11 +143,14 @@
     var storage = window.localStorage;
     var state = {
       content: content,
-      // 打开就停在上一次打卡的那一周（跟着她真实进度走）；
-      // 还没打过卡才退回上次存的周号，再不行才用默认周
-      week: Logic.loadLastCheckinWeek(storage) || Logic.loadCurrentWeek(storage),
       progress: Logic.loadProgress(storage)
     };
+    // 打开停在哪一周（按优先级）：
+    //   上次打卡的那一周 → 打卡记录里真有勾的最大那一周（老数据迁移）→ 上次存的周号 → 默认周
+    // 跟着她真实进度走，而不是跟着课表日期走（她可能比课表快或慢）
+    state.week = Logic.loadLastCheckinWeek(storage) ||
+      Logic.inferLastCheckinWeek(state.progress) ||
+      Logic.loadCurrentWeek(storage);
     var views = {
       week: document.getElementById("view-week"),
       day: document.getElementById("view-day"),

@@ -120,6 +120,16 @@
     try { storage.setItem(LAST_WEEK_KEY, String(clampWeek(weekNum))); } catch (e) { /* 存不下就算了 */ }
   }
 
+  // 老数据迁移：手机上还没写过后面的"上次打卡周"时，从已有打卡记录里推断——
+  // 取"真有打勾的周"里最大的那一周（她是一周一周往前走，所以最大的就是最近的）。
+  function inferLastCheckinWeek(progress) {
+    var weeks = Object.keys(progress || {})
+      .map(Number)
+      .filter(function (n) { return Number.isFinite(n) && weekDoneCount(progress, n) > 0; });
+    if (!weeks.length) return null;
+    return clampWeek(Math.max.apply(null, weeks));
+  }
+
   async function fetchContent(fetchImpl) {
     try {
       var res = await fetchImpl("content.json?ts=" + Date.now());
@@ -155,6 +165,7 @@
     saveCurrentWeek: saveCurrentWeek,
     loadLastCheckinWeek: loadLastCheckinWeek,
     saveLastCheckinWeek: saveLastCheckinWeek,
+    inferLastCheckinWeek: inferLastCheckinWeek,
     fetchContent: fetchContent
   };
 });
