@@ -1,5 +1,5 @@
 {
-  "version": 2,
+  "version": 3,
   "weeks": [
     {
       "week": 1, "stage": 1, "dates": "6/29-7/5",
@@ -51,7 +51,7 @@
         {"en": "grandpa", "zh": "爷爷"}
       ],
       "coreSentences": ["This is Mum.", "I love Dad."],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 6, "stage": 1, "dates": "8/3-8/9",
@@ -62,7 +62,7 @@
         {"en": "walk", "zh": "走"}
       ],
       "coreSentences": ["I can jump!", "Clap your hands!", "Let's run!"],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 7, "stage": 1, "dates": "8/10-8/16",
@@ -73,7 +73,7 @@
         {"en": "five", "zh": "五"}
       ],
       "coreSentences": ["I have two hands.", "One, two, three! Count with me."],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 8, "stage": 1, "dates": "8/17-8/23",
@@ -84,7 +84,7 @@
         {"en": "pink", "zh": "粉红"}, {"en": "purple", "zh": "紫色"}
       ],
       "coreSentences": ["Which is red?", "I like blue."],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 9, "stage": 1, "dates": "8/24-8/30",
@@ -95,7 +95,7 @@
         {"en": "moo", "zh": "哞（牛叫）"}, {"en": "quack", "zh": "嘎嘎（鸭叫）"}
       ],
       "coreSentences": ["The cow says moo.", "I see a duck.", "What does the pig say?"],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 10, "stage": 1, "dates": "8/31-9/6",
@@ -106,7 +106,7 @@
         {"en": "soup", "zh": "汤"}, {"en": "noodles", "zh": "面条"}
       ],
       "coreSentences": ["I want water.", "I eat rice.", "More please!"],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 11, "stage": 1, "dates": "9/7-9/13",
@@ -117,7 +117,7 @@
         {"en": "dress", "zh": "连衣裙"}, {"en": "coat", "zh": "外套"}
       ],
       "coreSentences": ["Put on your shoes.", "My hat!", "Take off your socks."],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 12, "stage": 1, "dates": "9/14-9/20",
@@ -128,7 +128,7 @@
         {"en": "sky", "zh": "天空"}
       ],
       "coreSentences": ["It's sunny!", "I see a cloud.", "It's raining!"],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 13, "stage": 2, "dates": "9/21-9/27",
@@ -139,7 +139,7 @@
         {"en": "scared", "zh": "害怕"}
       ],
       "coreSentences": ["I am happy!", "Are you tired?", "Don't be sad."],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 14, "stage": 2, "dates": "9/28-10/4",
@@ -150,7 +150,7 @@
         {"en": "hair", "zh": "头发"}
       ],
       "coreSentences": ["My hands!", "Wash your feet."],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 15, "stage": 2, "dates": "10/5-10/11",
@@ -161,7 +161,7 @@
         {"en": "big", "zh": "大的"}, {"en": "small", "zh": "小的"}
       ],
       "coreSentences": ["The lion is big!", "I see a tiger.", "The monkey is small."],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 16, "stage": 2, "dates": "10/12-10/18",
@@ -172,7 +172,7 @@
         {"en": "yummy", "zh": "好吃"}
       ],
       "coreSentences": ["I like cake.", "Do you like carrots?", "I don't like carrots."],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 17, "stage": 2, "dates": "10/19-10/25",
@@ -183,7 +183,7 @@
         {"en": "spin", "zh": "转圈"}
       ],
       "coreSentences": ["I can hop!", "Let's stomp!"],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 18, "stage": 2, "dates": "10/26-11/1",
@@ -194,7 +194,7 @@
         {"en": "train", "zh": "火车"}, {"en": "boat", "zh": "船"}
       ],
       "coreSentences": ["I see a blue car.", "The bus is big.", "Let's go by train!"],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 19, "stage": 2, "dates": "11/2-11/8",
@@ -206,7 +206,7 @@
         {"en": "brother", "zh": "兄弟"}
       ],
       "coreSentences": ["This is my dad.", "My grandma likes..."],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 20, "stage": 2, "dates": "11/9-11/15",
@@ -217,7 +217,7 @@
         {"en": "brown", "zh": "棕色"}
       ],
       "coreSentences": ["My favorite color is blue.", "What color do you like?", "The bear is brown."],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 21, "stage": 2, "dates": "11/16-11/22",
@@ -230,7 +230,7 @@
         {"en": "nine", "zh": "九"}, {"en": "ten", "zh": "十"}
       ],
       "coreSentences": ["How many?", "I have three!"],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 22, "stage": 2, "dates": "11/23-11/29",
@@ -241,7 +241,7 @@
         {"en": "zoo", "zh": "动物园"}, {"en": "outside", "zh": "外面"}
       ],
       "coreSentences": ["Let's go to the park!", "I am home.", "Where is my bed?"],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 23, "stage": 2, "dates": "11/30-12/6",
@@ -252,7 +252,7 @@
         {"en": "snow", "zh": "雪"}
       ],
       "coreSentences": ["Merry Christmas!", "I see a gift."],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 24, "stage": 2, "dates": "12/7-12/13",
@@ -263,7 +263,7 @@
         {"en": "well done", "zh": "真棒"}
       ],
       "coreSentences": ["Let's play again!", "Show me your favorite color.", "Well done! You did it!"],
-      "detailed": false
+      "detailed": true
     },
     {
       "week": 25, "stage": 3, "dates": "1/4-1/10",
@@ -357,8 +357,9 @@
       "week": 33, "stage": 3, "dates": "3/1-3/7",
       "theme": "字母周", "themeEn": "Alphabet", "emoji": "🔤",
       "coreWords": [
-        {"en": "A", "zh": "a"}, {"en": "B", "zh": "b"}, {"en": "C", "zh": "c"},
-        {"en": "D", "zh": "d"}, {"en": "E", "zh": "e"}, {"en": "F", "zh": "f"}
+        {"en": "A", "zh": "a"}, {"en": "B", "zh": "b"},
+        {"en": "C", "zh": "c"}, {"en": "D", "zh": "d"},
+        {"en": "E", "zh": "e"}, {"en": "F", "zh": "f"}
       ],
       "coreSentences": ["A is for apple!", "B is for ball!"],
       "detailed": false
@@ -511,8 +512,9 @@
       "week": 47, "stage": 4, "dates": "6/7-6/13",
       "theme": "字母周②", "themeEn": "Alphabet", "emoji": "🔤",
       "coreWords": [
-        {"en": "G", "zh": "g"}, {"en": "H", "zh": "h"}, {"en": "I", "zh": "i"},
-        {"en": "J", "zh": "j"}, {"en": "K", "zh": "k"}, {"en": "L", "zh": "l"},
+        {"en": "G", "zh": "g"}, {"en": "H", "zh": "h"},
+        {"en": "I", "zh": "i"}, {"en": "J", "zh": "j"},
+        {"en": "K", "zh": "k"}, {"en": "L", "zh": "l"},
         {"en": "M", "zh": "m"}, {"en": "N", "zh": "n"}
       ],
       "coreSentences": ["G is for green!", "M is for Mum!"],
@@ -688,6 +690,886 @@
            {"time": "睡前", "do": "晚安五官：亲着眼睛/鼻子/嘴/耳朵说晚安，然后唱完歌", "say": ["Goodnight, eyes!", "Goodnight, nose!", "Goodnight, mouth!", "Goodnight, ears!"]}
          ],
          "remember": "晚安五官——最温柔的复习方式"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "5": {
+      "video": {
+        "primary": {"name": "The More We Get Together", "no": "179"},
+        "advanced": {"name": "Where Is Baby", "no": "180"}
+      },
+      "advanced": "进阶词3个：sister（姐妹）· brother（兄弟）· family（家人）——家里有谁就带谁，没有就跳过。进阶句型：\"This is my dad.\"（加上 my，比上周更完整）\"I love Mum and Dad.\"（一次说两个人）。进阶游戏：全家福点名——照片排一排，你喊 \"Mum!\" 她拍妈妈那张，速度慢慢加快。进阶绘本：《Guess How Much I Love You》（猜猜我有多爱你），每晚读两页，读完抱一下。进阶小任务：让她给爷爷奶奶送一样东西，送的时候说 \"This is for Grandma.\"",
+      "days": [
+        {"day": 1, "title": "妈妈日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "穿好衣服蹲下来和她面对面，指自己胸口说 This is Mum，再指她", "say": ["Who is this? Mum!", "This is Mum."]},
+           {"time": "早餐 7:30-7:45", "do": "喂饭时说妈妈在，夸她一口一口吃得香", "say": ["Mum is here.", "Mum loves you!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "翻家庭相册，翻到妈妈的照片就停下来指，她指对了亲她一下", "say": ["Who is this?", "It's Mum! This is Mum.", "Give Mum a kiss!"]},
+           {"time": "睡前", "do": "抱着说晚安，放 The More We Get Together 或自己唱两句", "say": ["Goodnight, Mum!", "I love Mum."]}
+         ],
+         "remember": "妈妈 = Mum"},
+        {"day": 2, "title": "爸爸日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "复习昨天的妈妈，再指爸爸的照片介绍今天的主角", "say": ["Remember Mum? This is Mum.", "Today: Dad! This is Dad."]},
+           {"time": "早餐 7:30-7:45", "do": "指爸爸的碗、爸爸的椅子，把 Dad 和具体东西挂上钩", "say": ["Dad's bowl! Dad's chair!", "Dad is eating."]},
+           {"time": "爸爸下班回家", "do": "爸爸一进门就大声说 Dad is home，让她跑去抱——情绪最强的几秒，记得最牢", "say": ["Dad is home!", "Give Dad a hug!", "I love Dad."]},
+           {"time": "睡前", "do": "请爸爸来讲今晚的绘本或唱晚安歌，讲完抱着说晚安", "say": ["Goodnight, Dad!", "I love you, Dad."]}
+         ],
+         "remember": "爸爸 = Dad，回家 = \"Dad is home!\""},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "宝宝日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "指镜子里的她说 Baby，再翻出她婴儿时期的照片对比着看", "say": ["This is you! Baby!", "You are my baby."]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "玩过家家：给娃娃喂饭、擦嘴、哄睡，全程只说英文短句", "say": ["The baby is hungry.", "Feed the baby.", "Baby is sleeping. Shh!"]},
+           {"time": "晚饭后（5分钟）", "do": "拿出全家福一个一个指过去；再换成你问她指，她指对了大声表扬", "say": ["This is Mum. This is Dad. This is Baby!", "Where is Baby?"]},
+           {"time": "睡前", "do": "放 Where Is Baby 视频，或抱着她轻轻说", "say": ["Goodnight, baby!"]}
+         ],
+         "remember": "宝宝 = Baby；全家福里能指对人"},
+        {"day": 5, "title": "爷爷奶奶日 + 大回顾", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "看爷爷奶奶的照片，或打一个视频电话让她对着屏幕喊人", "say": ["This is Grandma. This is Grandpa.", "Say hello to Grandma!"]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "家人大搜寻：五张照片（mum / dad / baby / grandma / grandpa）摊在沙发上，你说名字她跑去找、拿给你", "say": ["Where is Grandma?", "Give me Dad!", "Yes! This is Dad. Well done!"]},
+           {"time": "晚饭后", "do": "一家人围坐放 The More We Get Together，边唱边指人；唱到谁谁拍手", "say": ["Let's sing! The more we get together!"]},
+           {"time": "睡前", "do": "讲一个家人小故事，讲完唱歌说晚安", "say": ["Once there was a little girl. She had a mum, a dad, a grandma and a grandpa. They all loved her very much. The end!"]}
+         ],
+         "remember": "五个称呼全部认一遍"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "6": {
+      "video": {
+        "primary": {"name": "Yes, I Can!", "no": "050"},
+        "advanced": {"name": "Move!", "no": "222"}
+      },
+      "advanced": "进阶词3个：stomp（跺脚）· spin（转圈）· hop（单脚跳）——歌里都有，跟着做就行。进阶句型：\"Can you jump? Yes, I can!\"（一问一答）\"I can clap and jump!\"（一次连两个动作）。进阶游戏：动作接龙——你做一个动作，她接着做一个，做完换她先做你学，笑场也算过关。进阶绘本：《From Head to Toe》（从头动到脚），Eric Carle，每页一个动物一个动作，边读边做。",
+      "days": [
+        {"day": 1, "title": "拍手 + 跳", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "穿好衣服拍手欢迎新的一天，边拍边喊 clap", "say": ["Clap your hands!", "Clap, clap, clap!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "放 Yes, I Can! 视频，放到 clap 和 jump 就一起做，跳时扶着她手一起蹦", "say": ["I can jump!", "Jump, jump, jump!"]},
+           {"time": "洗澡", "do": "洗澡时拍水花，把拍手换成拍水，边拍边喊 clap", "say": ["Clap your hands!", "Splash, splash!"]},
+           {"time": "睡前", "do": "抱着她在床上轻轻蹦两下，说晚安", "say": ["Jump to bed!", "Goodnight!"]}
+         ],
+         "remember": "拍手 = clap，跳 = jump"},
+        {"day": 2, "title": "跑 + 走", "rest": false,
+         "sections": [
+           {"time": "出门", "do": "出门下楼时牵着她慢慢走，边走边说 walk", "say": ["Let's walk.", "Walk, walk, walk."]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "客厅小短跑：从沙发跑到门口再跑回来，边跑边喊 run", "say": ["Let's run!", "Run, run, run!"]},
+           {"time": "午饭", "do": "饭前喊停，做坐下的动作一起坐好", "say": ["Sit down.", "Sit, sit, sit."]},
+           {"time": "睡前", "do": "复习今天的两个动作，床上原地小跑几步", "say": ["Walk, walk. Run, run!", "Goodnight!"]}
+         ],
+         "remember": "走 = walk，跑 = run"},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "听指令做动作", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "穿衣时下指令，喊 clap 她拍手，喊 sit 她坐下", "say": ["Clap your hands!", "Sit down."]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "放 Move! 视频，跟着歌里的动作做，喊什么做什么", "say": ["Jump! Jump!", "Clap! Run! Walk!"]},
+           {"time": "晚饭后（5分钟）", "do": "指令小游戏：你喊动作她做，做对了击掌；再反过来让她发号施令", "say": ["Can you jump?", "Yes, I can!"]},
+           {"time": "睡前", "do": "用最轻的动作收尾：轻轻拍手、轻轻坐下", "say": ["Clap quietly.", "Goodnight!"]}
+         ],
+         "remember": "听到指令能做对动作"},
+        {"day": 5, "title": "动作大回顾 + I can", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "穿衣时把五个动作串一遍，边念边做", "say": ["Clap! Jump! Run! Sit! Walk!"]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "动作大串联：五个动作连成一圈玩，你说一个她做一个；最后跟着 I can jump! 喊一遍", "say": ["I can jump!", "I can clap! I can run!"]},
+           {"time": "晚饭后", "do": "全家一起做动作，爸爸妈妈也跳，她指谁谁做", "say": ["Mum, jump!", "Dad, run!"]},
+           {"time": "睡前", "do": "放 Yes, I Can!，唱到哪做到哪，轻声收尾", "say": ["I can walk. Goodnight!"]}
+         ],
+         "remember": "五个动作连着做一遍，跟上一句 \"I can...\""},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "7": {
+      "video": {
+        "primary": {"name": "Count & Move", "no": "020"},
+        "advanced": {"name": "How Many Fingers", "no": "097"}
+      },
+      "advanced": "进阶词5个：six（六）· seven（七）· eight（八）· nine（九）· ten（十）——顺着往上数，能数到几算几。进阶句型：\"How many fingers?\"（问句）\"I have five fingers.\"（回答）。进阶游戏：猜手指——你藏几根手指，她数你伸了几根；再换她藏你数。进阶绘本：《Ten Little Fingers and Ten Little Toes》（十个小手指和十个小脚趾），数身体部位，睡前读刚刚好。",
+      "days": [
+        {"day": 1, "title": "一和二", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "穿袜子时数脚：一只脚、两只脚", "say": ["One foot, two feet!", "I have two feet."]},
+           {"time": "早餐 7:30-7:45", "do": "数眼睛、数耳朵，一边点一边说", "say": ["One, two! Two eyes.", "One nose!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "放 Count & Move，只跟到 two，数到就拍手", "say": ["One, two!", "Count with me!"]},
+           {"time": "睡前", "do": "数妈妈的眼睛和她的眼睛", "say": ["Two eyes, two eyes!", "Goodnight!"]}
+         ],
+         "remember": "一 = one，二 = two"},
+        {"day": 2, "title": "三、四、五", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "数她的手指，从一数到五", "say": ["One, two, three, four, five!"]},
+           {"time": "早餐 7:30-7:45", "do": "数碗里的东西：三块饼、五颗豆", "say": ["One, two, three!", "Three bites!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "数脚步：从这头走到那头，走一步数一个数", "say": ["One step, two steps!", "Three, four, five!"]},
+           {"time": "洗澡", "do": "数脚趾头，数到五", "say": ["One, two, three, four, five toes!"]}
+         ],
+         "remember": "能跟着数到 five"},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "数身边的东西", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "数衣服上的扣子、图案", "say": ["One button, two buttons!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "放 How Many Fingers，跟着歌数手指", "say": ["How many fingers?", "One, two, three, four, five!"]},
+           {"time": "出门", "do": "下楼数台阶，走一阶数一个", "say": ["One, two, three!"]},
+           {"time": "睡前", "do": "数枕头、数被子，说晚安", "say": ["One pillow, one blanket!", "Goodnight!"]}
+         ],
+         "remember": "看到东西会想数一数"},
+        {"day": 5, "title": "数到五 + 大回顾", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "从头到脚数身体：一个鼻子、两只手、五根手指", "say": ["I have two hands.", "One, two, three, four, five!"]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "数数大搜寻：家里找五个一样的东西（五辆车、五块积木），摆成一排数", "say": ["One, two, three! Count with me.", "How many cars? Five!"]},
+           {"time": "晚饭后（5分钟）", "do": "全家人伸手指，你说数字大家伸，伸错了笑成一团", "say": ["Show me three!", "Yes! Three!"]},
+           {"time": "睡前", "do": "放 Count & Move，数到五就停，轻声说晚安", "say": ["One, two, three, four, five. Goodnight!"]}
+         ],
+         "remember": "从一数到五，不卡壳"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "8": {
+      "video": {
+        "primary": {"name": "Red Yellow Green Blue", "no": "153"},
+        "advanced": {"name": "Pink Purple Orange Brown", "no": "221"}
+      },
+      "advanced": "进阶词2个：orange（橙色）· brown（棕色）——进阶视频里就有，顺带听。进阶句型：\"What color is it? It's red.\"（一问一答）\"I like pink and purple.\"（一次说两个）。进阶游戏：颜色接龙——你指一样东西说颜色，她接着找一样同色的东西，找不齐也没关系。进阶绘本：《Brown Bear, Brown Bear, What Do You See?》（棕色的熊，棕色的熊，你在看什么？），经典颜色+动物，每页一种颜色，边读边指。",
+      "days": [
+        {"day": 1, "title": "基础色指认", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "问今天穿的衣服什么颜色，先自己指再让她指", "say": ["Which is red?", "This is red!"]},
+           {"time": "早餐 7:30-7:45", "do": "指碗里的水果：红色的、黄色的", "say": ["Which is red?", "The apple is red!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "放 Red Yellow Green Blue，唱到哪个颜色就指家里哪样东西", "say": ["Which is blue?", "The cup is blue!"]},
+           {"time": "睡前", "do": "指被子、枕头颜色，说晚安", "say": ["Which is yellow?", "Goodnight!"]}
+         ],
+         "remember": "听到 \"Which is red?\" 会指红色的东西"},
+        {"day": 2, "title": "新增粉色和紫色", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "找一件粉色或紫色的衣服或发卡，重点说 pink 和 purple", "say": ["This is pink!", "This is purple!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "放 Pink Purple Orange Brown，重点跟 pink 和 purple，orange 和 brown 顺带听", "say": ["Pink! Purple!", "Which is pink?"]},
+           {"time": "晚饭后（5分钟）", "do": "找粉紫：家里找粉色和紫色的东西（花、袜子、玩具）", "say": ["Where is pink?", "Here! Purple!"]},
+           {"time": "睡前", "do": "复习四个旧色加两个新色，随口说", "say": ["Red, blue, yellow, green.", "Pink and purple. Goodnight!"]}
+         ],
+         "remember": "新增 pink = 粉红，purple = 紫色"},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "我喜欢哪个颜色", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "让她在两件衣服里选，选哪件就说哪件颜色", "say": ["Which one? This one?", "I like pink!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "玩喜欢哪个：摆几个颜色的积木，她说喜欢的你就递给她", "say": ["I like blue.", "Do you like blue?"]},
+           {"time": "午饭", "do": "指盘子、勺子颜色，说妈妈喜欢哪个", "say": ["I like yellow!"]},
+           {"time": "睡前", "do": "问今天最喜欢哪个颜色，说出来", "say": ["What color do you like?", "I like purple. Goodnight!"]}
+         ],
+         "remember": "能说或指一个她喜欢的颜色"},
+        {"day": 5, "title": "六色大搜寻 + 大回顾", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "六个颜色一起过一遍，边说边指身上和房间里的东西", "say": ["Red, blue, yellow, green, pink, purple!"]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "颜色大搜寻：你喊颜色她去找家里一样东西拿给你，找对了击掌", "say": ["Which is red?", "Find something blue!"]},
+           {"time": "晚饭后（5分钟）", "do": "全家人身上找颜色，看谁找到的多", "say": ["I like blue. What about you?", "I see pink!"]},
+           {"time": "睡前", "do": "放 Red Yellow Green Blue，轻声跟，说晚安", "say": ["Goodnight, all the colors!"]}
+         ],
+         "remember": "六个颜色能指认大半，pink 和 purple 不混"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "9": {
+      "video": {
+        "primary": {"name": "The Animals On The Farm", "no": "018"},
+        "advanced": {"name": "Who Took The Cookie (Farm Animals Version)", "no": "148"}
+      },
+      "advanced": "进阶词4个：horse（马）· chicken（鸡）· neigh（马叫）· cluck（鸡叫）——进阶视频里都有，顺带听。进阶句型：\"The duck goes quack.\"（换一个说法）\"What does the cow say? Moo!\"（完整一问一答）。进阶游戏：叫声电话——贴着她耳朵学一声叫，她接电话说出或指是哪个动物，再换她打给你。进阶绘本：《Moo, Baa, La La La!》（哞，咩，啦啦啦！），Sandra Boynton，农场动物叫声的经典，读起来像唱歌。",
+      "days": [
+        {"day": 1, "title": "奶牛和哞", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "拿奶牛的玩偶或图片，学 moo 叫，让她指", "say": ["The cow says moo.", "Moo, moo!"]},
+           {"time": "早餐 7:30-7:45", "do": "喝牛奶时提一句牛奶是奶牛给的", "say": ["Milk! The cow says moo!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "放 The Animals On The Farm，放到 cow 就一起 moo", "say": ["Moo, moo!", "The cow says moo."]},
+           {"time": "睡前", "do": "学一声轻轻的 moo 说晚安", "say": ["Moo. Goodnight, cow!"]}
+         ],
+         "remember": "奶牛 = cow，叫 = moo"},
+        {"day": 2, "title": "鸭子和嘎嘎", "rest": false,
+         "sections": [
+           {"time": "出门", "do": "路上看见鸟或水，就说 duck，学 quack", "say": ["I see a duck!", "Quack, quack!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "鸭子走路游戏：蹲下来学鸭子摇摇摆摆走，边摇边 quack", "say": ["The duck says quack!", "Quack, quack, quack!"]},
+           {"time": "洗澡", "do": "泡澡时放一只小黄鸭玩具，边捏边 quack", "say": ["The duck is in the water!", "Quack, quack!"]},
+           {"time": "睡前", "do": "复习 cow 和 duck，两种叫声各来一声", "say": ["Cow says moo. Duck says quack.", "Goodnight!"]}
+         ],
+         "remember": "鸭子 = duck，叫 = quack"},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "猪和羊 + 叫声游戏", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "找猪和羊的图，学 oink 和 baa，顺带学不要求记", "say": ["The pig says oink!", "The sheep says baa!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "叫声猜猜猜：你学 moo/quack/oink/baa，她指对应动物图，指对了亲一下", "say": ["What does the pig say?", "Oink oink! That's the pig!"]},
+           {"time": "晚饭后（5分钟）", "do": "反过来玩：她学叫声，你猜动物，猜错了装作很惊讶", "say": ["What does the sheep say?", "Baa! Is that the sheep?"]},
+           {"time": "睡前", "do": "把四个动物和叫声过一遍，轻轻说晚安", "say": ["Cow moo. Duck quack. Pig oink. Sheep baa.", "Goodnight!"]}
+         ],
+         "remember": "猪 = pig，羊 = sheep；叫声来回猜"},
+        {"day": 5, "title": "农场大回顾 + 叫声大点兵", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "四个动物一起过，边说动物边说叫声", "say": ["Cow, duck, pig, sheep!", "Moo! Quack! Oink! Baa!"]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "农场大点兵：四个动物图排一排，你喊名字她拍、你学叫她指", "say": ["The cow says moo.", "I see a duck!"]},
+           {"time": "晚饭后", "do": "全家一起学叫声，爸爸学猪、妈妈学羊，她当小裁判指", "say": ["What does the pig say?", "Oink oink!"]},
+           {"time": "睡前", "do": "放 Who Took The Cookie，看到哪个动物学哪个叫", "say": ["Who took the cookie?", "Goodnight, farm!"]}
+         ],
+         "remember": "四个动物 + 叫声都能对上"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "10": {
+      "video": {
+        "primary": {"name": "Do You Like Broccoli Ice Cream", "no": "019"},
+        "advanced": {"name": "Do You Like Spaghetti Yogurt", "no": "058"}
+      },
+      "advanced": "进阶词：milk（牛奶）· egg（鸡蛋）· hungry（饿）· thirsty（渴）。进阶句型：\"I'm hungry.\"（我饿了）\"I want some juice.\"（加点 some，更完整）。进阶游戏：假装口渴——你演渴，说 \"I'm thirsty!\"，她递水给你，你喝一口说 \"Thank you!\"；再换她演。进阶绘本：《The Very Hungry Caterpillar》（好饿的毛毛虫），里面全是吃的，读到哪样就指哪样。",
+      "days": [
+        {"day": 1, "title": "喝水日", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "给她倒水、递水杯时，把水杯举到她眼前说 water，她喝一口你就说", "say": ["Water! This is water.", "Drink water."]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "玩「我渴了」——你捂着嘴演很渴的样子，她递水杯给你，你咕咚喝一口说", "say": ["I want water.", "Thank you! Yummy water."]},
+           {"time": "午饭", "do": "饭桌旁放好她的水杯，她要喝水就帮她倒，倒的时候说 water，喝完再倒", "say": ["More water?", "Here's your water."]},
+           {"time": "睡前", "do": "床头放一杯水，睡前她要喝就说 water，顺便把今天的词再顺一遍", "say": ["Goodnight! Water is here."]}
+         ],
+         "remember": "水 = water，我要喝水 = \"I want water.\""},
+        {"day": 2, "title": "米饭日", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "昨天说 water，今天轮到 rice——指指电饭锅，盛饭时挖一勺给她看", "say": ["Today: rice!", "Rice! White rice."]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "过家家做饭——给娃娃盛一碗「米饭」（可以是一团白纸或米粒），喂娃娃吃饭", "say": ["Feed the baby. Rice!", "The baby eats rice."]},
+           {"time": "午饭（重点）", "do": "真的吃米饭时，每吃一口就说 rice，她跟着吃就夸她", "say": ["I eat rice.", "Yummy rice!"]},
+           {"time": "晚饭后（5分钟）", "do": "问她还要不要米饭，她说要你接上 please，笑着再盛一点", "say": ["More?", "More please!"]}
+         ],
+         "remember": "米饭 = rice，我吃米饭 = \"I eat rice.\""},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "面包果汁日", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45（重点）", "do": "吃面包时撕一块举起来说 bread，抹上果酱再说一次；倒果汁时举起杯子说 juice", "say": ["Bread! I eat bread.", "Juice! I want juice."]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "开「小餐厅」——摆上面包、果汁（真的或玩具），你点她端", "say": ["Bread, please!", "Juice, please!", "Here you go!"]},
+           {"time": "午饭", "do": "对比着说——今天吃面包，昨天吃米饭，一样一样指过去", "say": ["Bread or rice?", "I want bread!"]},
+           {"time": "睡前", "do": "睡前聊今天吃了什么，一样一样数", "say": ["Bread and juice. Yummy!"]}
+         ],
+         "remember": "面包 = bread，果汁 = juice"},
+        {"day": 5, "title": "面条汤日 + 大回顾", "rest": false,
+         "sections": [
+           {"time": "上午 8:00-9:30（10分钟）", "do": "食物大搜寻——六样东西（rice / water / bread / juice / soup / noodles）的图或实物摆一排，你说名字她指、拿给你", "say": ["Where is the rice?", "Give me the juice!", "Yes! Noodles!"]},
+           {"time": "午饭（重点）", "do": "吃面条时挑起一根长长的面说 noodles，喝汤时说 soup，先吹一吹再说烫", "say": ["Noodles! Long noodles.", "Soup is hot. Blow!"]},
+           {"time": "晚饭后（5分钟）", "do": "放 Do You Like Spaghetti Yogurt，跟着视频里的食物一起笑，把这周的词再过一遍", "say": ["Do you like rice?", "Do you like juice?", "More please!"]},
+           {"time": "睡前", "do": "睡前把六个词各说一遍，她跟着指图片就算数", "say": ["Rice, water, bread, juice, soup, noodles!"]}
+         ],
+         "remember": "面条 = noodles，汤 = soup；六个词全过一遍"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "11": {
+      "video": {
+        "primary": {"name": "Put On Your Shoes", "no": "040"},
+        "advanced": {"name": "This Is The Way We Get Dressed", "no": "137"}
+      },
+      "advanced": "进阶词：pants（裤子）· sweater（毛衣）· jacket（夹克）· sneakers（运动鞋）。进阶句型：\"I can put on my shoes.\"（加 I can，更完整）\"Where is my hat?\"（找东西的实用问句）。进阶游戏：穿衣比赛——你喊 \"Put on your socks!\"，看她能多快找到袜子套上；慢一点也没关系，重点是笑。进阶绘本：《Froggy Gets Dressed》（小青蛙穿衣服），讲穿衣服的经典，一边读一边跟着脱一件穿一件。",
+      "days": [
+        {"day": 1, "title": "穿鞋日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "早上穿袜子时顺便说 socks，再提今天的重头戏是鞋子 shoes", "say": ["Socks first. Socks on!", "Now shoes! Put on your shoes."]},
+           {"time": "出门前（重点）", "do": "蹲下来帮她穿鞋，一边套一边说，穿好拍拍鞋面说 done", "say": ["Put on your shoes.", "Shoes on! Let's go!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "把她所有的鞋排一排，一双一双认，再让她挑一双今天要穿的", "say": ["Which shoes?", "These shoes! Put them on."]},
+           {"time": "睡前", "do": "脱鞋时说 take off，把鞋摆回门口", "say": ["Take off your shoes.", "Bye bye, shoes!"]}
+         ],
+         "remember": "鞋 = shoes，穿上鞋 = \"Put on your shoes.\""},
+        {"day": 2, "title": "帽子外套日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "指着衣架上挂着的帽子、外套，先认再说", "say": ["This is your hat.", "This is your coat."]},
+           {"time": "出门前（重点）", "do": "秋天转凉，出门给她戴帽子、穿外套，一件一件来", "say": ["Your hat! My hat!", "Put on your coat."]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "玩「抢帽子」——你把帽子轻轻戴自己头上，她来抢，抢到戴她头上说", "say": ["My hat!", "Your hat now!"]},
+           {"time": "晚饭后（5分钟）", "do": "把帽子、外套、鞋都摆出来，把这两天学过的过一遍", "say": ["Hat! Coat! Shoes!"]}
+         ],
+         "remember": "帽子 = hat，外套 = coat；我的帽子 = \"My hat!\""},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "脱袜子日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "早上穿袜子时正着说 put on，为晚上的 take off 做对比", "say": ["Put on your socks.", "Socks on!"]},
+           {"time": "午睡后", "do": "午睡醒了可能踢掉袜子，找到袜子时玩「袜子去哪了」", "say": ["Where are your socks?", "Here they are!"]},
+           {"time": "洗澡前（重点）", "do": "脱衣服准备洗澡，重点脱袜子，一边脱一边说", "say": ["Take off your socks.", "One sock, two socks!"]},
+           {"time": "睡前", "do": "脱掉袜子，把袜子卷成小团「投篮」扔进洗衣篮", "say": ["Take off your socks.", "Throw! Bye bye, socks!"]}
+         ],
+         "remember": "袜子 = socks，脱掉袜子 = \"Take off your socks.\""},
+        {"day": 5, "title": "连衣裙日 + 大回顾", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15（重点）", "do": "给她穿一条小连衣裙，转个圈让她看裙子飘起来", "say": ["A dress! Pretty dress!", "Put on your dress."]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "衣服大搜寻——把帽子、衬衫、鞋、袜子、连衣裙、外套摆出来，你说名字她找；再玩「给娃娃穿衣服」", "say": ["Where is the hat?", "Give me the socks!", "Put on the shirt."]},
+           {"time": "晚饭后（5分钟）", "do": "放 This Is The Way We Get Dressed，跟着视频一件一件比划穿衣服的动作", "say": ["This is the way we get dressed!", "Put on your shirt!"]},
+           {"time": "睡前", "do": "睡前把六件衣服各说一遍，脱一件说一件", "say": ["Hat, shirt, shoes, socks, dress, coat!"]}
+         ],
+         "remember": "连衣裙 = dress，衬衫 = shirt；六件衣服全过一遍"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "12": {
+      "video": {
+        "primary": {"name": "How's The Weather", "no": "022"},
+        "advanced": {"name": "Rain Rain Go Away", "no": "055"}
+      },
+      "advanced": "进阶词：snow（雪）· hot（热）· cold（冷）· rainbow（彩虹）。进阶句型：\"How's the weather today?\"（今天天气怎么样）\"It's a sunny day.\"（更完整的一句）。进阶游戏：天气表演——你喊 \"Sunny!\" 她笑，你喊 \"Rainy!\" 她躲，你喊 \"Windy!\" 她转圈吹气；轮到你做动作她喊词。进阶绘本：《The Rainy Day》（下雨天），读到晴天指太阳、读到下雨指雨滴。",
+      "days": [
+        {"day": 1, "title": "看天日", "rest": false,
+         "sections": [
+           {"time": "出门前（重点）", "do": "拉开窗帘一起看天，指着天说 sky，再找太阳说 sun", "say": ["Look at the sky!", "The sun! It's sunny!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "在窗边晒太阳，把手伸到阳光里暖一暖，眯眼看太阳", "say": ["Sun! Warm sun.", "It's sunny today!"]},
+           {"time": "午饭", "do": "吃饭时顺口提一句今天的天气，天晴就说 sunny", "say": ["How's the weather?", "It's sunny!"]},
+           {"time": "睡前", "do": "睡前再想一遍今天的天，太阳下山了，说晚安太阳", "say": ["The sun is sleeping. Goodnight, sun!"]}
+         ],
+         "remember": "太阳 = sun，天 = sky；晴天 = \"It's sunny!\""},
+        {"day": 2, "title": "云和天空日", "rest": false,
+         "sections": [
+           {"time": "出门前（重点）", "do": "抬头看天，找云，指着一朵云说 cloud；再指整片天说 sky", "say": ["I see a cloud.", "Look! The sky is big."]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "出门散步，仰头看云，边走边找最大的一朵云、像小动物的云", "say": ["Where is the cloud?", "Big cloud! Small cloud!"]},
+           {"time": "午睡后", "do": "在窗边看看云还在不在，云会飘走这件事可以很惊喜地告诉她", "say": ["Where did the cloud go?", "The cloud is gone!"]},
+           {"time": "晚饭后（5分钟）", "do": "用棉花或白纸揉成「云」，贴在蓝色的纸上，边做边说", "say": ["This is a cloud.", "The sky is blue."]}
+         ],
+         "remember": "云 = cloud，我看到一朵云 = \"I see a cloud.\""},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "下雨日", "rest": false,
+         "sections": [
+           {"time": "出门前（重点）", "do": "如果下雨，一起听雨声、看窗外雨点说 rain；如果没下雨，就玩「假装下雨」", "say": ["Rain! It's raining!", "Rain on the window."]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "下雨天穿雨鞋踩水坑，溅起水花就笑；没下雨就用喷壶往地上喷水「造雨」", "say": ["Rain, rain, go away!", "Splash! Rain!"]},
+           {"time": "午饭", "do": "听外面的雨声，一起说 rain；雨小下来了就说 rain stop", "say": ["Listen! Rain.", "The rain stopped."]},
+           {"time": "睡前", "do": "放 Rain Rain Go Away，或自己哼两句哄睡", "say": ["Rain rain go away.", "Goodnight, rain!"]}
+         ],
+         "remember": "雨 = rain，下雨了 = \"It's raining!\""},
+        {"day": 5, "title": "刮风日 + 大回顾", "rest": false,
+         "sections": [
+           {"time": "出门前（重点）", "do": "如果有风，站在风里让头发、衣服飘起来说 wind；没风就吹一口气代替", "say": ["The wind! It's windy!", "Feel the wind!"]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "拿一条丝巾或小彩带，迎风让它飘，或者你吹气让她追「风」", "say": ["The wind blows!", "Catch the wind!"]},
+           {"time": "晚饭后（5分钟）", "do": "天气大回顾——sun / rain / wind / cloud / sky 五样，看窗外或看图片一样一样说；再放 How's The Weather", "say": ["Sun, rain, wind, cloud, sky!", "How's the weather today?"]},
+           {"time": "睡前", "do": "睡前把五种天气各说一遍，配表情——晴天笑、下雨躲、刮风吹", "say": ["Sunny! Rainy! Windy!"]}
+         ],
+         "remember": "风 = wind；五种天气全过一遍"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "13": {
+      "video": {
+        "primary": {"name": "If You're Happy", "no": "021"},
+        "advanced": {"name": "Can You Make A Happy Face", "no": "033"}
+      },
+      "advanced": "进阶词：excited（兴奋）· bored（无聊）· hungry（饿）· sleepy（困）。进阶句型：\"How do you feel?\"（你感觉怎么样）\"I'm a little sad.\"（加 a little，更细腻）。进阶游戏：情绪猜猜看——你做一个表情，她猜你是什么情绪，猜对了换她做你来猜；故意做夸张一点。进阶绘本：《The Color Monster》（情绪小怪兽），每种情绪一种颜色，读完可以问她今天是什么颜色。",
+      "days": [
+        {"day": 1, "title": "开心日", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "吃早饭时冲她笑，指自己的脸说 happy，再指她的笑脸", "say": ["Happy! I am happy!", "Look at your happy face!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "做 happy face——咧嘴笑、眼睛眯起来，让她也学；或者照镜子一起做笑脸", "say": ["Happy face!", "You are happy!"]},
+           {"time": "午睡后", "do": "她睡醒心情好，抱着她说 happy，再放 Can You Make A Happy Face 跟着做", "say": ["I am happy!", "Make a happy face!"]},
+           {"time": "睡前", "do": "睡前说说今天开心的事，边笑边把这个词再顺一遍", "say": ["Today was happy. I am happy!"]}
+         ],
+         "remember": "开心 = happy，我很开心 = \"I am happy!\""},
+        {"day": 2, "title": "难过生气日", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "演一个伤心的脸（嘴往下、眉毛耷拉）说 sad；再演生气（鼓腮帮、皱眉）说 angry，逗她笑", "say": ["Sad. Sad face.", "Angry. Angry face!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "照镜子做三种表情——happy / sad / angry，你做一个她做一个，做错了就一起大笑", "say": ["Make a sad face!", "Make an angry face!", "Don't be sad! Happy!"]},
+           {"time": "午睡后", "do": "如果她闹小脾气，蹲下来看着她说，抱一抱；没闹就用玩偶演「娃娃哭了」", "say": ["Don't be sad.", "It's okay. Happy now?"]},
+           {"time": "睡前", "do": "睡前轻轻说难过和生气都过去了，现在是 happy", "say": ["Sad goes away. Angry goes away. Happy!"]}
+         ],
+         "remember": "难过 = sad，生气 = angry；别难过 = \"Don't be sad.\""},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "累日子", "rest": false,
+         "sections": [
+           {"time": "上午 8:00-9:30（5分钟）", "do": "玩「假装睡觉」——抱着娃娃哄睡，说娃娃累了，再问你累不累", "say": ["The baby is tired.", "Are you tired?"]},
+           {"time": "午睡后（重点）", "do": "她刚醒还迷迷糊糊，或睡前有点闹，问她是累了吗，边问边自己打个哈欠", "say": ["Are you tired?", "You look tired."]},
+           {"time": "洗澡", "do": "洗澡玩累了，或者洗得打哈欠，顺口问一句", "say": ["Tired? Let's rest."]},
+           {"time": "睡前", "do": "睡前打哈欠给她看，说 tired，抱她上床", "say": ["I'm tired. Are you tired?", "Time to sleep."]}
+         ],
+         "remember": "累 = tired，你累了吗 = \"Are you tired?\""},
+        {"day": 5, "title": "害怕日 + 大回顾", "rest": false,
+         "sections": [
+           {"time": "上午 8:00-9:30（10分钟）", "do": "情绪大回顾——做 happy / sad / angry / tired / scared 五种表情，她看脸说（或指）；再放 Can You Make A Happy Face 一起做", "say": ["Make a happy face!", "Make a sad face!", "Make a scared face!"]},
+           {"time": "出门（重点）", "do": "遇到打雷、狗叫、黑一点的地方，她怕就抱着她说 scared，拍拍她说别怕", "say": ["Scared? It's okay.", "Don't be scared. I'm here."]},
+           {"time": "晚饭后（5分钟）", "do": "用玩偶演「害怕的小兔子」躲起来，你抱住它说别怕", "say": ["The bunny is scared.", "It's okay, bunny. I'm here."]},
+           {"time": "睡前", "do": "睡前把五种情绪各说一遍，配表情，最后落在 happy 上睡个好觉", "say": ["Happy, sad, angry, tired, scared.", "Now happy. Goodnight!"]}
+         ],
+         "remember": "害怕 = scared；五种情绪全过一遍"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "14": {
+      "video": {
+        "primary": {"name": "The Bath Song", "no": "064"},
+        "advanced": {"name": "Head Shoulders Knees & Toes (Speeding Up)", "no": "062"}
+      },
+      "advanced": "进阶词3个：fingers 手指 · toes 脚趾 · belly 肚肚——数手指脚趾时顺手带上，belly 是 tummy 更可爱的说法。进阶句型：\"These are my hands.\"（比 My hands! 更完整）\"I can wash my feet.\"（加上 I can）。进阶游戏：泡泡点名——洗澡时在她手、脚、肚子上各放一点泡泡，你喊 \"Wash your hands!\" 她就把那处泡泡洗掉。进阶绘本：《From Head to Toe》（从头到脚）——Eric Carle 的经典，一页做一个动作，正好配身体词。",
+      "days": [
+        {"day": 1, "title": "手和脚日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "穿袜子前抓着她的脚晃一晃，穿完举她的小手拍一下", "say": ["Where are your hands?", "My hands!", "Here are your feet."]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "玩手脚印：纸上按手印、按脚印，边按边点名", "say": ["Hands! Feet!", "Show me your hands.", "Stomp your feet!"]},
+           {"time": "洗澡", "do": "重点洗手洗脚，边洗边说", "say": ["Wash your hands.", "Wash your feet."]},
+           {"time": "睡前", "do": "捏捏她的小手小脚，一个一个数过去", "say": ["Goodnight, little hands!", "Goodnight, little feet!"]}
+         ],
+         "remember": "手 = hands，脚 = feet；洗澡时喊 \"Wash your feet!\""},
+        {"day": 2, "title": "肚子和背日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "穿衣服时轻轻戳她肚子、拍拍背", "say": ["Tickle your tummy!", "Pat your back."]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "挠痒痒游戏：你说哪里挠哪里，笑成一团", "say": ["Where is your tummy?", "I see your tummy!", "Where is your back?"]},
+           {"time": "洗澡", "do": "洗肚子、搓背，边洗边说", "say": ["Wash your tummy.", "Wash your back."]},
+           {"time": "睡前", "do": "让她趴着，轻轻拍背哄睡", "say": ["Pat, pat, pat your back.", "Goodnight, baby."]}
+         ],
+         "remember": "肚子 = tummy，背 = back"},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "头发日 + 洗澡歌", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "梳头时摸她的头发，说软软的", "say": ["Comb your hair.", "Soft hair!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "给娃娃梳头、假装洗头，全程说 hair", "say": ["The baby has hair.", "Wash the hair."]},
+           {"time": "洗澡（重点）", "do": "放 064 The Bath Song，边唱边洗，重点洗头", "say": ["Wash your hair.", "This is the way we wash our hair!"]},
+           {"time": "睡前", "do": "吹干头发，摸一摸", "say": ["Dry your hair.", "Goodnight, pretty hair!"]}
+         ],
+         "remember": "头发 = hair；洗澡歌里能跟着指到头发"},
+        {"day": 5, "title": "洗澡大回顾", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "边穿衣服边把前几天的词快速过一遍", "say": ["Hands! Feet! Tummy!", "Touch your back."]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "身体大点名：你说词她指/拍，速度慢慢加快", "say": ["Where is your hair?", "Touch your tummy!", "Show me your feet!"]},
+           {"time": "洗澡（重点）", "do": "放 The Bath Song，把五个词挨个洗一遍", "say": ["Wash your hands. Wash your feet.", "Wash your tummy, back and hair!"]},
+           {"time": "睡前", "do": "抱着她数今天的收获", "say": ["We washed everything!", "Goodnight, clean baby!"]}
+         ],
+         "remember": "五个身体词洗澡时全过一遍"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "15": {
+      "video": {
+        "primary": {"name": "Let's Go To The Zoo", "no": "028"},
+        "advanced": {"name": "Walking In The Jungle", "no": "017"}
+      },
+      "advanced": "进阶词3个：giraffe 长颈鹿 · bear 熊 · zoo 动物园——去动物园或看绘本时顺手带。进阶句型：\"The elephant is very big.\"（加 very，更夸张）\"I see a big tiger.\"（把大小放进去）。进阶游戏：动物排队比大小——把动物玩具从大到小排一队，边排边说 big, big, small。进阶绘本：《Dear Zoo》（亲爱的动物园）——翻翻书，每页揭开一个动物，正好配动物词和大小。",
+      "days": [
+        {"day": 1, "title": "大动物日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "拿出狮子玩具或图片，学一声吼", "say": ["Look! A lion!", "The lion is big!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "玩狮子和大象：狮子吼，大象甩鼻子，都用大动作比划", "say": ["The lion is big!", "The elephant is big too!"]},
+           {"time": "出门", "do": "路上看到狗、猫也顺口比一下大小", "say": ["Big dog!", "Small dog!"]},
+           {"time": "睡前", "do": "放 028 Let's Go To The Zoo，或者自己哼，哄睡", "say": ["Goodnight, big lion!", "Goodnight, big elephant!"]}
+         ],
+         "remember": "狮子 = lion，大象 = elephant，都是 big"},
+        {"day": 2, "title": "老虎日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "复习昨天的大狮子，再介绍老虎", "say": ["Remember the lion? Roar!", "This is a tiger."]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "躲猫猫找老虎：把老虎玩具藏起来，你喊 Where is the tiger? 她找", "say": ["Where is the tiger?", "I see a tiger!"]},
+           {"time": "出门", "do": "路上玩 I spy，看到什么都说 I see...", "say": ["I see a car.", "I see a bird!"]},
+           {"time": "睡前", "do": "学老虎叫，抱着说晚安", "say": ["The tiger says roar!", "Goodnight, tiger!"]}
+         ],
+         "remember": "老虎 = tiger；看到就说 \"I see a tiger!\""},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "小猴子日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "拿出猴子玩具，学猴子挠痒的动作", "say": ["A monkey!", "The monkey is small."]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "比大小游戏：狮子和猴子并排放，摊手比 big，捏手指比 small", "say": ["The lion is big!", "The monkey is small."]},
+           {"time": "出门", "do": "路上比大小，大树小树、大车小车", "say": ["Big tree! Small tree!"]},
+           {"time": "睡前", "do": "放 017 Walking In The Jungle，跟着动物走", "say": ["Goodnight, little monkey!"]}
+         ],
+         "remember": "猴子 = monkey，小 = small；用两根手指比 small"},
+        {"day": 5, "title": "动物园大回顾", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "四张动物卡片摆出来，快速过一遍", "say": ["Lion, tiger, elephant, monkey!"]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "动物园点名：你说动物名她找卡片/玩具，找到就一起学叫声，再用手势比大小", "say": ["Where is the elephant?", "The lion is big!", "The monkey is small!"]},
+           {"time": "出门", "do": "去动物园，或看动物绘本，见一个说一个", "say": ["I see a tiger!", "Big elephant!"]},
+           {"time": "睡前", "do": "放 028 Let's Go To The Zoo，边看边指", "say": ["Goodnight, zoo animals!"]}
+         ],
+         "remember": "四个动物 + big/small 全过一遍"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "16": {
+      "video": {
+        "primary": {"name": "The Muffin Man", "no": "108"},
+        "advanced": {"name": "Pizza Party", "no": "213"}
+      },
+      "advanced": "进阶词3个：apple 苹果 · banana 香蕉 · milk 牛奶——饭桌上有就顺手带。进阶句型：\"I like cake, too.\"（加 too）\"I like juice and cake.\"（一次说两个）。进阶游戏：味道投票——吃一样东西就举手问全家 \"Do you like it?\"，点头的举手，数一数。进阶绘本：《The Very Hungry Caterpillar》（好饿的毛毛虫）——里面全是食物，每页都指着说 I like... / Yummy。",
+      "days": [
+        {"day": 1, "title": "蛋糕日", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "吃早餐时问她喜不喜欢，教她点头", "say": ["Do you like it?", "Yummy!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "玩过家家做蛋糕，假装搅拌、装盘、吃", "say": ["Make a cake!", "I like cake!"]},
+           {"time": "午饭", "do": "吃到好吃的，夸张地说 yummy", "say": ["Yummy, yummy!", "So yummy!"]},
+           {"time": "晚饭后（5分钟）", "do": "放 108 The Muffin Man，边听边假装烤松饼", "say": ["Do you like cake?", "I like cake!"]}
+         ],
+         "remember": "蛋糕 = cake，好吃 = yummy；喜欢就点头说 \"I like cake!\""},
+        {"day": 2, "title": "胡萝卜日", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "早餐拿出胡萝卜或胡萝卜片，问她喜不喜欢，教她摇头", "say": ["Do you like carrots?", "Carrots are yummy!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "真胡萝卜或蔬菜玩具摆出来，你问她答（点头摇头就行）", "say": ["Do you like carrots?", "Yes! I like carrots.", "No! I don't like carrots."]},
+           {"time": "午饭", "do": "饭桌上有胡萝卜就指出来，没有就随口问别的菜", "say": ["Look! Carrots!", "Do you like carrots?"]},
+           {"time": "晚饭后（5分钟）", "do": "回顾今天的点头摇头，复习蛋糕和胡萝卜", "say": ["I like cake.", "I don't like carrots."]}
+         ],
+         "remember": "胡萝卜 = carrot；问 \"Do you like carrots?\" 她会点头或摇头"},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "鸡肉和果汁日", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "喝果汁或牛奶时举起杯子说 juice", "say": ["Juice! Yummy juice!", "Do you like juice?"]},
+           {"time": "午饭", "do": "吃鸡肉时指出来，说 chicken", "say": ["This is chicken.", "I like chicken."]},
+           {"time": "午睡后", "do": "点心时间倒一杯果汁，边喝边说", "say": ["Drink your juice.", "Yummy, yummy juice!"]},
+           {"time": "晚饭后（5分钟）", "do": "放 213 Pizza Party，看画面里的食物", "say": ["I see juice!", "Do you like chicken?"]}
+         ],
+         "remember": "鸡肉 = chicken，果汁 = juice"},
+        {"day": 5, "title": "喜欢不喜欢大回顾", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "把四个词快速过一遍，问今天的早餐喜不喜欢", "say": ["Cake, carrot, chicken, juice!", "Do you like it?"]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "食物大投票：四样食物（真的/卡片/玩具）摆出来，一样一样问，她点头就说 like，摇头就说 don't like", "say": ["Do you like cake?", "I like cake!", "I don't like carrots."]},
+           {"time": "午饭", "do": "午饭每吃一样都顺口问一句", "say": ["Do you like chicken?", "Yummy!"]},
+           {"time": "晚饭后（5分钟）", "do": "全家一起说今天最喜欢什么，比着说", "say": ["I like juice!", "What do you like?"]}
+         ],
+         "remember": "会点头说 like，摇头说 don't like"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "17": {
+      "video": {
+        "primary": {"name": "Walking Walking", "no": "088"},
+        "advanced": {"name": "The Roly Poly Roll", "no": "259"}
+      },
+      "advanced": "进阶词4个：jump 双脚跳 · run 跑 · walk 走 · march 踏步——路上和家里都能顺手带。进阶句型：\"I can hop and spin.\"（一次两个动作）\"Can you skip?\"（反过来问她）。进阶游戏：听口令做动作——你喊 stomp / hop / skip / spin，她听到哪个做哪个，最后喊 \"Freeze!\" 一起定住。进阶绘本：《We're Going on a Bear Hunt》（我们要去捉狗熊）——一路走、跨、踩的动作，边读边演。",
+      "days": [
+        {"day": 1, "title": "跺脚和单脚跳日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "穿好鞋后一起跺跺脚", "say": ["Let's stomp!", "Stomp, stomp, stomp!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "先跺脚，再扶着她单脚跳，边做边喊", "say": ["Stomp your feet!", "I can hop!"]},
+           {"time": "出门", "do": "出门下台阶时扶她单脚跳一下", "say": ["Hop! Hop! Hop!"]},
+           {"time": "晚饭后（5分钟）", "do": "放 088 Walking Walking，跟着歌里的动作做", "say": ["Stomp! Stomp!", "I can hop!"]}
+         ],
+         "remember": "跺脚 = stomp，单脚跳 = hop"},
+        {"day": 2, "title": "转圈和踮脚尖日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "拉她小手一起转个圈", "say": ["Spin around!", "Spin, spin, spin!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "踮脚尖够高处的东西，再转圈，一高一低一起玩", "say": ["Tip-toe! Tip-toe!", "You can spin!"]},
+           {"time": "出门", "do": "走路时踮脚尖走几步，像小猫一样轻", "say": ["Tip-toe, tip-toe!", "Shh, quiet feet!"]},
+           {"time": "晚饭后（5分钟）", "do": "全家一起转圈，看谁先晕，笑成一团", "say": ["Let's spin!", "Stop! I'm dizzy!"]}
+         ],
+         "remember": "转圈 = spin，踮脚尖 = tip-toe"},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "蹦跳日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "边穿衣服边轻轻蹦两下", "say": ["Skip, skip, skip!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "客厅铺软垫，学小兔子蹦跳，边跳边喊", "say": ["I can skip!", "Skip like a bunny!"]},
+           {"time": "出门", "do": "路上有平地就蹦两下", "say": ["Skip! Skip!"]},
+           {"time": "晚饭后（5分钟）", "do": "放 259 The Roly Poly Roll，跟着滚一滚、蹦一蹦", "say": ["Skip and spin!", "Roly poly!"]}
+         ],
+         "remember": "蹦跳 = skip"},
+        {"day": 5, "title": "动作大回顾", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "穿好衣服把五个动作挨个做一遍热热身", "say": ["Stomp! Hop! Skip! Tip-toe! Spin!"]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "动作接力赛：你喊一个动作她做一个，做对换下一个，越喊越快", "say": ["Let's stomp!", "I can hop!", "Now spin!"]},
+           {"time": "出门", "do": "出门路上随机喊动作，走到哪做到哪", "say": ["Tip-toe to the door!", "Skip to the car!"]},
+           {"time": "晚饭后（5分钟）", "do": "放 088 Walking Walking，全家一起跟着跳一遍，收尾", "say": ["Let's stomp!", "I can hop, skip and spin!"]}
+         ],
+         "remember": "五个动作都跟着做下来"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "18": {
+      "video": {
+        "primary": {"name": "The Wheels On The Bus", "no": "029"},
+        "advanced": {"name": "Driving In My Car", "no": "176"}
+      },
+      "advanced": "进阶词4个：wheels（轮子）· fast（快）· slow（慢）· horn（喇叭）——玩车时顺手带。进阶句型：\"The wheels go round and round.\"（比核心句长，配手势）\"My car goes fast!\"。进阶游戏：红灯绿灯——你喊 \"Green light, go!\" 她推车往前，喊 \"Red light, stop!\" 就停下，比谁停得快。进阶绘本：《Don't Let the Pigeon Drive the Bus!》（别让鸽子开巴士！），讲一只鸽子想开巴士的搞笑故事，翻到巴士就指一下。",
+      "days": [
+        {"day": 1, "title": "小汽车日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "找她衣服上或玩具筐里的小汽车，拿起来滚两下", "say": ["I see a car!", "The car goes vroom!"]},
+           {"time": "出门", "do": "走在路上看到车就指，把上周的颜色词串进来，见一辆说一辆", "say": ["I see a blue car.", "I see a red car."]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "和小汽车玩推来推去，她推过来你就接住说一句再推回去", "say": ["Here comes the car!", "The car is fast."]},
+           {"time": "睡前", "do": "抱她读一本有小汽车的书，翻到车就指一下", "say": ["Goodnight, car!", "Beep beep!"]}
+         ],
+         "remember": "车 = car，见车说 \"I see a car!\""},
+        {"day": 2, "title": "公交车日", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "拿出公交车玩具或绘本，指着说它大", "say": ["The bus is big.", "Big bus!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "放 The Wheels On The Bus，边唱边用手比轮子转圈，唱到 beep beep 就互相按鼻子", "say": ["The wheels on the bus go round and round.", "Beep beep beep!"]},
+           {"time": "出门", "do": "看到真公交车就停下来指，车开走就挥手说再见", "say": ["The bus is big!", "Bye-bye, bus!"]},
+           {"time": "睡前", "do": "轻声唱一遍 Wheels On The Bus 当摇篮曲，她困了就停", "say": ["The bus goes round and round.", "Goodnight, bus!"]}
+         ],
+         "remember": "公交车 = bus，它很大 = \"The bus is big.\""},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "交通工具排队日", "rest": false,
+         "sections": [
+           {"time": "上午 8:00-9:30（10分钟）", "do": "把家里的玩具车都拿出来，一辆一辆排好队，边排边说名字", "say": ["Here is a train.", "This is a plane.", "A bike!"]},
+           {"time": "洗澡", "do": "拿一只小船放进水里，让它漂来漂去", "say": ["The boat floats.", "Here is a boat."]},
+           {"time": "晚饭后（5分钟）", "do": "用手比划飞机起飞，举高再落下，配合 plane 的发音", "say": ["The plane goes up!", "Zoom! Here comes the plane."]},
+           {"time": "睡前", "do": "指着火车玩具轻轻说晚安", "say": ["Choo choo!", "Goodnight, train!"]}
+         ],
+         "remember": "train / plane / bike / boat 各说一遍"},
+        {"day": 5, "title": "出门找车 + 大回顾", "rest": false,
+         "sections": [
+           {"time": "出门", "do": "散步时见到什么说什么，把一周的句子都顺一遍，走到公交站就说去坐火车", "say": ["I see a blue car.", "The bus is big.", "Let's go by train!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "六样交通工具大点名：你指一样她说，或你说名字她去拿，拿对了就击掌", "say": ["Where is the bike?", "This is a bike.", "Yes! Well done!"]},
+           {"time": "晚饭后", "do": "放 Driving In My Car，边看边拿玩具车跟着转方向盘", "say": ["Driving in my car!", "Beep beep!"]},
+           {"time": "睡前", "do": "讲一个坐火车去玩的小故事，讲完说晚安", "say": ["We go by train. Choo choo! We see cars, buses and boats. The end!"]}
+         ],
+         "remember": "六样交通工具都能指认"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "19": {
+      "video": {
+        "primary": {"name": "I Like You", "no": "112"},
+        "advanced": {"name": "One For You, One For Me", "no": "038"}
+      },
+      "advanced": "进阶词4个：family（家人）· love（爱）· kiss（亲亲）· hug（抱抱）——说到就做动作。进阶句型：\"My grandma likes to read.\"（带 to，更完整）\"I love my mum and dad.\"。进阶游戏：喜欢什么配对——你说 \"My grandma likes...\" 让她从桌上的东西里拿对应的，拿错了就一起笑。进阶绘本：《The Family Book》（家人们），Todd Parr 画的，颜色鲜艳，每页讲一种家人。",
+      "days": [
+        {"day": 1, "title": "我的爸爸日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "把第 5 周学过的称呼翻出来，这次每个前面都加 my，先指自己再指爸爸", "say": ["This is my mum.", "This is my dad."]},
+           {"time": "爸爸回家时", "do": "爸爸一进门就大声喊，让她跑去抱，情绪最强的时候说 my 记得最牢", "say": ["My dad is home!", "This is my dad."]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "翻家庭相册，每翻到一张就用 my 说一遍，她指对了亲一下", "say": ["This is my dad.", "This is my baby."]},
+           {"time": "睡前", "do": "请爸爸来讲今晚的绘本，讲完抱着说晚安", "say": ["Goodnight, my dad!", "I love my dad."]}
+         ],
+         "remember": "爸爸前面加 my = \"This is my dad.\""},
+        {"day": 2, "title": "谁喜欢什么", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "吃饭时顺口说家里人喜欢吃什么，她吃一口你也说一句", "say": ["Mum likes apples.", "My grandma likes tea."]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "给娃娃喂吃的，一边喂一边猜娃娃喜欢什么", "say": ["My baby likes milk.", "What does baby like?"]},
+           {"time": "晚饭后", "do": "说家里人喜欢做的事，说到谁就指谁", "say": ["My grandma likes to cook.", "Grandpa likes to read."]},
+           {"time": "睡前", "do": "抱着她说妈妈喜欢和她一起看书", "say": ["Mum likes to read with you.", "I love you."]}
+         ],
+         "remember": "谁喜欢什么 = \"My grandma likes...\""},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "姐妹兄弟日 + 我的家人", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "聊姐妹和兄弟，家里没有就讲绘本里或朋友家的小朋友", "say": ["Do you have a sister?", "This is your brother."]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "把全家福摆出来，一个一个指过去，全部用 my 串起来", "say": ["This is my family.", "This is my grandma."]},
+           {"time": "晚饭后（5分钟）", "do": "数一数家里有谁，指着每一个人说一遍", "say": ["I love my family.", "Mum, dad, baby and you!"]},
+           {"time": "睡前", "do": "抱着她说晚安，把全家人都带一遍", "say": ["Goodnight, my family!"]}
+         ],
+         "remember": "家人 = family，我爱他们 = \"I love my family.\""},
+        {"day": 5, "title": "全家福大回顾 + 谁喜欢什么", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "给奶奶打一个视频电话，让她对着屏幕喊人", "say": ["Say hello to grandma!", "This is my grandma."]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "全家福点名：你说名字她跑去找、指给你，找对了就击掌", "say": ["Where is my dad?", "This is my dad.", "I love my family."]},
+           {"time": "晚饭后", "do": "一家人围坐放 I Like You，唱到谁就抱一下谁", "say": ["I like you!", "I love my family."]},
+           {"time": "睡前", "do": "讲一个家人的小故事，把七个称呼都带进去", "say": ["Once there was a little girl. She had a mum, a dad, a grandma, a grandpa, a sister and a brother. They all loved her. The end!"]}
+         ],
+         "remember": "七个称呼全部带 my 认一遍"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "20": {
+      "video": {
+        "primary": {"name": "What's Your Favorite Color", "no": "149"},
+        "advanced": {"name": "The Rainbow Song", "no": "248"}
+      },
+      "advanced": "进阶词4个：pink（粉色）· purple（紫色）· rainbow（彩虹）· silver（银色）——看到就带。进阶句型：\"What's your favorite color?\"（完整问句）\"My favorite color is pink.\"。进阶游戏：彩虹寻宝——画一条彩虹，每说一个颜色就找家里对应的东西放上去。进阶绘本：《Brown Bear, Brown Bear, What Do You See?》（棕色的熊，棕色的熊，你在看什么？），每页一种动物一个颜色，正好配这周。",
+      "days": [
+        {"day": 1, "title": "找橙色", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "吃橙子或胡萝卜时举起来，让橙色和吃的东西挂上钩", "say": ["The orange is orange.", "This is orange."]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "在家寻宝：找橙色的东西，她找到一样就大声接住", "say": ["Find something orange!", "Yes! It's orange."]},
+           {"time": "出门", "do": "路上看见橙色的车、招牌、衣服就指一下", "say": ["I see an orange car.", "Orange!"]},
+           {"time": "睡前", "do": "抱着她轻声说晚安，把今天找到的橙色回想一遍", "say": ["Goodnight, orange!"]}
+         ],
+         "remember": "橙色 = orange，橘子也是 orange"},
+        {"day": 2, "title": "棕色小熊", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "拿出棕色小熊玩偶，指着它的毛说颜色", "say": ["The bear is brown.", "Brown bear!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "找家里棕色的东西：木头、巧克力、小熊、鞋子，见一样说一样", "say": ["This is brown.", "The chair is brown."]},
+           {"time": "晚饭后（5分钟）", "do": "翻《Brown Bear》那本书，翻到熊就指，边看边说", "say": ["Brown bear, brown bear, what do you see?"]},
+           {"time": "睡前", "do": "抱着小熊玩偶一起睡，说晚安", "say": ["Goodnight, brown bear!"]}
+         ],
+         "remember": "棕色 = brown，小熊是棕色的 = \"The bear is brown.\""},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "黑与白与金色", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "看她今天穿的衣服和鞋，说黑白", "say": ["Your shoes are white.", "My shirt is black."]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "找黑白色的东西：斑马玩具、钢琴键、黑猫，放在一起比一比", "say": ["Black and white!", "This is black. This is white."]},
+           {"time": "晚饭后", "do": "找金色的东西：金币、戒指、星星贴纸，对着光看一闪一闪", "say": ["Gold! It's gold.", "The star is gold."]},
+           {"time": "睡前", "do": "抱着她说晚安，把黑白金三个颜色各说一遍", "say": ["Goodnight, black and white!"]}
+         ],
+         "remember": "黑 black · 白 white · 金 gold"},
+        {"day": 5, "title": "我喜欢什么颜色 + 大回顾", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "一边穿衣服一边问她，她说了什么颜色你就顺着重复", "say": ["What color do you like?", "My favorite color is blue."]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "五色大搜寻：在家找 orange / white / black / gold / brown 各一样，凑成一排", "say": ["Find something brown.", "The bear is brown."]},
+           {"time": "晚饭后", "do": "放 The Rainbow Song，唱到哪个颜色就去拍那个颜色的东西", "say": ["What's your favorite color?", "I like blue!"]},
+           {"time": "睡前", "do": "讲一个颜色小故事，把五个新色都带进去，最后问她喜欢哪个", "say": ["The bear is brown. The orange is orange. What color do you like?"]}
+         ],
+         "remember": "能说出一个自己喜欢的颜色"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "21": {
+      "video": {
+        "primary": {"name": "Counting Bananas", "no": "024"},
+        "advanced": {"name": "Ten In The Bed", "no": "008"}
+      },
+      "advanced": "进阶词4个：eleven（十一）· twelve（十二）· count（数）· more（更多）——顺口往后数。进阶句型：\"How many fingers?\"（完整问句）\"Let's count the grapes. One, two, three...\"。进阶游戏：数楼梯——上下楼数台阶，一天数几遍，她数错了你就跟着她的节奏再数一遍。进阶绘本：《Ten Little Fingers and Ten Little Toes》（十个手指头和十个脚趾头），数手指脚趾的经典，边读边点她的手。",
+      "days": [
+        {"day": 1, "title": "数手指 1-5", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "扣扣子、穿袜子时数一数，先复习 1 到 5", "say": ["One, two, three, four, five!", "Count with me!"]},
+           {"time": "早餐 7:30-7:45", "do": "数碗里的葡萄干或蓝莓，数到几就吃几颗", "say": ["One, two, three!", "I have three!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "玩数手指：你伸手指她数，或她伸你数，数一个弯一个", "say": ["How many fingers?", "Five fingers!"]},
+           {"time": "睡前", "do": "抱着她小声数着说晚安", "say": ["Goodnight, one, two, three!"]}
+         ],
+         "remember": "复习 1-5，边数边问 \"How many?\""},
+        {"day": 2, "title": "数到 10", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "数手指从 1 数到 10，两只手一起上", "say": ["Six, seven, eight, nine, ten!", "Count with me!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "放 Counting Bananas，跟着视频数香蕉，数到 10 就拍手", "say": ["How many bananas?", "One, two, three, four, five, six, seven, eight, nine, ten!"]},
+           {"time": "晚饭后", "do": "拿积木一块一块往上搭，搭一块数一块", "say": ["How many blocks?", "I have ten!"]},
+           {"time": "睡前", "do": "从十倒着数到一当摇篮曲，她困了就停", "say": ["Ten, nine, eight... goodnight!"]}
+         ],
+         "remember": "数字从 5 扩到 10，数到 \"I have ten!\""},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "数实物", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "数盘子里的葡萄，数一颗吃一颗，真的数", "say": ["How many grapes?", "One, two, three!", "I have three!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "数积木或乐高，让她一块一块递给你，你边接边数", "say": ["Let's count the blocks.", "One, two, three, four!"]},
+           {"time": "出门", "do": "上下楼数台阶，走一步数一下", "say": ["How many steps?", "One, two, three!"]},
+           {"time": "睡前", "do": "数她的手指头，一边数一边轻轻点", "say": ["Count with me: one, two, three!"]}
+         ],
+         "remember": "数真的东西——葡萄、积木、台阶"},
+        {"day": 5, "title": "十个小家伙 + 大回顾", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "从 1 数到 10，数完击个掌庆祝", "say": ["One, two, three, four, five, six, seven, eight, nine, ten!"]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "放 Ten In The Bed，边看边数床上还有几个小家伙，滚下去一个就少一个", "say": ["There were ten in the bed.", "Roll over!"]},
+           {"time": "晚饭后", "do": "实物大回顾：把葡萄、积木、手指各数一遍，来回问", "say": ["How many?", "I have three!", "Count with me!"]},
+           {"time": "睡前", "do": "抱着她数着说晚安，数完亲一下", "say": ["Goodnight! One, two, three!"]}
+         ],
+         "remember": "能从 1 数到 10，问 \"How many?\" 会数东西"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "22": {
+      "video": {
+        "primary": {"name": "Let's Go For A Walk Outside", "no": "223"},
+        "advanced": {"name": "Peekaboo Playground", "no": "156"}
+      },
+      "advanced": "进阶词3个：kitchen（厨房）· bathroom（洗手间）· supermarket（超市）——家里、常去的地方有就带，没有就跳过。进阶句型：\"Where is the shop?\"（把 Where 用在出门的地方）\"Let's go outside and play!\"（一句更完整的话）。进阶游戏：出门找地标——路上看到树说 tree、看到店说 shop、看到车说 car，谁先喊出来谁赢。进阶绘本：《We're Going on a Bear Hunt》（我们要去捉狗熊），一路经过各种地点，边走边念，回家躺下。进阶小任务：让她带你走一段回家的路，走到门口她说 \"I am home!\"",
+      "days": [
+        {"day": 1, "title": "家里日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "穿好衣服抱着她在家里走一圈，每到一个房间就张开手臂说 home", "say": ["This is our home.", "Home, home, home!"]},
+           {"time": "上午 8:00-9:30（5分钟）", "do": "玩找床游戏：把她的小熊、小被子藏到床上，问 Where is... 让她找", "say": ["Where is my bed?", "Where is the teddy?", "Here! On the bed!"]},
+           {"time": "回家时（重点）", "do": "从外面一回家，一开门就抱着她喊 I am home，让她也拍手喊", "say": ["We are home!", "I am home."]},
+           {"time": "睡前", "do": "铺床的时候边说边拍床，把 bed 和她自己的床挂上钩", "say": ["This is my bed.", "Where is my bed?"]}
+         ],
+         "remember": "家 = home，床 = bed；进门说 \"I am home!\""},
+        {"day": 2, "title": "出门去公园日", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "一边给她穿外套一边说要去公园，制造出门的期待", "say": ["Let's go outside!", "Let's go to the park!"]},
+           {"time": "出门（重点）", "do": "真的带她去公园，路上指着天空、树、地反复说 outside，到门口大声喊 Let's go to the park", "say": ["We are outside!", "Let's go to the park!"]},
+           {"time": "公园里", "do": "玩滑梯、荡秋千的时候顺口说，她说出一个音就亲她一下", "say": ["The park! Look at the tree!", "Slide! Swing! Fun!"]},
+           {"time": "回家路上", "do": "离开时说拜拜，把 park 和今天玩过的地方留在记忆里", "say": ["Bye-bye, park!", "Let's go home."]}
+         ],
+         "remember": "公园 = park，外面 = outside；出门喊 \"Let's go to the park!\""},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "商店与动物园日", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "吃早饭时问她要不要去商店，把 shop 挂到买东西这件事上", "say": ["Let's go to the shop!", "We can buy apples."]},
+           {"time": "出门去商店（重点）", "do": "真去一趟小店，让她帮你拿一样东西放进篮子里", "say": ["This is the shop.", "Give me the apple. Thank you!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "用动物玩具开个动物园：把毛绒动物摆一排带着她看，说 Let's go to the zoo", "say": ["Let's go to the zoo!", "Look! The monkey! The elephant!", "Where is the lion?"]},
+           {"time": "睡前", "do": "放 Peekaboo Playground，或抱着她玩躲猫猫找玩具", "say": ["Where is the teddy? Peekaboo!"]}
+         ],
+         "remember": "商店 = shop，动物园 = zoo；去商店说 \"Let's go to the shop!\""},
+        {"day": 5, "title": "地点大串门 + 大回顾", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "早上起来问今天想去哪，把学过的地点都过一遍", "say": ["Park or shop? Zoo or home?"]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "在家里摆地点地图：靠垫当床、画个圈当公园、毛绒动物当动物园、篮子当商店，你报地名她跑过去", "say": ["Where is the bed? Go to the bed!", "Let's go to the zoo!", "Yes! Well done!"]},
+           {"time": "出门", "do": "真的去一个她说想去的地方，路上把 home、park、shop、zoo 轮流说一遍", "say": ["Where are we going? The park!"]},
+           {"time": "睡前", "do": "把今天去过的地方编成一句睡前小故事", "say": ["We went to the park. We went to the shop. Now we are home. Goodnight!"]}
+         ],
+         "remember": "六个地点词全过一遍，能跑去指对就算成功"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "23": {
+      "video": {
+        "primary": {"name": "Decorate The Christmas Tree", "no": "043"},
+        "advanced": {"name": "S-A-N-T-A", "no": "006"}
+      },
+      "advanced": "进阶词3个：ornament（装饰球）· reindeer（驯鹿）· stocking（圣诞袜）——挂的时候顺口带，没有实物就跳过。进阶句型：\"What do you see?\"（她答 gift / star，一问一答）\"Santa is coming to town!\"（歌里的原句）。进阶游戏：圣诞寻宝——把一个小礼物藏三次，藏一次说一次 \"Where is the gift?\"，找到就拍手说 \"I see a gift!\"。进阶绘本：《Dear Santa》（亲爱的圣诞老人），翻翻书，翻一页问一句，正好配 Santa 和 gift。进阶小任务：让她把礼物送给家里每一个人，递出去时说 \"This is for you. Merry Christmas!\"",
+      "days": [
+        {"day": 1, "title": "装饰圣诞树日", "rest": false,
+         "sections": [
+           {"time": "上午 8:00-9:30（8分钟）", "do": "把圣诞树（或画的树）摆好，边放 Decorate The Christmas Tree 边挂第一样装饰", "say": ["Look! The Christmas tree!", "Let's decorate the tree."]},
+           {"time": "挂星星（重点）", "do": "抱她起来把星星放到树顶上，放好了一起拍手", "say": ["The star! Up on top!", "Put the star on the tree."]},
+           {"time": "晚饭后", "do": "关了灯开着小灯看树，指着亮晶晶的星星说", "say": ["Look at the star!", "The star is pretty."]},
+           {"time": "睡前", "do": "睡前再看一眼树说晚安，把今天挂的 star 留在记忆里", "say": ["Goodnight, tree! Goodnight, star!"]}
+         ],
+         "remember": "圣诞树 = tree，星星 = star"},
+        {"day": 2, "title": "包礼物日", "rest": false,
+         "sections": [
+           {"time": "上午 8:00-9:30（8分钟）", "do": "拿出彩纸和小盒子，一起包一个礼物，让她递纸、按胶带", "say": ["Let's wrap a gift!", "The gift is for you."]},
+           {"time": "藏礼物（重点）", "do": "把包好的礼物藏在枕头下或柜子里，玩找礼物", "say": ["Where is the gift?", "I see a gift!"]},
+           {"time": "晚饭后", "do": "把礼物都堆在树下，一个个指给她看", "say": ["Look! Gifts under the tree!", "I see a gift."]},
+           {"time": "睡前", "do": "睡前问她今天包了什么，抱着说", "say": ["The gift! Goodnight, gift!"]}
+         ],
+         "remember": "礼物 = gift；找到礼物喊 \"I see a gift!\""},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "圣诞老人日", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "早饭时给她看圣诞老人的图或玩具，讲他要来的事", "say": ["This is Santa.", "Santa is coming!"]},
+           {"time": "上午 8:00-9:30（8分钟）", "do": "放 S-A-N-T-A 视频，一边听一边拍手，跟着拼", "say": ["S! A! N! T! A! Santa!", "Santa is coming!"]},
+           {"time": "玩雪（重点）", "do": "用棉花团或碎纸当雪，撒在桌上玩下雪，她接住就喊 snow", "say": ["Snow! Snow is falling!", "Catch the snow!"]},
+           {"time": "睡前", "do": "抱着她讲圣诞老人夜里来的事，制造一点期待", "say": ["Santa is coming at night.", "Goodnight! Santa is coming!"]}
+         ],
+         "remember": "圣诞老人 = Santa，雪 = snow；喊 \"Santa is coming!\""},
+        {"day": 5, "title": "圣诞快乐日 + 大回顾", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "起来第一句就说 Merry Christmas，抱一抱，今天只过节", "say": ["Merry Christmas!", "Merry Christmas, baby!"]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "真的布置家里：把树、礼物、星星、圣诞老人全摆出来，一样一样指过去", "say": ["Look at the tree! The star! The gift!", "Where is Santa?", "I see a gift!"]},
+           {"time": "晚饭后（重点）", "do": "开小灯看树，一起唱 Merry Christmas，让她拆一个真礼物", "say": ["Merry Christmas!", "Open the gift!"]},
+           {"time": "睡前", "do": "把这一周串成一句睡前小故事", "say": ["We decorated the tree. We wrapped a gift. Santa is coming. Merry Christmas! The end!"]}
+         ],
+         "remember": "Merry Christmas！五个圣诞词全过一遍"},
+        {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
+      ]
+    },
+    "24": {
+      "video": {
+        "primary": {"name": "Red Light Green Light", "no": "152"},
+        "advanced": {"name": "Make A Circle", "no": "070"}
+      },
+      "advanced": "进阶词3个：purple（紫色）· brown（棕色）· orange（橙色）——颜色大游行里没提到的补上。进阶句型：\"I want more, please.\"（把 more 用在完整句里）\"My favorite color is red.\"（把 favorite 说全）。进阶游戏：翻牌大赛——把学过的东西画成小卡片（颜色、动物、食物、五官），翻一张说一张，说对就拿走。进阶绘本：《Brown Bear, Brown Bear, What Do You See?》（棕色的熊，你在看什么），正好复习颜色和动物，一问一答。进阶小任务：第5天的展示，让她当小老师，她问 \"What's this?\"，你答，角色换过来。",
+      "days": [
+        {"day": 1, "title": "颜色大游行", "rest": false,
+         "sections": [
+           {"time": "上午 8:00-9:30（10分钟）", "do": "把家里的彩色积木、彩笔、衣服按颜色摆成一排，带着她游行——一个个点名", "say": ["Red! Yellow! Blue!", "Show me red!"]},
+           {"time": "颜色游行（重点）", "do": "你报一个颜色，她跑去拿那一样东西举起来，拿对了就大声夸", "say": ["Show me your favorite color.", "Yes! Blue! Well done! You did it!"]},
+           {"time": "晚饭后", "do": "玩红绿灯：你说 green 她跑，说 red 她停，复习颜色又放电", "say": ["Green light, go! Red light, stop!", "Well done!"]},
+           {"time": "睡前", "do": "指着她睡衣的颜色说一遍，抱着说晚安", "say": ["Your pajamas are pink! Goodnight!"]}
+         ],
+         "remember": "颜色全指一遍，重点句 \"Show me your favorite color.\""},
+        {"day": 2, "title": "动物运动会", "rest": false,
+         "sections": [
+           {"time": "上午 8:00-9:30（10分钟）", "do": "把所有毛绒动物摆出来开运动会：学动物叫声，学动物跳", "say": ["The monkey! The elephant! The lion!", "Can you jump like a monkey?"]},
+           {"time": "动物赛跑（重点）", "do": "她拿一个动物玩具，你拿一个，比谁先跑到沙发，玩完喊再来一次", "say": ["One, two, three, go!", "Well done! You did it!", "Let's play again!"]},
+           {"time": "晚饭后", "do": "把动物一个个藏起来玩谁不见了，再一个个找回来", "say": ["Where is the lion?", "Here it is!"]},
+           {"time": "睡前", "do": "学几个动物叫声当晚安，她笑了就是成功", "say": ["Goodnight, monkey! Goodnight, elephant!"]}
+         ],
+         "remember": "动物名和叫声都过一遍，重点句 \"Let's play again!\""},
+        {"day": 3, "title": "休息", "rest": true, "sections": [], "remember": ""},
+        {"day": 4, "title": "食物小商店", "rest": false,
+         "sections": [
+           {"time": "早餐 7:30-7:45", "do": "早饭时指着食物报名字，复习 apple、milk、egg 这些", "say": ["Yummy! Apple! Milk!", "Do you want more?"]},
+           {"time": "开小商店（重点）", "do": "用水果、玩具食物摆个小摊，她来买你当老板，她指着要就说 more", "say": ["Welcome to the shop!", "What do you want? An apple?", "More? Okay, more!"]},
+           {"time": "午饭", "do": "真吃饭时用 more 和 all，吃完了说 all gone", "say": ["More rice?", "All gone! Well done!"]},
+           {"time": "睡前", "do": "把今天吃过的、买过的食物串成一句", "say": ["We ate an apple. We drank milk. All gone!"]}
+         ],
+         "remember": "食物词过一遍，重点句 more（还要）和 all gone（吃光）"},
+        {"day": 5, "title": "身体五官大赛 + 我会了什么展示", "rest": false,
+         "sections": [
+           {"time": "穿衣服 7:00-7:15", "do": "穿衣服时玩指五官：你说 eyes、nose、mouth，她指，越指越快", "say": ["Show me your eyes!", "Show me your nose!"]},
+           {"time": "上午 8:00-9:30（10分钟）", "do": "放 Make A Circle，全家围圈做动作：big/small、up/down、点头拍手", "say": ["Make a circle! Big! Small!", "Well done! You did it!"]},
+           {"time": "晚饭后（重点：我会了什么展示）", "do": "请全家来看：她把自己会的从头表演一遍——指颜色、学动物叫、说食物、指五官，每演一个全家一起拍手", "say": ["Show me your favorite color.", "Show me your nose!", "Well done! You did it!"]},
+           {"time": "睡前", "do": "抱着她把这一周串成一句话，亲一下", "say": ["You know colors, animals, food and body. All of them! Well done!"]}
+         ],
+         "remember": "让她在全家人面前表演一次，只夸不考"},
         {"day": 6, "title": "休息", "rest": true, "sections": [], "remember": ""},
         {"day": 7, "title": "休息", "rest": true, "sections": [], "remember": ""}
       ]

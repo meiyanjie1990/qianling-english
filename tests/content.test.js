@@ -9,10 +9,15 @@ test("48周骨架齐全且周号连续", () => {
   for (let i = 0; i < 48; i++) assert.strictEqual(content.weeks[i].week, i + 1);
 });
 
-test("只有1-4周细化", () => {
+test("细化到第 24 周，骨架与 details 一一对应", () => {
+  const weeks1to24 = Array.from({ length: 24 }, (_, i) => i + 1);
   const detailed = content.weeks.filter(w => w.detailed).map(w => w.week);
-  assert.deepStrictEqual(detailed, [1, 2, 3, 4]);
-  assert.deepStrictEqual(Object.keys(content.details).sort(), ["1", "2", "3", "4"]);
+  assert.deepStrictEqual(detailed, weeks1to24);
+  const keys = Object.keys(content.details).map(Number).sort((a, b) => a - b);
+  assert.deepStrictEqual(keys, weeks1to24);
+  for (const n of weeks1to24) {
+    assert.ok(content.details[String(n)], `缺第${n}周细化内容`);
+  }
 });
 
 test("每个细化周7天齐全，非休息天结构完整", () => {
@@ -22,16 +27,26 @@ test("每个细化周7天齐全，非休息天结构完整", () => {
     assert.deepStrictEqual(days, [1, 2, 3, 4, 5, 6, 7], `第${wk}周天数不连续`);
     for (const day of detail.days) {
       assert.ok(day.title, `第${wk}周第${day.day}天缺 title`);
-      if (!day.rest) {
-        assert.ok(day.sections.length >= 1, `第${wk}周第${day.day}天没有时间段`);
+      if (day.rest) {
+        assert.ok([3, 6, 7].includes(day.day), `第${wk}周第${day.day}天不该是休息日（只有3/6/7休息）`);
+        assert.strictEqual(day.sections.length, 0, `第${wk}周第${day.day}天休息日不该有内容`);
+        assert.strictEqual(day.remember, "", `第${wk}周第${day.day}天休息日的 remember 应为空`);
+      } else {
+        assert.ok([1, 2, 4, 5].includes(day.day), `第${wk}周第${day.day}天应是休息日`);
+        // 地板是 2 块（第1-4周源材料里"大回顾日"就是 2 块）；
+        // 第5周起新写的内容要求 ≥3 块，由 tools/merge-weeks.js 在合并时把关
+        assert.ok(day.sections.length >= 2, `第${wk}周第${day.day}天时间段太少`);
+        assert.ok(day.remember, `第${wk}周第${day.day}天缺 remember`);
         for (const s of day.sections) {
           assert.ok(s.time && s.do, `第${wk}周第${day.day}天有块缺 time/do`);
           assert.ok(Array.isArray(s.say), `第${wk}周第${day.day}天 ${s.time} 缺 say 数组`);
+          assert.ok(s.say.every(x => typeof x === "string"), `第${wk}周第${day.day}天 ${s.time} 的 say 有非字符串`);
         }
       }
     }
     assert.ok(detail.video && detail.video.primary && detail.video.primary.name && detail.video.primary.no,
       `第${wk}周缺主视频`);
+    assert.ok(typeof detail.advanced === "string" && detail.advanced.trim(), `第${wk}周缺进阶内容`);
   }
 });
 

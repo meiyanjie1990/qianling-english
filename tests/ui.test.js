@@ -1,5 +1,7 @@
 const test = require("node:test");
 const assert = require("node:assert");
+const fs = require("node:fs");
+const path = require("node:path");
 const Ui = require("../ui.js");
 
 const c = {
@@ -83,4 +85,29 @@ test("全年地图：细化周可点，未细化周灰化", () => {
   assert.ok(html.includes("data-week=\"2\""));
   assert.ok(html.includes("内容还没出"));
   assert.ok(html.includes("第5周"));
+});
+
+// 用真实的 content.json 跑一遍：每个细化周、每一天都得能渲染出内容。
+// 内容是一周一加进来的，这条能挡住"新加的周把页面渲染搞崩"这类问题。
+test("content.json 里每个细化周、每一天都能渲染", () => {
+  const real = JSON.parse(fs.readFileSync(path.join(__dirname, "..", "content.json"), "utf-8"));
+  const weeks = Object.keys(real.details).map(Number);
+  assert.ok(weeks.length > 0, "一个细化周都没有？");
+  for (const n of weeks) {
+    const wk = Ui.renderWeekPage(real, n, {});
+    assert.ok(wk.includes("第" + n + "周"), `第${n}周本周页没渲染出周号`);
+    assert.ok(wk.includes('data-action="open-day"'), `第${n}周本周页没有 7 天列表`);
+    assert.ok(wk.includes('data-action="toggle-week"'), `第${n}周本周页没有整周打卡键`);
+    for (let d = 1; d <= 7; d++) {
+      const day = Ui.renderDayPage(real, n, d, {});
+      assert.ok(day.includes('data-action="go-back"'), `第${n}周第${d}天没有返回键`);
+      const isRest = real.details[String(n)].days.find(x => x.day === d).rest;
+      if (isRest) {
+        assert.ok(day.includes("休息日"), `第${n}周第${d}天缺休息提示`);
+      } else {
+        assert.ok(day.length > 300, `第${n}周第${d}天渲染出来太空`);
+        assert.ok(day.includes('data-action="toggle-checkin"'), `第${n}周第${d}天没有打卡键`);
+      }
+    }
+  }
 });

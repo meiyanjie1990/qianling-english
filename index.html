@@ -50,6 +50,14 @@
       -webkit-font-smoothing: antialiased;
     }
     button { font: inherit; color: inherit; }
+    /* 手机上凡是可以点的东西，统一：不选中文字、不长按弹菜单、没有双击缩放延迟。
+       少这一条，「点我更新」这类按钮就会一点选中一个字、要连点好几次才有反应。 */
+    button, [data-action] {
+      user-select: none;
+      -webkit-user-select: none;
+      -webkit-touch-callout: none;
+      touch-action: manipulation;
+    }
     [hidden] { display: none !important; }
     ::selection { background: var(--main-soft); }
     :focus-visible { outline: 3px solid var(--caramel); outline-offset: 2px; }
@@ -351,23 +359,29 @@
     }
     .empty button:active { transform: scale(.96); }
 
-    /* ---------- 「点我更新」悬浮胶囊（Task 7 接逻辑） ---------- */
+    /* ---------- 「点我更新」悬浮胶囊 ---------- */
     /* bottom 76px：悬浮在底部停靠栏(.week-nav 高58px+停靠10px)之上，不遮挡 */
+    /* 它必须是 <button>（不是 div）：div 上点一下会被当成选字，手机上要连点好几次 */
     #update-badge {
       position: fixed;
       right: 14px;
       bottom: calc(76px + var(--safe-b));
       z-index: 60;
+      border: 0;
+      appearance: none;
+      -webkit-appearance: none;
       background: var(--main);
       color: var(--ink);
       font-size: 14px;
       font-weight: 800;
       letter-spacing: .03em;
+      line-height: 1.6;
       padding: 11px 18px;
       border-radius: var(--r-pill);
       box-shadow: var(--shadow-lift);
       cursor: pointer;
     }
+    #update-badge:active { transform: scale(.96); }
 
     /* ---------- 当天页返回按钮（页头顶部，安静的大触控区） ---------- */
     .back {
@@ -570,7 +584,7 @@
     <div id="view-day" class="view" hidden></div>
     <div id="view-map" class="view" hidden></div>
   </div>
-  <div id="update-badge" hidden>点我更新</div>
+  <button type="button" id="update-badge" hidden>点我更新</button>
   <script src="logic.js"></script>
   <script src="ui.js"></script>
   <script>
@@ -597,6 +611,30 @@
     })();
     (function () {
       var badge = document.getElementById("update-badge");
+      var updating = false;
+
+      // 彻底清掉旧缓存再刷新：一定要等清理真的做完再 reload，
+      // 否则刷新会又被旧缓存接住，表现就是「点了没反应、要点好几次」
+      function clearAndReload() {
+        var steps = Promise.resolve();
+        if (navigator.serviceWorker) {
+          steps = steps.then(function () {
+            return navigator.serviceWorker.getRegistrations().then(function (regs) {
+              return Promise.all(regs.map(function (reg) { return reg.unregister(); }));
+            });
+          });
+        }
+        if (window.caches) {
+          steps = steps.then(function () {
+            return caches.keys().then(function (keys) {
+              return Promise.all(keys.map(function (k) { return caches.delete(k); }));
+            });
+          });
+        }
+        var go = function () { location.reload(); };
+        steps.then(go, go);
+      }
+
       fetch("version.json?ts=" + Date.now()).then(function (r) { return r.json(); })
         .then(function (v) {
           var curRaw = localStorage.getItem(Logic.APP_VERSION_KEY);
@@ -604,14 +642,14 @@
             // 首装：只记录版本，不弹徽标（否则一点徽标就清掉刚预缓存的壳文件，破坏离线）
             localStorage.setItem(Logic.APP_VERSION_KEY, String(v.version));
           } else if (v.version > Number(curRaw)) {
-            badge.hidden = false;
-            badge.onclick = function () {
-              if (navigator.serviceWorker && navigator.serviceWorker.controller) {
-                navigator.serviceWorker.controller.postMessage("CLEAR_CACHE");
-              }
+            badge.hidden = false;   // 徽标一直挂着，直到点掉为止
+            badge.addEventListener("click", function () {
+              if (updating) return;              // 连点只算一次
+              updating = true;
+              badge.textContent = "正在更新…";
               localStorage.setItem(Logic.APP_VERSION_KEY, String(v.version));
-              setTimeout(function () { location.reload(true); }, 600);
-            };
+              clearAndReload();
+            });
           } else {
             localStorage.setItem(Logic.APP_VERSION_KEY, String(v.version));
           }
