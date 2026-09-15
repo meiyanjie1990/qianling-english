@@ -1,6 +1,6 @@
 # 谦灵启蒙 App · 项目名片
 
-> 最后更新：2026-09-10｜页面代码版本 v6（version.json）｜内容版本 4（content.json，第 1-24 周已细化）
+> 最后更新：2026-09-15｜页面代码版本 v7（version.json，森林手账改版）｜内容版本 5（content.json，48周核心词句全面升级：native句型+难度爬坡）
 
 ## 项目概述
 
@@ -36,10 +36,10 @@
 
 | 部分 | 状态 |
 |---|---|
-| 48 周骨架（weeks） | 全部在 content.json，字段完整（含 1-48 周的详细 false/true 标记）；**48 周核心词句已补满**（非细化周 ≥5 词 / ≥2 句） |
+| 48 周骨架（weeks） | 全部在 content.json，字段完整（含 1-48 周的详细 false/true 标记）；**2026-09-15 内容v5：48周核心词句全面升级**——句子换 native 妈妈日常话、每周期加2-3个新词、难度按周爬坡（前8周短句，往后渐长），非细化周 ≥5 词 / ≥2 句 |
 | 细化内容（details） | **第 1-24 周**，每周 7 天（休息日固定第 3、6、7 天，活动日只有 1/2/4/5），每周带主视频+进阶视频+进阶说明 |
 | 每周 md 计划 | `E:\谦灵英语启蒙\第01周-…` 到 `第24周-…`，共 24 个文件 |
-| 页面代码 | v6：三页齐全 + PWA 套件 + 更新徽标（真按钮、禁选字、清缓存后再刷新）；返回键走历史记录、休息日无打卡键、本周页有「整周打卡」、打开停在**上次打卡的那周**（含老数据迁移） |
+| 页面代码 | v7：森林手账定稿（文楷手写体+五色纸卡+缝线卡片+紧凑排版，fonts/ 本地子集离线可用）+ 三页齐全 + PWA 套件 + 更新徽标（真按钮、禁选字、清缓存后再刷新）；返回键走历史记录、休息日无打卡键、本周页有「整周打卡」、打开停在**上次打卡的那周**（含老数据迁移） |
 | 测试 | 37/37 通过（content 7 + logic 12 + ui 9 + nav 9） |
 | 仓库与上线 | ✅ 已上线 https://meiyanjie1990.github.io/qianling-english/，工作流自动部署 |
 
@@ -48,6 +48,7 @@
 | 文件 | 作用 |
 |---|---|
 | `index.html` | 页面外壳 + 全部 CSS + 三视图容器 + Service Worker 注册 + 「点我更新」徽标逻辑 |
+| `fonts/` | LXGW WenKai 手写体按需子集（54段，只含 app 用到的字符）+ Nunito 700/800 + fonts.css，离线可用 |
 | `logic.js` | Logic 模块：内容解析/拉取、周号钳制、打卡读写、localStorage 键定义。UMD（同一份代码浏览器和 Node 都能用），Node 下导出给测试 |
 | `ui.js` | Ui 模块：本周页 / 当天详情页 / 全年地图页渲染、打卡勾选状态、整周打卡键、**视图历史记录**（手机返回键先回上一页）。UMD |
 | `content.json` | 全部课程数据：48 周骨架（核心词句已补满）+ 细化周的逐日内容；顶部带内容版本号 `version` |
@@ -57,7 +58,7 @@
 | `icon-192.png` / `icon-512.png` | PWA 图标（浅蓝渐变圆角方块 #C1DFFA→#82BBEF + 白色幼圆「灵」字），`tools/make-icons.py` 生成 |
 | `apple-touch-icon.png` | iPhone「添加到主屏幕」用的图标 |
 | `tests/` | 测试：content / logic / ui / nav 四个文件共 37 条，`node --test` 跑（nav.test.js 用最小浏览器桩验证返回键、整周打卡、重开回到上次打卡那周；ui.test.js 有一条拿真实 content.json 全量渲染的回归测试） |
-| `tools/` | `make-icons.py`：图标（`python tools/make-icons.py` 出正式图标，加 `options` 出三方案对比图 `docs/icon-options.png`）。`merge-weeks.js`：**把每周 JSON 片段合并进 content.json 的工具**，见「每周新内容固定流程」。改图标后要提交新的 PNG |
+| `tools/` | `make-icons.py`：图标（`python tools/make-icons.py` 出正式图标，加 `options` 出三方案对比图 `docs/icon-options.png`）。`merge-weeks.js`：**把每周 JSON 片段合并进 content.json 的工具**，见「每周新内容固定流程」。`fetch-fonts.js`：字体子集抓取（新增内容出现生僻字后重跑 `node tools/fetch-fonts.js`）。`gen-md.js`：**从 content.json 重新生成 E:\谦灵英语启蒙\ 的每周教案 md**（改了内容后跑一次同步 md）。`upgrade-skeleton.js`：48周骨架词句升级（一次性工具，留档）。改图标后要提交新的 PNG |
 | `docs/` | `source-transcripts/`（1-4 周老 docx 转录，历史资料）+ `superpowers/`（设计文档、实施计划）+ `icon-options.png` |
 | `.github/workflows/pages.yml` | GitHub Pages 部署工作流（push 到 master 自动发布）；仓库 remote 用 SSH（git@github.com），https 推送会被重置 |
 
