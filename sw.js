@@ -1,7 +1,7 @@
-var CACHE_NAME = "qianling-app-v6";
+var CACHE_NAME = "qianling-app-v7";
 var PRECACHE = [
   "./", "index.html", "logic.js", "ui.js", "content.json",
-  "manifest.json", "version.json",
+  "manifest.json", "version.json", "fonts/fonts.css",
   "icon-192.png", "icon-512.png", "apple-touch-icon.png"
 ];
 
@@ -42,8 +42,19 @@ self.addEventListener("fetch", function (e) {
     );
     return;
   }
+  // 缓存优先；没缓存时联网取，并顺手存进缓存——
+  // 字体的子集文件（fonts/*.woff2）是浏览器按需才下载的，
+  // 不存的话每次打开都重下、断网就打不开字体
   e.respondWith(
-    caches.match(e.request).then(function (m) { return m || fetch(e.request); })
+    caches.match(e.request).then(function (m) {
+      return m || fetch(e.request).then(function (res) {
+        if (res.ok) {
+          var copy = res.clone();
+          caches.open(CACHE_NAME).then(function (c) { c.put(e.request, copy); });
+        }
+        return res;
+      });
+    })
   );
 });
 

@@ -3,36 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta name="theme-color" content="#FFF6E9">
+  <meta name="theme-color" content="#F6F1E6">
   <title>谦灵启蒙</title>
   <link rel="manifest" href="manifest.json">
   <link rel="apple-touch-icon" href="apple-touch-icon.png">
   <link rel="icon" href="icon-192.png">
+  <link rel="stylesheet" href="fonts/fonts.css">
   <style>
     /* ============================================================
-       设计令牌 —— 亲子手账风：暖底、深棕墨字、橙色主色 + 语义色
-       (绿=完成/休息，红=提醒)。彩色文字只用深色变体保证可读。
+       森林手账 v7 —— 清新绘本风（2026-09 改版定稿）
+       燕麦纸打底，中文用「霞鹜文楷」手写体（fonts/ 本地子集，离线可用），
+       卡片是虚线缝线边，核心词是五色纸小卡，日期是牛皮纸吊牌。
+       配色：苔绿主色 + 湖蓝/芥末黄/莓果/牛皮轮换点缀。
        ============================================================ */
     :root {
-      --bg: #FFF6E9;            /* 奶油暖底 */
-      --card: #FFFFFF;          /* 卡片白 */
-      --ink: #4A3728;           /* 正文深棕 */
-      --ink-2: #7A5C3E;         /* 深棕（浅底上的次级文字） */
-      --ink-soft: #82664A;      /* 说明性文字（浅底上 AA 达标） */
-      --main: #FF8C1A;          /* 暖橙主色（大色块/按钮） */
-      --main-soft: #FFE9CC;     /* 浅橙底（色块/状态圈/条形） */
-      --caramel: #A04B00;       /* 焦糖橙文字（cream/浅橙底上可读） */
-      --green: #4CAF50;         /* 完成绿（勾、大图标） */
-      --green-deep: #2E7D32;    /* 深绿文字（浅绿底/已读行） */
-      --green-soft: #E9F5E4;    /* 完成/休息浅底 */
-      --red-deep: #B33E26;      /* 提醒深红文字 */
-      --red-soft: #FBE9E1;      /* 提醒浅底（内容没出/今天只需记） */
-      --line: rgba(74, 55, 40, .10);   /* 细分隔线 */
-      --shadow: 0 2px 10px rgba(160, 94, 38, .10);
-      --shadow-lift: 0 8px 24px rgba(160, 94, 38, .20);
-      --r: 20px;                /* 大卡片圆角 */
-      --r-sm: 14px;             /* 小条圆角 */
-      --r-pill: 999px;          /* 胶囊 */
+      --paper: #F6F1E6;         /* 燕麦纸页底 */
+      --card: #FFFDF4;          /* 卡片米白 */
+      --ink: #3A443C;           /* 正文墨绿灰 */
+      --ink-2: #6B7668;         /* 次级 */
+      --green: #4C7A54;         /* 苔绿主色 */
+      --green-deep: #32553A;
+      --green-soft: #E3EBDC;
+      --sky-soft: #DFE9EE;      /* 湖蓝纸 */
+      --sky-deep: #3F6E87;
+      --mustard-soft: #F2E5BF;  /* 芥末黄纸 */
+      --mustard-deep: #8A6A1F;
+      --berry-soft: #F6E5DC;    /* 莓果红纸 */
+      --berry-deep: #A0482F;
+      --kraft: #EFE2C8;         /* 牛皮纸 */
+      --kraft-text: #7A5226;
+      --kraft-line: #E0CFA8;
+      --wood: #A97C50;          /* 原木色 */
+      --stitch: #C3CDB4;        /* 缝线色 */
+      --r: 14px; --r-sm: 10px; --r-pill: 999px;
+      --shadow: 0 10px 22px rgba(74, 62, 32, .10);
       --safe-b: env(safe-area-inset-bottom, 0px);
     }
 
@@ -41,12 +45,12 @@
     html { -webkit-text-size-adjust: 100%; }
     body {
       margin: 0;
-      background: var(--bg);
+      background: var(--paper);
       color: var(--ink);
-      font-family: -apple-system, BlinkMacSystemFont, "PingFang SC",
-        "Noto Sans CJK SC", "Microsoft YaHei", sans-serif;
+      font-family: "LXGW WenKai", "Nunito", -apple-system,
+        "PingFang SC", "Microsoft YaHei", sans-serif;
       font-size: 16px;
-      line-height: 1.6;
+      line-height: 1.7;
       -webkit-font-smoothing: antialiased;
     }
     button { font: inherit; color: inherit; }
@@ -59,8 +63,8 @@
       touch-action: manipulation;
     }
     [hidden] { display: none !important; }
-    ::selection { background: var(--main-soft); }
-    :focus-visible { outline: 3px solid var(--caramel); outline-offset: 2px; }
+    ::selection { background: var(--green-soft); }
+    :focus-visible { outline: 3px solid var(--wood); outline-offset: 2px; }
     @media (prefers-reduced-motion: reduce) {
       * { transition: none !important; animation: none !important; }
     }
@@ -69,288 +73,264 @@
     #app {
       max-width: 520px;
       margin: 0 auto;
-      padding: 14px 16px calc(22px + var(--safe-b));
+      padding: 18px 16px calc(30px + var(--safe-b));
     }
     .view { display: block; }
 
-    /* ---------- 页头：日期章 + 周标题 + 英文主题 ---------- */
-    .page-head { margin: 2px 2px 10px; }
-    .week-badge {
-      display: inline-block;
-      background: var(--main-soft);
-      color: var(--caramel);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: .05em;
-      padding: 3px 12px;
-      border-radius: var(--r-pill);
-      margin-bottom: 8px;
-    }
+    /* ---------- 页头（两行）：标题一行 / 英文主题+日期吊牌一行 ---------- */
     .page-head h1 {
       margin: 0;
-      font-size: 24px;
-      font-weight: 800;
-      line-height: 1.35;
+      font-size: 25px;
+      font-weight: 700;
+      line-height: 1.45;
       letter-spacing: -.01em;
       word-break: break-word;
     }
-    .page-head .sub {
-      margin: 2px 0 0;
-      color: var(--caramel);
-      font-size: 17px;
+    .head-meta {
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 10px;
+      margin-top: 2px;
+    }
+    .head-meta .sub {
+      margin: 0;
+      color: var(--green);
+      font-family: "Nunito", sans-serif;
       font-weight: 800;
-      letter-spacing: .04em;
+      font-size: 18px;
       line-height: 1.4;
     }
-
-    /* ---------- 分区小标签（ui.js 不输出标题，CSS 伪元素补文案） ---------- */
-    .word-chips::before { content: "本 周 核 心 词"; }
-    .sentence-card::before { content: "本 周 核 心 句 · 说给孩子听"; }
-    .word-chips::before,
-    .sentence-card::before {
-      display: block;
-      color: var(--caramel);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: .12em;
-      margin-bottom: 8px;
+    .tag {
+      display: inline-block;
+      background: var(--kraft);
+      color: var(--kraft-text);
+      border: 1px solid var(--kraft-line);
+      font-size: 12.5px;
+      font-weight: 700;
+      padding: 3px 12px;
+      border-radius: 8px;
+      transform: rotate(-1deg);
+      box-shadow: 2px 2px 0 rgba(122, 82, 38, .12);
+      white-space: nowrap;
+      flex: none;
     }
 
-    /* ---------- 核心词：明快色块，英文大字 + 中文小字 ---------- */
-    .word-chips {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 10px;
-      margin: 0 0 4px;
+    /* ---------- 分区小标签：书卷气「」 + 点线 ---------- */
+    .label {
+      display: flex; align-items: center; gap: 10px;
+      font-size: 13.5px; font-weight: 700; color: var(--green-deep);
+      margin: 16px 2px 8px;
     }
-    .word-chips::before { flex-basis: 100%; margin-bottom: 4px; }
+    .label::after {
+      content: ""; flex: 1; height: 1px;
+      background: repeating-linear-gradient(90deg, #C3CDB4 0 6px, transparent 6px 12px);
+    }
+
+    /* ---------- 核心词：五种纸色轮流上，词卡一行 ---------- */
+    .word-chips { display: flex; flex-wrap: wrap; gap: 8px; }
     .word-chip {
-      display: inline-flex;
-      flex-direction: column;
-      background: var(--main-soft);
+      display: inline-flex; align-items: baseline; gap: 5px;
       border-radius: var(--r-sm);
-      padding: 9px 16px 8px;
-      box-shadow: var(--shadow);
+      border: 1px solid rgba(60, 70, 62, .12);
+      padding: 7px 14px;
+      box-shadow: 2px 2px 0 rgba(74, 62, 32, .08);
     }
+    .word-chip:nth-child(odd) { transform: rotate(-.6deg); }
+    .word-chip:nth-child(even) { transform: rotate(.5deg); }
+    .word-chip:nth-child(5n+1) { background: var(--kraft);       border-color: var(--kraft-line); color: #5C4226; }
+    .word-chip:nth-child(5n+2) { background: var(--sky-soft);    color: var(--sky-deep); }
+    .word-chip:nth-child(5n+3) { background: var(--mustard-soft); color: var(--mustard-deep); }
+    .word-chip:nth-child(5n+4) { background: var(--berry-soft);  color: var(--berry-deep); }
+    .word-chip:nth-child(5n+5) { background: var(--green-soft);  color: var(--green-deep); }
     .word-chip b {
-      font-size: 22px;
-      font-weight: 800;
-      line-height: 1.3;
-      letter-spacing: .01em;
+      font-family: "Nunito", sans-serif;
+      font-size: 16.5px; font-weight: 800;
+      line-height: 1.4;
     }
     .word-chip i {
       font-style: normal;
-      color: var(--ink-2);
       font-size: 12.5px;
-      font-weight: 600;
       line-height: 1.4;
-      margin-top: 1px;
+      opacity: .85;
     }
 
-    /* ---------- 核心句：白卡片内英文大字，照着读 ---------- */
+    /* ---------- 核心句：缝线布边白卡 ---------- */
     .sentence-card {
       background: var(--card);
+      border: 1.5px dashed var(--stitch);
       border-radius: var(--r);
+      padding: 14px 17px;
       box-shadow: var(--shadow);
-      padding: 16px 18px;
-      margin-top: 14px;
     }
-    .sentence-card::before { margin-bottom: 10px; }
     .sentence {
       margin: 0;
-      font-size: 22px;
-      font-weight: 600;
+      font-family: "Nunito", sans-serif;
+      font-size: 21px; font-weight: 700;
       line-height: 1.5;
       word-break: break-word;
     }
-    .sentence + .sentence { margin-top: 12px; }
+    .sentence + .sentence { margin-top: 9px; }
 
-    /* ---------- 本周主视频提醒条（浅橙窄条） ---------- */
-    .video-bar {
-      background: var(--main-soft);
-      color: var(--ink);
-      font-size: 15px;
-      line-height: 1.6;
+    /* ---------- 视频：主视频苔绿条、进阶湖蓝条，各一行不折行 ---------- */
+    .vbar {
+      display: flex; align-items: baseline; gap: 6px;
       border-radius: var(--r-sm);
-      padding: 10px 14px;
-      margin-top: 14px;
+      padding: 8px 13px;
+      margin-top: 9px;
+      font-size: 14px;
+      white-space: nowrap;
     }
+    .vbar .name {
+      overflow: hidden; text-overflow: ellipsis;
+      font-family: "Nunito", sans-serif; font-weight: 700;
+    }
+    .vbar.primary { background: var(--green-soft); border-left: 4px solid var(--green); }
+    .vbar.primary .vb-label { color: var(--green-deep); font-weight: 700; }
+    .vbar.advanced { background: var(--sky-soft); border-left: 4px solid var(--sky-deep); }
+    .vbar.advanced .vb-label { color: var(--sky-deep); font-weight: 700; }
 
-    /* ---------- 7 天打卡列表 ---------- */
+    /* ---------- 7 天打卡列表：缝线卡 ---------- */
     .day-list {
       background: var(--card);
+      border: 1.5px dashed var(--stitch);
       border-radius: var(--r);
+      padding: 6px 10px;
+      margin-top: 12px;
       box-shadow: var(--shadow);
-      padding: 8px 6px;
-      margin-top: 14px;
     }
     .day-row {
-      display: flex;
-      align-items: center;
-      gap: 10px;
+      display: flex; align-items: center; gap: 12px;
       width: 100%;
-      min-height: 54px;
-      padding: 6px 12px;
+      padding: 10px 8px;
       border: 0;
       background: transparent;
       text-align: left;
       border-radius: var(--r-sm);
       cursor: pointer;
-      transition: background-color .15s ease, transform .12s ease;
+      transition: background-color .15s ease;
     }
-    .day-row:active { transform: scale(.985); background: var(--main-soft); }
-    .day-row.is-done { background: var(--green-soft); }
-    .day-row.is-done:active { background: #DFF1D8; }
+    .day-row + .day-row { border-top: 1px dashed rgba(60, 70, 62, .12); }
+    .day-row:active { background: var(--green-soft); }
     .day-name {
-      flex: 1;
-      min-width: 0;
-      font-size: 16px;
-      font-weight: 600;
+      flex: 1; min-width: 0;
+      font-size: 15.5px; font-weight: 700;
       line-height: 1.4;
     }
     .day-row.is-done .day-name { color: var(--green-deep); }
 
-    /* 状态标记：待做=浅橙圆，完成=实心绿勾，休息=浅绿胶囊 */
+    /* 状态标记：待做=虚线圈，完成=实心绿勾，休息=牛皮胶囊 */
     .day-state {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      flex: none;
-      width: 28px;
-      height: 28px;
-      border-radius: 50%;
-      font-size: 0;               /* 占位 ○ 字形由底色表达 */
-      box-shadow: inset 0 0 0 3px var(--card);
-      background: var(--main-soft);
+      display: inline-flex; align-items: center; justify-content: center;
+      flex: none; width: 27px; height: 27px; border-radius: 50%;
+      border: 2px dashed #96A98D;
+      font-size: 0;
     }
     .day-state.done {
-      background: var(--green);
-      box-shadow: none;
-      color: #FFF;
-      font-size: 15px;
-      font-weight: 800;
+      background: var(--green); border: 0;
+      color: #FFF; font-size: 14px; font-weight: 800;
     }
     .day-state.rest {
-      width: auto;
-      height: auto;
+      width: auto; height: auto; border: 0;
       border-radius: var(--r-pill);
-      background: var(--green-soft);
-      color: var(--green-deep);
-      font-size: 12.5px;
-      font-weight: 700;
+      background: var(--kraft); color: var(--kraft-text);
+      font-size: 12px; font-weight: 700;
       padding: 4px 11px;
-      box-shadow: none;
     }
 
-    /* ---------- 提示条：tip=浅绿（休息/顺带说），warn=浅红（醒目） ---------- */
+    /* ---------- 提示条：tip=苔绿（休息/顺带说），warn=莓果（醒目） ---------- */
     .notice {
       border-radius: var(--r-sm);
       padding: 12px 14px;
-      font-size: 15px;
-      line-height: 1.6;
-      margin-top: 14px;
-      border-left: 5px solid transparent;
+      font-size: 14.5px;
+      line-height: 1.7;
+      margin-top: 12px;
     }
-    .notice.tip { background: var(--green-soft); color: var(--ink); border-left-color: var(--green-deep); }
-    .notice.warn { background: var(--red-soft); color: var(--ink); border-left-color: var(--red-deep); }
-    .notice.warn::before { content: "⚠ "; color: var(--red-deep); font-weight: 800; }
+    .notice.tip { background: var(--green-soft); color: var(--ink); border-left: 4px solid var(--green); }
+    .notice.warn { background: var(--berry-soft); color: var(--ink); border-left: 4px solid var(--berry-deep); }
+    .notice.warn::before { content: "⚠ "; color: var(--berry-deep); font-weight: 700; }
 
     /* ---------- 进阶内容（选做）折叠卡 ---------- */
     .adv {
       background: var(--card);
+      border: 1.5px dashed var(--stitch);
       border-radius: var(--r);
-      box-shadow: var(--shadow);
-      margin-top: 14px;
+      margin-top: 12px;
       overflow: hidden;
+      box-shadow: var(--shadow);
     }
     .adv summary {
       list-style: none;
       display: flex;
       align-items: center;
+      justify-content: space-between;
       min-height: 48px;
-      padding: 0 16px;
-      font-size: 15.5px;
+      padding: 8px 16px;
+      font-size: 15px;
       font-weight: 700;
       cursor: pointer;
     }
     .adv summary::-webkit-details-marker { display: none; }
     .adv summary::after {
       content: "▾";
-      margin-left: auto;
-      color: var(--caramel);
-      font-weight: 800;
+      color: var(--green-deep);
+      font-weight: 700;
       transition: transform .2s ease;
     }
     .adv[open] summary::after { transform: rotate(180deg); }
-    .adv p { margin: 0; padding: 2px 16px 15px; font-size: 15px; line-height: 1.65; }
+    .adv p { margin: 0; padding: 0 16px 15px; font-size: 14.5px; line-height: 1.8; color: var(--ink-2); }
 
-    /* ---------- 底部周切换条：白色悬浮胶囊 dock ---------- */
-    .week-nav {
+    /* ---------- 底部周切换条：缝线胶囊 dock ---------- */
+    .dock {
       position: sticky;
       bottom: calc(10px + var(--safe-b));
       display: flex;
       align-items: center;
-      gap: 6px;
+      gap: 8px;
       background: var(--card);
+      border: 1.5px dashed var(--stitch);
       border-radius: var(--r-pill);
-      box-shadow: var(--shadow-lift);
+      box-shadow: 0 12px 28px rgba(74, 62, 32, .18);
       padding: 6px;
-      margin-top: 18px;
+      margin-top: 16px;
     }
-    .nav-btn {
+    .arrow {
       border: 0;
-      background: none;
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      min-height: 44px;
+      flex: none; width: 44px; height: 44px;
+      border-radius: 50%;
+      background: var(--green-soft); color: var(--green-deep);
+      font-size: 14px; font-weight: 700;
       cursor: pointer;
+      transition: transform .12s ease;
+    }
+    .arrow:active { transform: scale(.94); }
+    .pos { flex: 1; text-align: center; font-size: 14.5px; color: var(--ink-2); white-space: nowrap; }
+    .map-btn {
+      border: 0;
+      flex: 1.6; height: 44px;
       border-radius: var(--r-pill);
-      transition: transform .12s ease, background-color .15s ease;
+      background: var(--green); color: #FFF;
+      font-size: 15.5px; font-weight: 700;
+      cursor: pointer;
+      transition: transform .12s ease;
     }
-    .nav-btn:active { transform: scale(.94); }
-    .nav-btn:not(.map) {
-      width: 46px;
-      height: 46px;
-      flex: none;
-      background: var(--main-soft);
-      color: var(--caramel);
-      font-size: 15px;
-      font-weight: 800;
-    }
-    .nav-btn.map {
-      flex: 1;
-      height: 46px;
-      gap: 4px;
-      background: var(--main);
-      color: var(--ink);
-      font-size: 16px;
-      font-weight: 800;
-    }
-    .nav-label {
-      color: var(--ink-soft);
-      font-size: 15px;
-      font-weight: 700;
-      white-space: nowrap;
-      margin: 0 2px;
-    }
+    .map-btn:active { transform: scale(.97); }
 
     /* ---------- 空态 / 加载失败 ---------- */
     .empty {
       background: var(--card);
+      border: 1.5px dashed var(--stitch);
       border-radius: var(--r);
       box-shadow: var(--shadow);
       padding: 30px 20px;
       text-align: center;
       margin-top: 24px;
     }
-    .empty p { margin: 0 0 14px; font-size: 15px; color: var(--ink-soft); }
+    .empty p { margin: 0 0 14px; font-size: 15px; color: var(--ink-2); }
     .empty button {
       border: 0;
-      background: var(--main);
-      color: var(--ink);
+      background: var(--green);
+      color: #FFF;
       font-size: 16px;
-      font-weight: 800;
+      font-weight: 700;
       padding: 11px 26px;
       min-height: 44px;
       border-radius: var(--r-pill);
@@ -360,7 +340,7 @@
     .empty button:active { transform: scale(.96); }
 
     /* ---------- 「点我更新」悬浮胶囊 ---------- */
-    /* bottom 76px：悬浮在底部停靠栏(.week-nav 高58px+停靠10px)之上，不遮挡 */
+    /* bottom 76px：悬浮在底部停靠栏(.dock 高56px+停靠10px)之上，不遮挡 */
     /* 它必须是 <button>（不是 div）：div 上点一下会被当成选字，手机上要连点好几次 */
     #update-badge {
       position: fixed;
@@ -370,69 +350,85 @@
       border: 0;
       appearance: none;
       -webkit-appearance: none;
-      background: var(--main);
-      color: var(--ink);
+      background: var(--green);
+      color: #FFF;
       font-size: 14px;
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: .03em;
       line-height: 1.6;
       padding: 11px 18px;
       border-radius: var(--r-pill);
-      box-shadow: var(--shadow-lift);
+      box-shadow: 0 10px 22px rgba(50, 85, 58, .30);
       cursor: pointer;
     }
     #update-badge:active { transform: scale(.96); }
 
-    /* ---------- 当天页返回按钮（页头顶部，安静的大触控区） ---------- */
-    .back {
-      display: inline-flex;
-      align-items: center;
-      border: 0;
-      background: none;
-      color: var(--caramel);
-      font-size: 15.5px;
-      font-weight: 800;
-      letter-spacing: .03em;
-      min-height: 44px;
-      margin: -6px -6px 0 -10px;   /* 负边距回收触控区，文字仍与 h1 左对齐 */
-      padding: 4px 10px;
-      border-radius: var(--r-sm);
-      cursor: pointer;
-      transition: background-color .15s ease, transform .12s ease;
+    /* ---------- 当天页：返回键和标题并排一行 ---------- */
+    .day-head .top {
+      display: flex; align-items: center; gap: 8px;
     }
-    .back:active { background: var(--main-soft); transform: scale(.97); }
+    .back {
+      flex: none;
+      display: inline-flex; align-items: center;
+      border: 0;
+      background: var(--green-soft);
+      color: var(--green-deep);
+      font-size: 13px; font-weight: 700;
+      padding: 5px 12px;
+      border-radius: var(--r-pill);
+      cursor: pointer;
+      transition: transform .12s ease;
+    }
+    .back:active { transform: scale(.96); }
+    .day-head h1 {
+      margin: 0;
+      font-size: 21px;
+      font-weight: 700;
+      line-height: 1.45;
+      min-width: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    .day-head .sub {
+      margin: 1px 0 0;
+      font-size: 13px;
+      color: var(--ink-2);
+    }
 
-    /* ---------- 当天时间段卡片：白卡 + 左侧橙条时间轨 ---------- */
+    /* ---------- 当天时间段卡片：缝线卡 + 原木左条 ---------- */
     .block {
       background: var(--card);
+      border: 1.5px dashed var(--stitch);
+      border-left: 4px solid var(--wood);
       border-radius: var(--r);
-      box-shadow: var(--shadow);
-      border-left: 5px solid var(--main);
       padding: 13px 16px 15px;
-      margin-top: 14px;
+      margin-top: 12px;
+      box-shadow: var(--shadow);
     }
     .block h2 {
       margin: 0 0 6px;
-      font-size: 15.5px;
-      font-weight: 800;
+      font-size: 15px;
+      font-weight: 700;
       letter-spacing: .02em;
       line-height: 1.5;
-      color: var(--caramel);
+      color: var(--green-deep);
     }
     .block .do {
       margin: 0;
-      font-size: 16px;
-      line-height: 1.7;
+      font-size: 15.5px;
+      line-height: 1.8;
       color: var(--ink);
     }
 
-    /* 英文原句：淡橙便签块，大字加粗照着念 */
+    /* 英文原句：牛皮纸便签，圆体大字照着念 */
     .block .say {
-      background: var(--main-soft);
+      background: var(--kraft);
+      border: 1px solid var(--kraft-line);
       border-radius: var(--r-sm);
       color: var(--ink);
-      font-size: 22px;
-      font-weight: 700;
+      font-family: "Nunito", sans-serif;
+      font-size: 20px; font-weight: 700;
       line-height: 1.5;
       word-break: break-word;
       padding: 9px 13px;
@@ -440,29 +436,29 @@
     }
     .block .say + .say { margin-top: 7px; }
 
-    /* ---------- 打卡大按钮：全宽橙色，完成态整块变深绿 ---------- */
+    /* ---------- 打卡大按钮：全宽苔绿，完成态变深绿 ---------- */
     .btn-checkin {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
-      margin-top: 18px;
+      margin-top: 16px;
       min-height: 56px;
       padding: 14px 18px;
       border: 0;
       border-radius: var(--r-pill);
-      background: var(--main);
-      color: var(--ink);
+      background: var(--green);
+      color: #FFF;
       font-size: 17px;
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: .02em;
       cursor: pointer;
+      box-shadow: 0 6px 16px rgba(50, 85, 58, .30);
       transition: background-color .15s ease, transform .12s ease;
     }
-    .btn-checkin:active { transform: scale(.97); filter: brightness(.95); }
+    .btn-checkin:active { transform: scale(.97); }
     .btn-checkin.is-done {
       background: var(--green-deep);
-      color: #FFF;
     }
 
     /* ---------- 整周打卡键（本周页用：描边胶囊，与当天页的实心键区分开） ---------- */
@@ -474,106 +470,103 @@
       margin-top: 12px;
       min-height: 52px;
       padding: 12px 18px;
-      border: 2px solid var(--main);
+      border: 2px solid var(--green);
       border-radius: var(--r-pill);
       background: var(--card);
-      color: var(--caramel);
+      color: var(--green-deep);
       font-size: 16px;
-      font-weight: 800;
+      font-weight: 700;
       letter-spacing: .02em;
       cursor: pointer;
+      box-shadow: var(--shadow);
       transition: background-color .15s ease, transform .12s ease;
     }
-    .btn-week:active { transform: scale(.97); background: var(--main-soft); }
+    .btn-week:active { transform: scale(.97); background: var(--green-soft); }
     .btn-week.is-done {
-      border-color: var(--green);
+      border-color: var(--green-deep);
       background: var(--green-soft);
       color: var(--green-deep);
     }
 
-    /* ---------- 全年地图：48 周贴纸墙 ----------
-       已细化周 = 贴上白卡贴纸（暖橙章+彩emoji，可点）；
-       未细化周 = 虚线空位（灰字灰emoji「内容还没出」）。
-       暖灰全部由 --ink 降透明度派生，不另起炉灶。 ---------- */
+    /* ---------- 全年地图：五种纸色贴纸墙，主题一行 ----------
+       已细化周 = 彩色贴纸（可点）；未细化周 = 虚线空位（灰字灰emoji）。 ---------- */
     .map-grid {
       display: grid;
       grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 10px;
-      margin-top: 14px;
+      margin-top: 12px;
     }
     .map-cell {
+      min-height: 132px;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       text-align: center;
-      min-height: 146px;
-      padding: 12px 8px;
+      padding: 9px 6px;
       border-radius: var(--r-sm);
-      background: rgba(74, 55, 40, .04);
-      border: 1.5px dashed rgba(74, 55, 40, .16);
+      border: 1.5px dashed rgba(60, 70, 62, .25);
+      background: rgba(60, 70, 62, .03);
     }
     .map-cell.detailed {
-      background: var(--card);
-      border: 0;
-      box-shadow: var(--shadow);
+      border: 1px solid rgba(60, 70, 62, .14);
+      box-shadow: 0 4px 12px rgba(74, 62, 32, .08);
       cursor: pointer;
       transition: transform .12s ease, box-shadow .15s ease;
     }
     .map-cell.detailed:active {
       transform: scale(.95);
-      box-shadow: var(--shadow-lift);
+      box-shadow: 0 10px 22px rgba(74, 62, 32, .18);
     }
+    .map-cell.detailed:nth-child(5n+1) { background: var(--green-soft); }
+    .map-cell.detailed:nth-child(5n+2) { background: var(--sky-soft); }
+    .map-cell.detailed:nth-child(5n+3) { background: var(--mustard-soft); }
+    .map-cell.detailed:nth-child(5n+4) { background: var(--berry-soft); }
+    .map-cell.detailed:nth-child(5n+5) { background: var(--kraft); }
 
-    /* 周序号小胶囊：空位灰 / 已细化暖橙 */
+    /* 周序号小胶囊：空位白 / 已细化纸色 */
     .map-week {
-      background: rgba(74, 55, 40, .10);
-      color: rgba(74, 55, 40, .62);
-      font-size: 11.5px;
-      font-weight: 800;
-      letter-spacing: .06em;
+      font-size: 11px;
+      font-weight: 700;
       padding: 2px 9px;
       border-radius: var(--r-pill);
+      background: rgba(255, 253, 244, .8);
+      color: rgba(60, 70, 62, .6);
     }
-    .map-cell.detailed .map-week {
-      background: var(--main-soft);
-      color: var(--caramel);
-    }
+    .map-cell.detailed .map-week { color: var(--ink-2); }
     .map-emoji {
-      font-size: 26px;
+      font-size: 25px;
       line-height: 1.4;
       margin-top: 6px;
       filter: grayscale(1);
-      opacity: .55;
+      opacity: .5;
     }
     .map-cell.detailed .map-emoji { filter: none; opacity: 1; }
     .map-theme {
-      font-size: 15px;
+      font-size: 14.5px;
       font-weight: 700;
       line-height: 1.4;
       margin-top: 4px;
-      color: rgba(74, 55, 40, .72);
+      display: flex; align-items: baseline; gap: 5px;
+      color: rgba(60, 70, 62, .65);
     }
     .map-cell.detailed .map-theme { color: var(--ink); }
     .map-en {
       font-size: 11.5px;
-      font-weight: 600;
+      font-weight: 700;
       line-height: 1.4;
       letter-spacing: .02em;
-      margin-top: 1px;
       word-break: break-word;
-      color: rgba(74, 55, 40, .62);
+      color: rgba(60, 70, 62, .55);
     }
-    .map-cell.detailed .map-en { color: var(--ink-soft); }
+    .map-cell.detailed .map-en { color: var(--ink-2); }
     .map-tag {
-      margin-top: 8px;
-      padding: 2px 10px;
+      margin-top: 6px;
+      padding: 2px 9px;
       border-radius: var(--r-pill);
-      background: rgba(74, 55, 40, .10);
-      color: rgba(74, 55, 40, .62);
-      font-size: 11px;
-      font-weight: 700;
-      letter-spacing: .05em;
+      background: rgba(255, 253, 244, .8);
+      color: rgba(60, 70, 62, .6);
+      font-size: 10.5px;
       white-space: nowrap;
     }
   </style>

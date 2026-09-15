@@ -10,14 +10,21 @@
     });
   }
 
+  // 分区小标签（书卷气「」+ 点线）
+  function label(text) {
+    return '<p class="label">「' + text + '」</p>';
+  }
+
   function wordChips(words) {
-    return '<div class="word-chips">' + words.map(function (w) {
+    if (!words || !words.length) return "";
+    return label("本周核心词") + '<div class="word-chips">' + words.map(function (w) {
       return '<span class="word-chip"><b>' + escapeHtml(w.en) + '</b><i>' + escapeHtml(w.zh) + '</i></span>';
     }).join("") + '</div>';
   }
 
   function sentenceCard(sentences) {
-    return '<div class="sentence-card">' + sentences.map(function (s) {
+    if (!sentences || !sentences.length) return "";
+    return label("说给孩子听") + '<div class="sentence-card">' + sentences.map(function (s) {
       return '<p class="sentence">' + escapeHtml(s) + '</p>';
     }).join("") + '</div>';
   }
@@ -30,15 +37,18 @@
       '<span class="day-name">第' + day.day + '天 · ' + escapeHtml(day.title) + '</span>' + state + '</button>';
   }
 
+  // 视频两条：主视频苔绿条、进阶湖蓝条，各一行
   function videoBar(detail) {
     if (!detail.video || !detail.video.primary) return "";
-    var html = '<div class="video-bar">🎬 本周主视频：' + escapeHtml(detail.video.primary.name) +
-      '（' + escapeHtml(detail.video.primary.no) + '）';
+    var html = '<div class="vbar primary"><span class="vb-label">🎬 主视频</span>' +
+      '<span class="name">' + escapeHtml(detail.video.primary.name) +
+      '（' + escapeHtml(detail.video.primary.no) + '）</span></div>';
     if (detail.video.advanced) {
-      html += '　·　进阶：' + escapeHtml(detail.video.advanced.name) +
-        '（' + escapeHtml(detail.video.advanced.no) + '）';
+      html += '<div class="vbar advanced"><span class="vb-label">⏫ 进阶</span>' +
+        '<span class="name">' + escapeHtml(detail.video.advanced.name) +
+        '（' + escapeHtml(detail.video.advanced.no) + '）</span></div>';
     }
-    return html + '</div>';
+    return html;
   }
 
   // 整周打卡键：内容太简单、她早就会了的时候，一下把本周需要打卡的日子全勾上
@@ -76,15 +86,15 @@
         weekCheckinButton(weekNum, detail, progress) + adv;
     }
     return '<header class="page-head">' +
-      '<span class="week-badge">' + escapeHtml(week.dates) + '</span>' +
       '<h1>' + escapeHtml(week.emoji) + ' 第' + week.week + '周 · ' + escapeHtml(week.theme) + '</h1>' +
-      '<p class="sub">' + escapeHtml(week.themeEn) + '</p></header>' +
+      '<div class="head-meta"><p class="sub">' + escapeHtml(week.themeEn) + '</p>' +
+      '<span class="tag">' + escapeHtml(week.dates) + '</span></div></header>' +
       body +
-      '<footer class="week-nav">' +
-      '<button class="nav-btn" data-action="prev-week">◀</button>' +
-      '<span class="nav-label">第' + week.week + '周 / 48</span>' +
-      '<button class="nav-btn" data-action="next-week">▶</button>' +
-      '<button class="nav-btn map" data-action="show-map">🗺 全年地图</button>' +
+      '<footer class="dock">' +
+      '<button class="arrow" data-action="prev-week">◀</button>' +
+      '<span class="pos">第' + week.week + '周 / 48</span>' +
+      '<button class="arrow" data-action="next-week">▶</button>' +
+      '<button class="map-btn" data-action="show-map">🗺 全年地图</button>' +
       '</footer>';
   }
 
@@ -114,10 +124,11 @@
       '<button class="btn-checkin' + (done ? " is-done" : "") +
       '" data-action="toggle-checkin" data-day="' + day.day + '">' +
       (done ? '✅ 已完成 · 点一下取消' : '✅ 今天完成啦') + '</button>';
-    return '<header class="page-head">' +
-      '<button class="back" data-action="go-back">← 返回本周</button>' +
-      '<h1>第' + dayNum + '天 · ' + escapeHtml(day.title) + '</h1>' +
-      '<p class="sub">第' + week.week + '周 · ' + escapeHtml(week.theme) + '</p></header>' +
+    return '<header class="day-head">' +
+      '<div class="top"><button class="back" data-action="go-back">← 返回</button>' +
+      '<h1>第' + dayNum + '天 · ' + escapeHtml(day.title) + '</h1></div>' +
+      '<p class="sub">第' + week.week + '周 · ' + escapeHtml(week.theme) +
+      ' · ' + escapeHtml(week.dates) + '</p></header>' +
       blocks + remember + checkin;
   }
 
@@ -125,17 +136,18 @@
     var cells = content.weeks.map(function (w) {
       var inner = '<span class="map-week">第' + w.week + '周</span>' +
         '<span class="map-emoji">' + escapeHtml(w.emoji) + '</span>' +
-        '<span class="map-theme">' + escapeHtml(w.theme) + '</span>' +
-        '<span class="map-en">' + escapeHtml(w.themeEn) + '</span>';
+        '<span class="map-theme">' + escapeHtml(w.theme) +
+        ' <span class="map-en">' + escapeHtml(w.themeEn) + '</span></span>';
       if (w.detailed) {
         return '<button class="map-cell detailed" data-action="goto-week" data-week="' + w.week + '">' +
           inner + '</button>';
       }
       return '<div class="map-cell">' + inner + '<span class="map-tag">内容还没出</span></div>';
     }).join("");
-    return '<header class="page-head">' +
-      '<button class="back" data-action="go-back">← 返回</button>' +
-      '<h1>🗺 全年地图</h1><p class="sub">48周 · 七大主题循环</p></header>' +
+    return '<header class="day-head">' +
+      '<div class="top"><button class="back" data-action="go-back">← 返回</button>' +
+      '<h1>🗺 全年地图</h1></div>' +
+      '<p class="sub">48周 · 七大主题循环</p></header>' +
       '<div class="map-grid">' + cells + '</div>';
   }
 
